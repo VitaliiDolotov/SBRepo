@@ -108,12 +108,16 @@ namespace Simple_Bot
 
         private void VillageSetUp()
         {
-            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[12]) == true)
+            try
             {
-                AddingCategory("Ресурсы");
-                AddingItemToTheCategory_Timers("Счётчики", "Время работы заведующего на ферме", "Заведующий фермы");
-                Timer_VillageManager = ToDateTime(GetResourceValue("Время работы заведующего на ферме")[0]);
+                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[12]) == true)
+                {
+                    AddingCategory("Ресурсы");
+                    AddingItemToTheCategory_Timers("Счётчики", "Время работы заведующего на ферме", "Заведующий фермы");
+                    Timer_VillageManager = ToDateTime(GetResourceValue("Время работы заведующего на ферме")[0]);
+                }
             }
+            catch { }
         }
 
         private void MineSetUp()
@@ -319,12 +323,16 @@ namespace Simple_Bot
 
         private void MassAbilitysSetUp()
         {
-            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "MassAbilityBox")[9]) == true)
+            try
             {
-                AddingCategory("Счётчики");
-                AddingItemToTheCategory_Timers("Счётчики", "Время до окончания тренировки массового скилла.", " Тренировка ");
-                Timer_MassAbil = ToDateTime(GetResourceValue("Время до окончания тренировки массового скилла.")[0]);
+                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "MassAbilityBox")[9]) == true)
+                {
+                    AddingCategory("Счётчики");
+                    AddingItemToTheCategory_Timers("Счётчики", "Время до окончания тренировки массового скилла.", "Тренировка");
+                    Timer_MassAbil = ToDateTime(GetResourceValue("Время до окончания тренировки массового скилла.")[0]);
+                }
             }
+            catch { }
         }
 
         private bool CheckElementExist(IWebElement element)
@@ -849,7 +857,7 @@ namespace Simple_Bot
                     {
                         string[] TempString = GetResourceValue("i34");
                         //если число полян больше заданного или больше максимума -3
-                        if (Convert.ToInt32(TempString[0]) > MaxF || Convert.ToInt32(GetResourceValue("i34")[0]) > (Convert.ToInt32(GetResourceValue("i34")[1]) - 3))
+                        if (Convert.ToInt32(TempString[0]) > MaxF)
                         {
                             try
                             {
@@ -901,7 +909,7 @@ namespace Simple_Bot
                     {
                         string[] TempString = GetResourceValue("i33");
                         //если число малых полян больше заданного или больше максимума -3
-                        if (Convert.ToInt32(TempString[0]) > MaxF || Convert.ToInt32(GetResourceValue("i33")[0]) > (Convert.ToInt32(GetResourceValue("i33")[1]) - 3))
+                        if (Convert.ToInt32(TempString[0]) > MaxF)
                         {
                             try
                             {
@@ -3886,6 +3894,7 @@ namespace Simple_Bot
             {
                 if (Timer_MassAbil.CompareTo(DateTime.Now) < 0)
                 {
+                    Timer_MassAbil = ToDateTime(GetResourceValue("Время до окончания тренировки массового скилла.")[0]);
                     //переходим в БГ
                     try
                     {
@@ -3973,5 +3982,7 @@ namespace Simple_Bot
                 }
             }
         }
+
+
     }
 }

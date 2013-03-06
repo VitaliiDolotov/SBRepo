@@ -71,3 +71,21 @@ H:\Botva HTML\Simple Bot\Simple Bot\obj\x86\Release\Simple Bot.exe.manifest
 H:\Botva HTML\Simple Bot\Simple Bot\obj\x86\Release\Simple Bot.application
 H:\Botva HTML\Simple Bot\Simple Bot\obj\x86\Release\Simple Bot.exe
 H:\Botva HTML\Simple Bot\Simple Bot\obj\x86\Release\Simple Bot.pdb
+F:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe.config
+F:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe.manifest
+F:\SBRepo\Simple Bot\bin\Release\Simple Bot.application
+F:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe
+F:\SBRepo\Simple Bot\bin\Release\Simple Bot.pdb
+F:\SBRepo\Simple Bot\bin\Release\nunit.framework.dll
+F:\SBRepo\Simple Bot\bin\Release\WebDriver.dll
+F:\SBRepo\Simple Bot\bin\Release\WebDriver.pdb
+F:\SBRepo\Simple Bot\bin\Release\WebDriver.xml
+F:\SBRepo\Simple Bot\obj\x86\Release\ResolveAssemblyReference.cache
+F:\SBRepo\Simple Bot\obj\x86\Release\Simple_Bot.Form1.resources
+F:\SBRepo\Simple Bot\obj\x86\Release\Simple_Bot.Properties.Resources.resources
+F:\SBRepo\Simple Bot\obj\x86\Release\GenerateResource.read.1.tlog
+F:\SBRepo\Simple Bot\obj\x86\Release\GenerateResource.write.1.tlog
+F:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.exe.manifest
+F:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.application
+F:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.exe
+F:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.pdb

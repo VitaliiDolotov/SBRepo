@@ -21,6 +21,7 @@ using Simple_Bot.ocr;
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 using System.Media;
+using OpenQA.Selenium.PhantomJS;
 
 namespace Simple_Bot
 {
@@ -1396,13 +1397,14 @@ namespace Simple_Bot
 
         private void button20_Click_1(object sender, EventArgs e)
         {
-            IWebDriver driver = new FirefoxDriver();
-            driver.Navigate().GoToUrl("http://ya.ru/");
-            Actions aBuilder = new Actions(driver);
-            Actions aBuilder1 = new Actions(driver);
-            IWebElement body = driver.FindElement(By.TagName("body"));
-            //body.SendKeys(Keys.chord(OpenQA.Selenium.Keys.Control, "a"));
-            //aBuilder.KeyDown(OpenQA.Selenium.Keys.Control).KeyDown("t").KeyUp("t").KeyUp(OpenQA.Selenium.Keys.Control).Build().Perform();
+            //IWebDriver driver = new FirefoxDriver();
+            //driver.Navigate().GoToUrl("http://ya.ru/");
+            //Actions aBuilder = new Actions(driver);
+            //Actions aBuilder1 = new Actions(driver);
+            //IWebElement body = driver.FindElement(By.TagName("body"));
+            ////body.SendKeys(Keys.chord(OpenQA.Selenium.Keys.Control, "a"));
+            ////aBuilder.KeyDown(OpenQA.Selenium.Keys.Control).KeyDown("t").KeyUp("t").KeyUp(OpenQA.Selenium.Keys.Control).Build().Perform();
+
         }
 
         private void pictureBox27_Click(object sender, EventArgs e)
@@ -1510,6 +1512,11 @@ namespace Simple_Bot
         private void pictureBox33_Click(object sender, EventArgs e)
         {
             UIBoxDisplay(3, 4, "ShopBox");
+        }
+
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
