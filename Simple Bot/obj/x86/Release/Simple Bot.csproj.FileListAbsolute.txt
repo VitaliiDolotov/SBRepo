@@ -76,7 +76,6 @@ F:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe.manifest
 F:\SBRepo\Simple Bot\bin\Release\Simple Bot.application
 F:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe
 F:\SBRepo\Simple Bot\bin\Release\Simple Bot.pdb
-F:\SBRepo\Simple Bot\bin\Release\nunit.framework.dll
 F:\SBRepo\Simple Bot\bin\Release\WebDriver.dll
 F:\SBRepo\Simple Bot\bin\Release\WebDriver.pdb
 F:\SBRepo\Simple Bot\bin\Release\WebDriver.xml

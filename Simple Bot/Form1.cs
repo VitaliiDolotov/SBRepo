@@ -18,7 +18,6 @@ using OpenQA.Selenium.Firefox;
 using System.Security.Cryptography;
 using System.Threading;
 using Simple_Bot.ocr;
-using NUnit.Framework;
 using System.Runtime.InteropServices;
 using System.Media;
 using OpenQA.Selenium.PhantomJS;
@@ -27,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2458;
+        int BotVersion = 2459;
 
         string lable29Text;
 

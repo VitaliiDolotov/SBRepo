@@ -11,7 +11,7 @@ using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
-using NUnit.Framework;
+//using NUnit.Framework;
 using System.Media;
 
 namespace Simple_Bot
@@ -335,18 +335,18 @@ namespace Simple_Bot
             catch { }
         }
 
-        private bool CheckElementExist(IWebElement element)
-        {
-            try
-            {
-                Assert.IsNotNull(element);
-                return true;
-            }
-            catch (AssertionException)
-            {
-                return false;
-            }
-        }
+        //private bool CheckElementExist(IWebElement element)
+        //{
+        //    try
+        //    {
+        //        Assert.IsNotNull(element);
+        //        return true;
+        //    }
+        //    catch (AssertionException)
+        //    {
+        //        return false;
+        //    }
+        //}
 
         private void WaitForElementAndClick(IWebElement element, int waitInMiliSeconds)
         {
@@ -367,18 +367,18 @@ namespace Simple_Bot
             while (delay < waitInMiliSeconds);
         }
 
-        private void ClickWhilePresent(IWebElement element)
-        {
-            do
-            {
-                try
-                {
-                    element.Click();
-                }
-                catch { }
-            }
-            while (CheckElementExist(element));
-        }
+        //private void ClickWhilePresent(IWebElement element)
+        //{
+        //    do
+        //    {
+        //        try
+        //        {
+        //            element.Click();
+        //        }
+        //        catch { }
+        //    }
+        //    while (CheckElementExist(element));
+        //}
 
         private DateTime ToDateTime(string CounterTime)
         {
@@ -3911,6 +3911,11 @@ namespace Simple_Bot
                                 driver.FindElement(By.LinkText("ПРОДОЛЖИТЬ ИЗУЧЕНИЕ")).Click();
                             }
                             catch{}
+                            try
+                            {
+                                driver.FindElement(By.LinkText("ПОВТОРИТЬ ИЗУЧЕНИЕ")).Click();
+                            }
+                            catch { }
                             IWebElement tempButton = driver.FindElement(By.XPath(".//input[@type='submit'][@value]"));
                             if (tempButton.GetAttribute("value") != "ОТМЕНИТЬ ОБУЧЕНИЕ")
                             {
@@ -3932,6 +3937,7 @@ namespace Simple_Bot
                             }
                         }
                         Delays();
+                        driver.FindElement(By.TagName("body")).Click();
                         driver.FindElement(By.CssSelector("input[value='УЧИТЬ']")).Click();
                         Delays();
                         Timer_MassAbil = ToDateTime(GetResourceValue("Время до окончания тренировки массового скилла.")[0]);

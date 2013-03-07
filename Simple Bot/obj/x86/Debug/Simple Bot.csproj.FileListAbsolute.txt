@@ -116,7 +116,6 @@ F:\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe.manifest
 F:\SBRepo\Simple Bot\bin\Debug\Simple Bot.application
 F:\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe
 F:\SBRepo\Simple Bot\bin\Debug\Simple Bot.pdb
-F:\SBRepo\Simple Bot\bin\Debug\nunit.framework.dll
 F:\SBRepo\Simple Bot\bin\Debug\WebDriver.dll
 F:\SBRepo\Simple Bot\bin\Debug\WebDriver.pdb
 F:\SBRepo\Simple Bot\bin\Debug\WebDriver.xml
