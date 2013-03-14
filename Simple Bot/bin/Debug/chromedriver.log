@@ -1,5 +1,5 @@
 [0.000][INFO]:      ChromeDriver 22.0.1203.0 F:\SBRepo\Simple Bot\bin\Debug\chromedriver.exe
-[1.110][FINE]:      Initializing session with capabilities {
+[1.117][FINE]:      Initializing session with capabilities {
    "browserName": "chrome",
    "chrome.switches": [ "--disable-extensions" ],
    "chromeOptions": {
@@ -12,11 +12,11 @@
    "version": ""
 }
 
-[1.110][INFO]:      Launching chrome: "C:\Users\Aksis\AppData\Local\Google\Chrome\Application\chrome.exe" --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --ignore-certificate-errors --disable-popup-blocking --homepage=about:blank --disable-extensions
-[1.482][INFO]:      Connected to Chrome successfully. Version: 25.0.1364.152
-[1.485][FINE]:      Command received (/session/188fdc3c9239af26c40159dff8e4bf9e)
-[1.485][FINE]:      Command finished (/session/188fdc3c9239af26c40159dff8e4bf9e) with response {
-   "sessionId": "188fdc3c9239af26c40159dff8e4bf9e",
+[1.117][INFO]:      Launching chrome: "C:\Users\Aksis\AppData\Local\Google\Chrome\Application\chrome.exe" --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --ignore-certificate-errors --disable-popup-blocking --homepage=about:blank --disable-extensions
+[1.495][INFO]:      Connected to Chrome successfully. Version: 25.0.1364.172
+[1.498][FINE]:      Command received (/session/279bd73f5b0cc0fa7334ee29fcc493b7)
+[1.498][FINE]:      Command finished (/session/279bd73f5b0cc0fa7334ee29fcc493b7) with response {
+   "sessionId": "279bd73f5b0cc0fa7334ee29fcc493b7",
    "status": 0,
    "value": {
       "acceptSslCerts": false,
@@ -34,30 +34,30 @@
       "platform": "windows",
       "rotatable": false,
       "takesScreenshot": true,
-      "version": "25.0.1364.152",
+      "version": "25.0.1364.172",
       "webStorageEnabled": true
    }
 }
 
-[1.516][FINE]:      Command received (/session/188fdc3c9239af26c40159dff8e4bf9e/timeouts/implicit_wait) with params {
+[1.530][FINE]:      Command received (/session/279bd73f5b0cc0fa7334ee29fcc493b7/timeouts/implicit_wait) with params {
    "ms": 2000.0
 }
 
-[1.516][FINER]:     Waiting for all views to stop loading...
-[1.516][FINER]:     Done waiting for all views to stop loading
-[1.516][FINER]:     Waiting for all views to stop loading...
-[1.516][FINER]:     Done waiting for all views to stop loading
-[1.516][FINE]:      Command finished (/session/188fdc3c9239af26c40159dff8e4bf9e/timeouts/implicit_wait) with response {
-   "sessionId": "188fdc3c9239af26c40159dff8e4bf9e",
+[1.530][FINER]:     Waiting for all views to stop loading...
+[1.530][FINER]:     Done waiting for all views to stop loading
+[1.530][FINER]:     Waiting for all views to stop loading...
+[1.530][FINER]:     Done waiting for all views to stop loading
+[1.530][FINE]:      Command finished (/session/279bd73f5b0cc0fa7334ee29fcc493b7/timeouts/implicit_wait) with response {
+   "sessionId": "279bd73f5b0cc0fa7334ee29fcc493b7",
    "status": 0,
    "value": {
 
    }
 }
 
-[1.518][FINE]:      Command received (/session/188fdc3c9239af26c40159dff8e4bf9e/url) with params {
+[1.531][FINE]:      Command received (/session/279bd73f5b0cc0fa7334ee29fcc493b7/url) with params {
    "url": "http://www.botva.ru/"
 }
 
-[1.518][FINER]:     Waiting for all views to stop loading...
-[1.518][FINER]:     Done waiting for all views to stop loading
+[1.531][FINER]:     Waiting for all views to stop loading...
+[1.532][FINER]:     Done waiting for all views to stop loading

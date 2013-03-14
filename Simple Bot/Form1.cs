@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2459;
+        int BotVersion = 2460;
 
         string lable29Text;
 
@@ -652,7 +652,7 @@ namespace Simple_Bot
                         Bot.VillageManager();
                         //Adv
                         Bot.OpenAdvPage();
-                        Bot.SwToBotvaPage();
+                        //Bot.SwToBotvaPage();
 
                         //релогинимся
                         Bot.ReLogIn();
@@ -1402,8 +1402,7 @@ namespace Simple_Bot
             //Actions aBuilder1 = new Actions(driver);
             //IWebElement body = driver.FindElement(By.TagName("body"));
             ////body.SendKeys(Keys.chord(OpenQA.Selenium.Keys.Control, "a"));
-            ////aBuilder.KeyDown(OpenQA.Selenium.Keys.Control).KeyDown("t").KeyUp("t").KeyUp(OpenQA.Selenium.Keys.Control).Build().Perform();
-
+            ////aBuilder.KeyDown(OpenQA.Selenium.Keys.Control).KeyDown("t").KeyUp("t").KeyUp(OpenQA.Selenium.Keys.Control).Build().Perform()
         }
 
         private void pictureBox27_Click(object sender, EventArgs e)

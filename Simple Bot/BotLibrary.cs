@@ -622,13 +622,13 @@ namespace Simple_Bot
                 ChromeOptions options = new ChromeOptions();
                 options.AddArgument("--disable-extensions");
                 IWebDriver driver = new ChromeDriver(options);
-                Timer_OpenMySite = ToDateTime("55:08:30");
+                Timer_OpenMySite = ToDateTime("00:10:30");
                 return driver;
             }
             else
             {
                 IWebDriver driver = new FirefoxDriver();
-                Timer_OpenMySite = ToDateTime("00:08:30");
+                Timer_OpenMySite = ToDateTime("00:10:30");
                 return driver;
             }
         }
@@ -2973,11 +2973,11 @@ namespace Simple_Bot
             if (Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[16]) == true)
             {
                 IList<IWebElement> Stats = driver.FindElements(By.ClassName("c4"));
-                if (Convert.ToInt32(Stats[0].Text) <= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[17]) &&
-                    Convert.ToInt32(Stats[1].Text) <= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[18]) &&
-                    Convert.ToInt32(Stats[2].Text) <= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[19]) &&
-                    Convert.ToInt32(Stats[3].Text) <= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[20]) &&
-                    Convert.ToInt32(Stats[4].Text) <= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[21]))
+                if (Convert.ToInt32(Stats[0].Text) >= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[17]) &&
+                    Convert.ToInt32(Stats[1].Text) >= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[18]) &&
+                    Convert.ToInt32(Stats[2].Text) >= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[19]) &&
+                    Convert.ToInt32(Stats[3].Text) >= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[20]) &&
+                    Convert.ToInt32(Stats[4].Text) >= Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[21]))
                 {
                     retValue = false;
                 }
@@ -3792,9 +3792,13 @@ namespace Simple_Bot
             {
                 if (AdvIsOpened == false)
                 {
-                    driver.FindElement(By.TagName("body")).SendKeys(OpenQA.Selenium.Keys.Control + 't');
-                    driver.Navigate().GoToUrl("http://vitaliidolotov.narod2.ru/");
-                    AdvIsOpened = true;
+                    /*driver.FindElement(By.TagName("body")).SendKeys(OpenQA.Selenium.Keys.Control + 't');
+                    driver.Navigate().GoToUrl("http://simplebot.ru/");
+                    AdvIsOpened = true;*/
+                    driver.Navigate().GoToUrl("http://simplebot.ru/");
+                    System.Threading.Thread.Sleep(10000);
+                    driver.Navigate().Back();
+                    Timer_OpenMySite = ToDateTime("55:08:30");
                 }
             }
         }
