@@ -3176,7 +3176,7 @@ namespace Simple_Bot
                             driver.FindElement(By.Id("potion_td_3")).FindElement(By.TagName("a")).Click();
                             System.Threading.Thread.Sleep(rnd.Next(759, 1498));
                             //Close Healing form
-                            driver.FindElement(By.XPath("//div/div/a/span[contains(@class,'ui-icon-closethick')]")).Click();
+                            driver.FindElement(By.CssSelector(".box_x_button")).Click();
                             System.Threading.Thread.Sleep(rnd.Next(759, 991));
                         }
                         catch { }
@@ -3212,7 +3212,7 @@ namespace Simple_Bot
                             driver.FindElement(By.Id("potion_td_5")).FindElement(By.TagName("a")).Click();
                             System.Threading.Thread.Sleep(rnd.Next(759, 1498));
                             //Close Healing form
-                            driver.FindElement(By.XPath("//div/div/a/span[contains(@class,'ui-icon-closethick')]")).Click();
+                            driver.FindElement(By.CssSelector(".box_x_button")).Click();
                             System.Threading.Thread.Sleep(rnd.Next(759, 991));
                         }
                         catch { }
@@ -3796,7 +3796,7 @@ namespace Simple_Bot
                     driver.Navigate().GoToUrl("http://simplebot.ru/");
                     AdvIsOpened = true;*/
                     driver.Navigate().GoToUrl("http://simplebot.ru/");
-                    System.Threading.Thread.Sleep(10000);
+                    System.Threading.Thread.Sleep(18000);
                     driver.Navigate().Back();
                     Timer_OpenMySite = ToDateTime("55:08:30");
                 }
