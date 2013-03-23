@@ -58,7 +58,7 @@ namespace Simple_Bot
         static DateTime Timer_MassAbil = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_VillageManager = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_Shop = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
-
+        static DateTime Timer_DayliGifts = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
 
         static DateTime Timer_Grif = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_Mont = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
@@ -605,7 +605,7 @@ namespace Simple_Bot
             {
                 Timer_Shop = ToDateTime("00:" + Convert.ToString(ReadFromFile(SettingsFile, "ShopBox")[7]) + ":00");
             }
-            
+
 
             return driver;
         }
@@ -929,7 +929,7 @@ namespace Simple_Bot
                                     //ВСЛЕПУЮ
                                     driver.FindElement(By.LinkText("ВСЛЕПУЮ")).Click();
                                 }
-                                catch{}
+                                catch { }
                                 try
                                 {
                                     //ЕЩЁ
@@ -2149,7 +2149,7 @@ namespace Simple_Bot
                                 driver.FindElement(By.Id("fa_events")).Click();
                                 System.Threading.Thread.Sleep(rnd.Next(799, 1201));
                                 //Прежде всего отсылаем в малое если нужно
-                                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "FlyBox")[16 + FlyNumber/2 ]) == true)
+                                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "FlyBox")[16 + FlyNumber / 2]) == true)
                                 {
                                     try
                                     {
@@ -2172,7 +2172,7 @@ namespace Simple_Bot
                                     switch (Convert.ToInt32(ReadFromFile(SettingsFile, "FlyBox")[settingsIndex + 2]))
                                     {
                                         case 1:
-                                            WaitForElementAndClick(driver.FindElement(By.XPath("//div[@rel='1']")),5000);
+                                            WaitForElementAndClick(driver.FindElement(By.XPath("//div[@rel='1']")), 5000);
                                             break;
                                         case 2:
                                             WaitForElementAndClick(driver.FindElement(By.XPath("//div[@rel='2']")), 5000);
@@ -2707,7 +2707,7 @@ namespace Simple_Bot
                 {
                     IWebElement temp = PandList[i].FindElement(By.ClassName("level"));
                     //если уровень больше чем нужно то дооткрываем
-                    if (Convert.ToInt32(temp.Text) > MinPandaLvl && Convert.ToInt32(temp.Text)!= 8)
+                    if (Convert.ToInt32(temp.Text) > MinPandaLvl && Convert.ToInt32(temp.Text) != 8)
                     {
                         //кликаем по бордеру чтоб появилась кнопка ОТКРЫТЬ и ОТКРЫВАЕМ
                         PandList[i].FindElement(By.ClassName("border")).Click();
@@ -3038,7 +3038,7 @@ namespace Simple_Bot
             {
                 Timer = ToDateTime(driver.FindElement(By.Id("rmenu1")).FindElement(By.XPath("div[1]/a[2]/span")).Text);
             }
-            catch{}
+            catch { }
             if (DateTime.Now.Add(duration).CompareTo(Timer) > 0)
             {
                 System.Threading.Thread.Sleep(10889);
@@ -3226,7 +3226,7 @@ namespace Simple_Bot
         {
             bool Ogl = Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[10]);
             bool Anti = Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[11]);
-            if (Ogl == true ||  Anti == true)
+            if (Ogl == true || Anti == true)
             {
                 if (Timer_FightImmunOgl.CompareTo(DateTime.Now) < 0 || Timer_FightImmunAnti.CompareTo(DateTime.Now) < 0)
                 {
@@ -3278,7 +3278,7 @@ namespace Simple_Bot
                 {
                     driver.FindElement(By.XPath("//input[@rel='2']")).Click();
                 }
-                catch{}
+                catch { }
             }
         }
 
@@ -3481,9 +3481,9 @@ namespace Simple_Bot
                     Timer_PandaEffect1 = ToDateTime(GetResourceValue("Увеличение шанса получить билет именно на большую поляну, а не на малую.")[0]);
                 }
             }
-            else Timer_PandaEffect1 = new DateTime(DateTime.Now.Year + 1, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second );
+            else Timer_PandaEffect1 = new DateTime(DateTime.Now.Year + 1, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
 
-            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "PandaEffectsBox")[2]) == true )
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "PandaEffectsBox")[2]) == true)
             {
                 if (PageContent.Contains("Увеличение в 2 раза вероятности получения билета на большую или малую поляну.") == true)
                 {
@@ -3492,7 +3492,7 @@ namespace Simple_Bot
             }
             else Timer_PandaEffect2 = new DateTime(DateTime.Now.Year + 1, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
 
-            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "PandaEffectsBox")[3]) == true )
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "PandaEffectsBox")[3]) == true)
             {
                 if (PageContent.Contains("Любой получаемый опыт увеличивается в 2 раза.") == true)
                 {
@@ -3501,7 +3501,7 @@ namespace Simple_Bot
             }
             else Timer_PandaEffect3 = new DateTime(DateTime.Now.Year + 1, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
 
-            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "PandaEffectsBox")[4]) == true )
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "PandaEffectsBox")[4]) == true)
             {
                 if (PageContent.Contains("Увеличение в 2 раза дохода с побежденных страшилок.") == true)
                 {
@@ -3517,7 +3517,7 @@ namespace Simple_Bot
             {
                 if (Timer_FarCountrys.CompareTo(DateTime.Now) < 0)
                 {
-                    if (Convert.ToInt32( GetResourceValue("Ртутный порошок")[1]) - 5 > Convert.ToInt32( GetResourceValue("Ртутный порошок")[0]))
+                    if (Convert.ToInt32(GetResourceValue("Ртутный порошок")[1]) - 5 > Convert.ToInt32(GetResourceValue("Ртутный порошок")[0]))
                     {
                         try
                         {
@@ -3700,7 +3700,7 @@ namespace Simple_Bot
 
         public void LitleGuru()
         {
-            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[9])==true)
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[9]) == true)
             {
                 while (true)
                 {
@@ -3871,7 +3871,7 @@ namespace Simple_Bot
             IMouse mm = ((IHasInputDevices)driver).Mouse;
             mm.MouseMove(loc.Coordinates);
             mm.MouseDown(loc.Coordinates);
-            mm.MouseUp(loc.Coordinates);  
+            mm.MouseUp(loc.Coordinates);
         }
 
         public void CheckForNest()
@@ -3914,7 +3914,7 @@ namespace Simple_Bot
                             {
                                 driver.FindElement(By.LinkText("ПРОДОЛЖИТЬ ИЗУЧЕНИЕ")).Click();
                             }
-                            catch{}
+                            catch { }
                             try
                             {
                                 driver.FindElement(By.LinkText("ПОВТОРИТЬ ИЗУЧЕНИЕ")).Click();
@@ -3946,7 +3946,7 @@ namespace Simple_Bot
                         Delays();
                         Timer_MassAbil = ToDateTime(GetResourceValue("Время до окончания тренировки массового скилла.")[0]);
                     }
-                    catch 
+                    catch
                     {
                         Timer_MassAbil = ToDateTime(GetResourceValue("Время до окончания тренировки массового скилла.")[0]);
                     }
@@ -3993,6 +3993,44 @@ namespace Simple_Bot
             }
         }
 
-
+        public void DayliGifts()
+        {
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[14]) == true)
+            {
+                if (Timer_DayliGifts.CompareTo(DateTime.Now) < 0)
+                {
+                    try
+                    {
+                        driver.FindElement(By.LinkText("Школа")).Click();
+                        Delays();
+                        driver.FindElement(By.LinkText("Школьные поручения")).Click();
+                        Delays();
+                        try
+                        {
+                            IList<IWebElement> getList = driver.FindElements(By.XPath(".//input[@value='ПОЛУЧИТЬ НАГРАДУ']"));
+                            bool br = false;
+                            while (!br)
+                            {
+                                getList = driver.FindElements(By.XPath(".//input[@value='ПОЛУЧИТЬ НАГРАДУ']"));
+                                br = true;
+                                foreach (IWebElement get in getList)
+                                {
+                                    if (get.Enabled)
+                                    {
+                                        get.Click();
+                                        br = false;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        catch { }
+                    }
+                    catch { }
+                    string minutes = Convert.ToString(rnd.Next(24, 36));
+                    Timer_DayliGifts = ToDateTime("00:" + minutes + ":06");
+                }
+            }
+        }
     }
 }

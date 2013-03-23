@@ -327,6 +327,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.textBoxProdutName = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.checkBoxDayliGifts = new System.Windows.Forms.CheckBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -756,6 +757,7 @@
             // 
             // MenuBox
             // 
+            this.MenuBox.Controls.Add(this.checkBoxDayliGifts);
             this.MenuBox.Controls.Add(this.pictureBox25);
             this.MenuBox.Controls.Add(this.button7);
             this.MenuBox.Controls.Add(this.checkBoxLitleGuru);
@@ -771,7 +773,7 @@
             this.MenuBox.Controls.Add(this.AdditionalSettingsBox);
             this.MenuBox.Location = new System.Drawing.Point(210, 4);
             this.MenuBox.Name = "MenuBox";
-            this.MenuBox.Size = new System.Drawing.Size(461, 506);
+            this.MenuBox.Size = new System.Drawing.Size(461, 529);
             this.MenuBox.TabIndex = 2;
             this.MenuBox.TabStop = false;
             this.MenuBox.Text = " Settings ";
@@ -809,9 +811,9 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(161, 476);
+            this.button10.Location = new System.Drawing.Point(309, 478);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(135, 21);
+            this.button10.Size = new System.Drawing.Size(141, 21);
             this.button10.TabIndex = 16;
             this.button10.Text = "Казна";
             this.button10.UseVisualStyleBackColor = true;
@@ -1296,11 +1298,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(309, 476);
+            this.button4.Location = new System.Drawing.Point(13, 503);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 21);
+            this.button4.Size = new System.Drawing.Size(437, 21);
             this.button4.TabIndex = 8;
-            this.button4.Text = "Save and Back";
+            this.button4.Text = "-==>> Save and Back <<==--";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -3188,7 +3190,7 @@
             this.SoapBox.Controls.Add(this.pictureBox10);
             this.SoapBox.Controls.Add(this.textBoxSoapToTP);
             this.SoapBox.Controls.Add(this.label30);
-            this.SoapBox.Location = new System.Drawing.Point(210, 516);
+            this.SoapBox.Location = new System.Drawing.Point(209, 567);
             this.SoapBox.Name = "SoapBox";
             this.SoapBox.Size = new System.Drawing.Size(277, 108);
             this.SoapBox.TabIndex = 15;
@@ -3248,7 +3250,7 @@
             this.StiringBox.Controls.Add(this.numericUpDownStiringByCryMin);
             this.StiringBox.Controls.Add(this.radioButtonStiringByCry);
             this.StiringBox.Controls.Add(this.radioButtonUseClearPotion);
-            this.StiringBox.Location = new System.Drawing.Point(492, 516);
+            this.StiringBox.Location = new System.Drawing.Point(497, 572);
             this.StiringBox.Name = "StiringBox";
             this.StiringBox.Size = new System.Drawing.Size(165, 119);
             this.StiringBox.TabIndex = 16;
@@ -3919,6 +3921,16 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Название товара:";
             // 
+            // checkBoxDayliGifts
+            // 
+            this.checkBoxDayliGifts.AutoSize = true;
+            this.checkBoxDayliGifts.Location = new System.Drawing.Point(164, 481);
+            this.checkBoxDayliGifts.Name = "checkBoxDayliGifts";
+            this.checkBoxDayliGifts.Size = new System.Drawing.Size(119, 17);
+            this.checkBoxDayliGifts.TabIndex = 19;
+            this.checkBoxDayliGifts.Text = "Собирать дейлики";
+            this.checkBoxDayliGifts.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4398,6 +4410,7 @@
         private System.Windows.Forms.TextBox textBoxCurrenCry;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox textBoxCurrentGold;
+        private System.Windows.Forms.CheckBox checkBoxDayliGifts;
     }
 }
 
