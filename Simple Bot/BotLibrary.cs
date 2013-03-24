@@ -582,7 +582,7 @@ namespace Simple_Bot
                 else
                 {
                     //mail.ru login
-                    driver.Navigate().GoToUrl("http://g2.botva.mail.ru/");
+                    driver.Navigate().GoToUrl("http://botva.mail.ru/");
                     driver.FindElement(By.Id("server")).FindElement(By.XPath(ServerValueXPath)).Click();
                     driver.FindElement(By.Id("loginForm")).FindElement(By.XPath(".//table/tbody/tr/td[1]/input")).SendKeys(Log);
                     driver.FindElement(By.Id("loginForm")).FindElement(By.XPath(".//input[2]")).SendKeys(Pas);
@@ -598,7 +598,7 @@ namespace Simple_Bot
             Delay1 = 600;
             Delay2 = 1000;
 
-            Timer_Relogin = ToDateTime("00:10:10");
+            Timer_Relogin = ToDateTime("00:05:10");
 
             //асайнем таймер сбытни
             if (Convert.ToBoolean(ReadFromFile(SettingsFile, "ShopBox")[1]) == true)
@@ -637,7 +637,7 @@ namespace Simple_Bot
         {
             if (Timer_Relogin.CompareTo(DateTime.Now) < 0)
             {
-                Timer_Relogin = ToDateTime("00:10:00");
+                Timer_Relogin = ToDateTime("00:05:23");
                 try
                 {
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(TimeOutValue));
@@ -3802,7 +3802,14 @@ namespace Simple_Bot
                         System.Threading.Thread.Sleep(16000);
                         AdvTimerAssigne();
                         TryToClick();
-                        driver.Navigate().GoToUrl(driverUrl);
+                        if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
+                        {
+                            driver.Navigate().GoToUrl("http://www.botva.ru/");
+                        }
+                        else
+                        {
+                            driver.Navigate().GoToUrl("http://botva.mail.ru/");
+                        }
                     }
                     catch { }
                 }
@@ -3842,7 +3849,7 @@ namespace Simple_Bot
 
         private void TryToClick()
         {
-            if (rnd.Next(0, 4) == 3)
+            if (rnd.Next(0, 3) == 1)
             {
                 IList<IWebElement> advList = driver.FindElements(By.XPath(".//div[@id='pgcontainer']//a[@onfocus]"));
                 int advLink = rnd.Next(0, 3);

@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2465;
+        int BotVersion = 2466;
 
         string lable29Text;
 
