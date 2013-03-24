@@ -126,3 +126,18 @@ F:\SBRepo\Simple Bot\obj\x86\Debug\GenerateResource.read.1.tlog
 F:\SBRepo\Simple Bot\obj\x86\Debug\GenerateResource.write.1.tlog
 F:\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.exe.manifest
 F:\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.application
+E:\Botva\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe.config
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.exe
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.pdb
+E:\Botva\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe.manifest
+E:\Botva\SBRepo\Simple Bot\bin\Debug\Simple Bot.application
+E:\Botva\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe
+E:\Botva\SBRepo\Simple Bot\bin\Debug\Simple Bot.pdb
+E:\Botva\SBRepo\Simple Bot\bin\Debug\WebDriver.pdb
+E:\Botva\SBRepo\Simple Bot\bin\Debug\WebDriver.xml
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.csprojResolveAssemblyReference.cache
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple_Bot.Form1.resources
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple_Bot.Properties.Resources.resources
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.csproj.GenerateResource.Cache
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.exe.manifest
+E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.application

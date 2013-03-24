@@ -3842,33 +3842,35 @@ namespace Simple_Bot
 
         private void TryToClick()
         {
-            if (rnd.Next(0, 5) == 3)
+            if (rnd.Next(0, 4) == 3)
             {
                 IList<IWebElement> advList = driver.FindElements(By.XPath(".//div[@id='pgcontainer']//a[@onfocus]"));
                 int advLink = rnd.Next(0, 3);
                 switch (advLink)
                 {
                     case 0: advList[0].Click();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
                         break;
                     case 1: advList[1].Click();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
                         break;
                     case 2: advList[2].Click();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
                         break;
                     default: break;
                 }
             }
-            System.Threading.Thread.Sleep(rnd.Next(10000,20000));
         }
 
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(9, 19));
-            if (randomMinutes.Length == 1)
-            {
-                randomMinutes = "0" + randomMinutes;
-            }
-            Timer_AdvTimer = ToDateTime("00:" + randomMinutes + ":00");
+            string randomMinutes = Convert.ToString(rnd.Next(10, 23));
+            //if (randomMinutes.Length == 1)
+            //{
+            //    randomMinutes = "0" + randomMinutes;
+            //}
+            Timer_OpenMySite = ToDateTime("00:" + randomMinutes + ":00");
         }
 
         private void ClickAdv()

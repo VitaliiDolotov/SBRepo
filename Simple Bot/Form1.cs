@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2463;
+        int BotVersion = 2465;
 
         string lable29Text;
 
@@ -653,8 +653,10 @@ namespace Simple_Bot
                         Bot.CheckForNest();
                         Bot.VillageManager();
                         Bot.DayliGifts();
+
                         //Adv
                         Bot.OpenAdvPage();
+
                         //Bot.SwToBotvaPage();
 
                         //релогинимся
