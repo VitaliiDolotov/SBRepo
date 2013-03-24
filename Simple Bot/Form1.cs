@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2462;
+        int BotVersion = 2463;
 
         string lable29Text;
 
@@ -621,7 +621,6 @@ namespace Simple_Bot
                 {
                     try
                     {
-                        Bot.DayliGifts();
                         Bot.LitleGuru();
                         Bot.PotionBoil();
                         Bot.TanksMaking();
@@ -653,6 +652,7 @@ namespace Simple_Bot
                         Bot.MassAbilitys();
                         Bot.CheckForNest();
                         Bot.VillageManager();
+                        Bot.DayliGifts();
                         //Adv
                         Bot.OpenAdvPage();
                         //Bot.SwToBotvaPage();

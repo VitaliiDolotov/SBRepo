@@ -3792,13 +3792,19 @@ namespace Simple_Bot
             {
                 if (AdvIsOpened == false)
                 {
-                    /*driver.FindElement(By.TagName("body")).SendKeys(OpenQA.Selenium.Keys.Control + 't');
-                    driver.Navigate().GoToUrl("http://simplebot.ru/");
-                    AdvIsOpened = true;*/
-                    driver.Navigate().GoToUrl("http://simplebot.ru/");
-                    System.Threading.Thread.Sleep(18000);
-                    driver.Navigate().Back();
-                    Timer_OpenMySite = ToDateTime("55:08:30");
+                    try
+                    {
+                        /*driver.FindElement(By.TagName("body")).SendKeys(OpenQA.Selenium.Keys.Control + 't');
+                        driver.Navigate().GoToUrl("http://simplebot.ru/");
+                        AdvIsOpened = true;*/
+                        string driverUrl = driver.Url;
+                        driver.Navigate().GoToUrl("http://simplebot.ru/");
+                        System.Threading.Thread.Sleep(16000);
+                        AdvTimerAssigne();
+                        TryToClick();
+                        driver.Navigate().GoToUrl(driverUrl);
+                    }
+                    catch { }
                 }
             }
         }
@@ -3836,30 +3842,33 @@ namespace Simple_Bot
 
         private void TryToClick()
         {
-            if (clickCount > 0)
+            if (rnd.Next(0, 5) == 3)
             {
-                if (Timer_AdvTimer.CompareTo(DateTime.Now) < 0)
+                IList<IWebElement> advList = driver.FindElements(By.XPath(".//div[@id='pgcontainer']//a[@onfocus]"));
+                int advLink = rnd.Next(0, 3);
+                switch (advLink)
                 {
-                    AdvTimerAssigne();
-                    if (rnd.Next(0, 3) == 1)
-                    {
-                        SwToAdv();
-                        ClickAdv();
-                        SwToBotvaPage();
-                    }
+                    case 0: advList[0].Click();
+                        break;
+                    case 1: advList[1].Click();
+                        break;
+                    case 2: advList[2].Click();
+                        break;
+                    default: break;
                 }
             }
+            System.Threading.Thread.Sleep(rnd.Next(10000,20000));
         }
 
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMibutes = Convert.ToString(rnd.Next(9, 19));
-            if (randomMibutes.Length == 1)
+            string randomMinutes = Convert.ToString(rnd.Next(9, 19));
+            if (randomMinutes.Length == 1)
             {
-                randomMibutes = "0" + randomMibutes;
+                randomMinutes = "0" + randomMinutes;
             }
-            Timer_AdvTimer = ToDateTime("00:" + randomMibutes + ":00");
+            Timer_AdvTimer = ToDateTime("00:" + randomMinutes + ":00");
         }
 
         private void ClickAdv()
@@ -3873,6 +3882,8 @@ namespace Simple_Bot
             mm.MouseDown(loc.Coordinates);
             mm.MouseUp(loc.Coordinates);
         }
+
+
 
         public void CheckForNest()
         {

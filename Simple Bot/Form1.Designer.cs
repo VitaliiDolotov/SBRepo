@@ -59,6 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
             this.MenuBox = new System.Windows.Forms.GroupBox();
+            this.checkBoxDayliGifts = new System.Windows.Forms.CheckBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.checkBoxLitleGuru = new System.Windows.Forms.CheckBox();
@@ -327,7 +328,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.textBoxProdutName = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.checkBoxDayliGifts = new System.Windows.Forms.CheckBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -777,6 +777,16 @@
             this.MenuBox.TabIndex = 2;
             this.MenuBox.TabStop = false;
             this.MenuBox.Text = " Settings ";
+            // 
+            // checkBoxDayliGifts
+            // 
+            this.checkBoxDayliGifts.AutoSize = true;
+            this.checkBoxDayliGifts.Location = new System.Drawing.Point(164, 481);
+            this.checkBoxDayliGifts.Name = "checkBoxDayliGifts";
+            this.checkBoxDayliGifts.Size = new System.Drawing.Size(119, 17);
+            this.checkBoxDayliGifts.TabIndex = 19;
+            this.checkBoxDayliGifts.Text = "Собирать дейлики";
+            this.checkBoxDayliGifts.UseVisualStyleBackColor = true;
             // 
             // pictureBox25
             // 
@@ -3920,16 +3930,6 @@
             this.label38.Size = new System.Drawing.Size(98, 13);
             this.label38.TabIndex = 0;
             this.label38.Text = "Название товара:";
-            // 
-            // checkBoxDayliGifts
-            // 
-            this.checkBoxDayliGifts.AutoSize = true;
-            this.checkBoxDayliGifts.Location = new System.Drawing.Point(164, 481);
-            this.checkBoxDayliGifts.Name = "checkBoxDayliGifts";
-            this.checkBoxDayliGifts.Size = new System.Drawing.Size(119, 17);
-            this.checkBoxDayliGifts.TabIndex = 19;
-            this.checkBoxDayliGifts.Text = "Собирать дейлики";
-            this.checkBoxDayliGifts.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
