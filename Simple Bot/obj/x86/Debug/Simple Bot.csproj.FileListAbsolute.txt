@@ -141,3 +141,20 @@ E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple_Bot.Properties.Resources.resourc
 E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.csproj.GenerateResource.Cache
 E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.exe.manifest
 E:\Botva\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.application
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe.config
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.exe
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.pdb
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe.manifest
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\Simple Bot.application
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\Simple Bot.exe
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\Simple Bot.pdb
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\WebDriver.dll
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\WebDriver.pdb
+F:\SBRepo\SBRepo\Simple Bot\bin\Debug\WebDriver.xml
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\Simple_Bot.Form1.resources
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\Simple_Bot.Properties.Resources.resources
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.exe.manifest
+F:\SBRepo\SBRepo\Simple Bot\obj\x86\Debug\Simple Bot.application

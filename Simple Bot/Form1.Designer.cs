@@ -328,6 +328,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.textBoxProdutName = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.checkBoxHideBrowser = new System.Windows.Forms.CheckBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -447,6 +448,7 @@
             // 
             // LoginBox
             // 
+            this.LoginBox.Controls.Add(this.checkBoxHideBrowser);
             this.LoginBox.Controls.Add(this.pictureBox27);
             this.LoginBox.Controls.Add(this.button20);
             this.LoginBox.Controls.Add(this.pictureBox26);
@@ -3931,6 +3933,17 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Название товара:";
             // 
+            // checkBoxHideBrowser
+            // 
+            this.checkBoxHideBrowser.AutoSize = true;
+            this.checkBoxHideBrowser.Location = new System.Drawing.Point(74, 180);
+            this.checkBoxHideBrowser.Name = "checkBoxHideBrowser";
+            this.checkBoxHideBrowser.Size = new System.Drawing.Size(117, 17);
+            this.checkBoxHideBrowser.TabIndex = 22;
+            this.checkBoxHideBrowser.Text = "Спрятать браузер";
+            this.checkBoxHideBrowser.UseVisualStyleBackColor = true;
+            this.checkBoxHideBrowser.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4411,6 +4424,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox textBoxCurrentGold;
         private System.Windows.Forms.CheckBox checkBoxDayliGifts;
+        private System.Windows.Forms.CheckBox checkBoxHideBrowser;
     }
 }
 

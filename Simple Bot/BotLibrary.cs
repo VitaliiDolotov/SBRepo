@@ -7,17 +7,31 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.IO;
-//using SimpleBotLibrary.ocr;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
-//using NUnit.Framework;
 using System.Media;
+using System.Diagnostics;               // For prcesss related information
+using System.Runtime.InteropServices;   // For DLL importing 
 
 namespace Simple_Bot
 {
     public class BotvaClass
     {
+        private const int SW_HIDE = 0;
+
+        private const int SW_RESTORE = 9;
+
+        private int hWnd;
+
+        string oldBotvaWindow;
+
+        [DllImport("User32")]
+        private static extern int ShowWindow(int hwnd, int nCmdShow);
+
+
+
+
         int Delay1 = 0;
         int Delay2 = 0;
 
@@ -83,6 +97,34 @@ namespace Simple_Bot
         IWebDriver driver;
 
         Random rnd = new Random();
+
+        public void Hide()
+        {
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[15]) == true)
+            {
+                Process[] processRunning = Process.GetProcesses();
+                foreach (Process pr in processRunning)
+                {
+                    if (pr.ProcessName.Contains("chrome") && pr.MainWindowTitle.Contains("Ботва") && oldBotvaWindow != pr.MainWindowHandle.ToString())
+                    {
+                        hWnd = pr.MainWindowHandle.ToInt32();
+                        ShowWindow(hWnd, SW_HIDE);
+                    }
+                }
+            }
+        }
+
+        private void OldBotvaWindow()
+        {
+            Process[] processRunning = Process.GetProcesses();
+            foreach (Process pr in processRunning)
+            {
+                if (pr.ProcessName.Contains("chrome") && pr.MainWindowTitle.Contains("Ботва"))
+                {
+                    oldBotvaWindow = pr.MainWindowHandle.ToString();
+                }
+            }
+        }
 
         public void EnvironmentSetUp()
         {
@@ -538,7 +580,9 @@ namespace Simple_Bot
 
         public BotvaClass()
         {
+            OldBotvaWindow();
             driver = Login(ReadFromFile(SettingsFile, "LoginBox")[1], ReadFromFile(SettingsFile, "LoginBox")[2], ReadFromFile(SettingsFile, "LoginBox")[3], ReadFromFile(SettingsFile, "LoginBox")[4], Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]));
+            Hide();
         }
 
         public IWebDriver Login(string server, string Log, string Pas, string DriverType, bool MailRuLogin)
@@ -622,13 +666,25 @@ namespace Simple_Bot
                 ChromeOptions options = new ChromeOptions();
                 options.AddArgument("--disable-extensions");
                 IWebDriver driver = new ChromeDriver(options);
-                Timer_OpenMySite = ToDateTime("00:10:30");
+
+                //Hide chromedriver Window
+                Process[] processRunning = Process.GetProcesses();
+                foreach (Process pr in processRunning)
+                {
+                    if (pr.ProcessName.Contains("chromedriver"))
+                    {
+                        hWnd = pr.MainWindowHandle.ToInt32();
+                        ShowWindow(hWnd, SW_HIDE);
+                        break;
+                    }
+                }
+                Timer_OpenMySite = ToDateTime("00:23:30");
                 return driver;
             }
             else
             {
                 IWebDriver driver = new FirefoxDriver();
-                Timer_OpenMySite = ToDateTime("00:10:30");
+                Timer_OpenMySite = ToDateTime("00:25:30");
                 return driver;
             }
         }
@@ -642,6 +698,22 @@ namespace Simple_Bot
                 {
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(TimeOutValue));
                     driver.Navigate().Refresh();
+                    try
+                    {
+                        System.Threading.Thread.Sleep(3000);
+                        IWebElement test = driver.FindElement(By.XPath("//a[@id='news_link'][text()='Новости']"));
+                    }
+                    catch
+                    {
+                        if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
+                        {
+                            driver.Navigate().GoToUrl("http://www.botva.ru/");
+                        }
+                        else
+                        {
+                            driver.Navigate().GoToUrl("http://botva.mail.ru/");
+                        }
+                    }
                 }
                 catch { }
 
@@ -649,7 +721,7 @@ namespace Simple_Bot
                 {
                     int iterator = 0;
                     //если нет нашего тайтла или линки в футере то релогинемся
-                    while (driver.Title.Contains("Ботва Онлайн | Битва за реальную капусту!") == false || driver.FindElement(By.XPath("//a[@href='http://www.ddestiny.ru']")).Displayed == false)
+                    while (driver.Title.Contains("Ботва Онлайн | Битва за реальную капусту!") == false || driver.FindElement(By.XPath("//a[@id='news_link'][text()='Новости']")).Displayed == false)
                     {
                         if (iterator != 0)
                         {
@@ -3801,7 +3873,7 @@ namespace Simple_Bot
                         driver.Navigate().GoToUrl("http://simplebot.ru/");
                         System.Threading.Thread.Sleep(16000);
                         AdvTimerAssigne();
-                        TryToClick();
+                        TryToClick2under();
                         if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
                         {
                             driver.Navigate().GoToUrl("http://www.botva.ru/");
@@ -3849,7 +3921,7 @@ namespace Simple_Bot
 
         private void TryToClick()
         {
-            if (rnd.Next(0, 3) == 1)
+            if (rnd.Next(0, 6) == 1)
             {
                 IList<IWebElement> advList = driver.FindElements(By.XPath(".//div[@id='pgcontainer']//a[@onfocus]"));
                 int advLink = rnd.Next(0, 3);
@@ -3869,10 +3941,35 @@ namespace Simple_Bot
             }
         }
 
+        private void TryToClick2under()
+        {
+            if (rnd.Next(0, 6) == 1)
+            {
+                int advLink = rnd.Next(0, 5);
+                switch (advLink)
+                {
+                    case 0: driver.FindElement(By.CssSelector("#un1 a")).Click();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                        break;
+                    case 1:
+                    case 2: driver.FindElement(By.CssSelector("#un5 a")).Click();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                        break;
+                    case 3:
+                    case 4: driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("#un3 iframe")));
+                        driver.FindElement(By.CssSelector("a")).Click();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                        driver.SwitchTo().DefaultContent();
+                        break;
+                    default: break;
+                }
+            }
+        }
+
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(40, 55));
+            string randomMinutes = Convert.ToString(rnd.Next(28, 37));
             //if (randomMinutes.Length == 1)
             //{
             //    randomMinutes = "0" + randomMinutes;

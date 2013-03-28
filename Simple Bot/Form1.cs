@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2469;
+        int BotVersion = 2472;
 
         string lable29Text;
 
@@ -121,6 +121,7 @@ namespace Simple_Bot
                 checkBoxVillageManager.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[12]);
                 numericUpDownVillageManagerTime.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[13]);
                 checkBoxDayliGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[14]);
+                checkBoxHideBrowser.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[15]);
             }
             catch { }
 
@@ -409,7 +410,8 @@ namespace Simple_Bot
             string[] AdditionalSettings = { Convert.ToString(checkBoxCryDust.Checked), Convert.ToString(checkBoxFish.Checked), Convert.ToString(checkBoxFly.Checked),
                                               Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
                                               Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
-                                              Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked)};
+                                              Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
+                                              Convert.ToString(checkBoxHideBrowser.Checked)};
             CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
             checkBoxCryDust.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[1]);
             checkBoxFish.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[2]);
@@ -425,6 +427,7 @@ namespace Simple_Bot
             checkBoxVillageManager.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[12]);
             numericUpDownVillageManagerTime.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[13]);
             checkBoxDayliGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[14]);
+            checkBoxHideBrowser.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[15]);
 
             //Underground Settings
             string[] UndergroundSettings = { Convert.ToString(checkBoxUnderground.Checked), Convert.ToString(radioButtonUnderground.Checked), Convert.ToString(radioButtonFastUnderground.Checked),
@@ -1359,6 +1362,7 @@ namespace Simple_Bot
         private void button17_MouseHover(object sender, EventArgs e)
         {
             button17.Visible = false;
+            checkBoxHideBrowser.Visible = true;
             int sizeBox = LoginBox.Size.Height;
             int sizeForm = this.Size.Height;
             for (int i = 0; i < 38; i++)
@@ -1376,6 +1380,7 @@ namespace Simple_Bot
         private void button18_MouseHover(object sender, EventArgs e)
         {
             button18.Visible = false;
+            checkBoxHideBrowser.Visible = false;
             int sizeBox = LoginBox.Size.Height;
             int sizeForm = this.Size.Height;
             for (int i = 0; i < 38; i++)
