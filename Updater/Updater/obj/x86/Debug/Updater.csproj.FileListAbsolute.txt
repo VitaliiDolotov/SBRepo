@@ -1,0 +1,24 @@
+D:\Programs\BotvaBot\Updater\Updater\bin\Debug\Updater.exe
+D:\Programs\BotvaBot\Updater\Updater\bin\Debug\Updater.pdb
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\Updater.Form1.resources
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\ResGen.read.1.tlog
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\ResGen.write.1.tlog
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\Updater.exe
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\Updater.pdb
+D:\Programs\BotvaBot\Updater\Updater\bin\Debug\Updater.exe.config
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Programs\BotvaBot\Updater\Updater\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\bin\Debug\Updater.exe.config
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\Updater.exe
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\Updater.pdb
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\bin\Debug\Updater.exe
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\bin\Debug\Updater.pdb
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\Updater.Form1.resources
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\ResGen.write.1.tlog
