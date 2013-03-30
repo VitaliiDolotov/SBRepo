@@ -25,6 +25,7 @@ namespace Simple_Bot
         private int hWnd;
 
         string oldBotvaWindow;
+        string newBotvaWindow;
 
         [DllImport("User32")]
         private static extern int ShowWindow(int hwnd, int nCmdShow);
@@ -107,8 +108,26 @@ namespace Simple_Bot
                 {
                     if (pr.ProcessName.Contains("chrome") && pr.MainWindowTitle.Contains("Ботва") && oldBotvaWindow != pr.MainWindowHandle.ToString())
                     {
+                        newBotvaWindow = pr.MainWindowHandle.ToString();
                         hWnd = pr.MainWindowHandle.ToInt32();
                         ShowWindow(hWnd, SW_HIDE);
+                    }
+                }
+            }
+        }
+
+        public void ReHideWindow()
+        {
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[15]) == true)
+            {
+                Process[] processRunning = Process.GetProcesses();
+                foreach (Process pr in processRunning)
+                {
+                    if (newBotvaWindow == pr.MainWindowHandle.ToString())
+                    {
+                        hWnd = pr.MainWindowHandle.ToInt32();
+                        ShowWindow(hWnd, SW_HIDE);
+                        break;
                     }
                 }
             }
@@ -733,6 +752,7 @@ namespace Simple_Bot
                     }
                 }
                 catch { }
+                ReHideWindow();
             }
         }
 
@@ -3873,14 +3893,16 @@ namespace Simple_Bot
                         driver.Navigate().GoToUrl("http://simplebot.ru/");
                         System.Threading.Thread.Sleep(16000);
                         AdvTimerAssigne();
-                        TryToClick2under();
+                        ClickRandomAdv();
                         if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
                         {
                             driver.Navigate().GoToUrl("http://www.botva.ru/");
+                            ReHideWindow();
                         }
                         else
                         {
                             driver.Navigate().GoToUrl("http://botva.mail.ru/");
+                            ReHideWindow();
                         }
                     }
                     catch { }
@@ -3921,7 +3943,7 @@ namespace Simple_Bot
 
         private void TryToClick()
         {
-            if (rnd.Next(0, 6) == 1)
+            if (rnd.Next(0, 5) == 1)
             {
                 IList<IWebElement> advList = driver.FindElements(By.XPath(".//div[@id='pgcontainer']//a[@onfocus]"));
                 int advLink = rnd.Next(0, 3);
@@ -3941,35 +3963,82 @@ namespace Simple_Bot
             }
         }
 
-        private void TryToClick2under()
+        //-------------ADV------------- START
+
+        private void TryToClick2underTopBar()
         {
-            if (rnd.Next(0, 6) == 1)
+            int advLink = rnd.Next(0, 5);
+            switch (advLink)
             {
-                int advLink = rnd.Next(0, 5);
-                switch (advLink)
+                case 0: driver.FindElement(By.CssSelector("#un1 a")).Click();
+                    ReHideWindow();
+                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    break;
+                case 1:
+                case 2: driver.FindElement(By.CssSelector("#un5 a")).Click();
+                    ReHideWindow();
+                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    break;
+                case 3:
+                case 4: driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("#un3 iframe")));
+                    driver.FindElement(By.CssSelector("a")).Click();
+                    ReHideWindow();
+                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    driver.SwitchTo().DefaultContent();
+                    break;
+                default: break;
+            }
+        }
+
+        private void TryToClick2underBelowTheHeader()
+        {
+            driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("iframe[height='90pt']")));
+            IList<IWebElement> advLinks = driver.FindElements(By.CssSelector("td[valign]"));
+            int advLink = rnd.Next(0, 3);
+            switch (advLink)
+            {
+                case 0: advLinks[0].FindElement(By.TagName("a")).Click();
+                    ReHideWindow();
+                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    break;
+                case 1: advLinks[1].FindElement(By.TagName("a")).Click();
+                    ReHideWindow();
+                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    break;
+                case 2: advLinks[2].FindElement(By.TagName("a")).Click();
+                    ReHideWindow();
+                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    break;
+                default: break;
+            }
+            driver.SwitchTo().DefaultContent();
+        }
+
+        public void ClickRandomAdv()
+        {
+            if (rnd.Next(0, 5) == 1)
+            {
+                int adv = rnd.Next(0, 3);
+                switch (adv)
                 {
-                    case 0: driver.FindElement(By.CssSelector("#un1 a")).Click();
-                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    case 0:
+                        TryToClick2underTopBar();
                         break;
                     case 1:
-                    case 2: driver.FindElement(By.CssSelector("#un5 a")).Click();
-                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
-                        break;
-                    case 3:
-                    case 4: driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("#un3 iframe")));
-                        driver.FindElement(By.CssSelector("a")).Click();
-                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
-                        driver.SwitchTo().DefaultContent();
+                    case 2:
+                        TryToClick2underBelowTheHeader();
                         break;
                     default: break;
                 }
             }
         }
 
+        //-------------ADV------------- END
+
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(28, 37));
+            string randomMinutes = Convert.ToString(rnd.Next(24, 37));
             //if (randomMinutes.Length == 1)
             //{
             //    randomMinutes = "0" + randomMinutes;
