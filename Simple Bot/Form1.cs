@@ -20,13 +20,13 @@ using System.Threading;
 using Simple_Bot.ocr;
 using System.Runtime.InteropServices;
 using System.Media;
-using OpenQA.Selenium.PhantomJS;
+
 
 namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2473;
+        int BotVersion = 2474;
 
         string lable29Text;
 
@@ -1406,14 +1406,11 @@ namespace Simple_Bot
 
         private void button20_Click_1(object sender, EventArgs e)
         {
-            //IWebDriver driver = new FirefoxDriver();
-            //driver.Navigate().GoToUrl("http://ya.ru/");
-            //Actions aBuilder = new Actions(driver);
-            //Actions aBuilder1 = new Actions(driver);
-            //IWebElement body = driver.FindElement(By.TagName("body"));
-            ////body.SendKeys(Keys.chord(OpenQA.Selenium.Keys.Control, "a"));
-            ////aBuilder.KeyDown(OpenQA.Selenium.Keys.Control).KeyDown("t").KeyUp("t").KeyUp(OpenQA.Selenium.Keys.Control).Build().Perform()
+
         }
+
+        [DllImport("user32.dll")]
+        static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
         private void pictureBox27_Click(object sender, EventArgs e)
         {

@@ -22,3 +22,15 @@ C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\GenerateResource
 C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\ResGen.read.1.tlog
 C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Aksis\Desktop\Botva HTML\Updater\Updater\obj\x86\Debug\ResGen.write.1.tlog
+F:\SBRepo\SBRepo\Updater\Updater\bin\Debug\Updater.exe.config
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\Updater.exe
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\Updater.pdb
+F:\SBRepo\SBRepo\Updater\Updater\bin\Debug\Updater.exe
+F:\SBRepo\SBRepo\Updater\Updater\bin\Debug\Updater.pdb
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Form1.resources
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\ResGen.read.1.tlog
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\SBRepo\SBRepo\Updater\Updater\obj\x86\Debug\ResGen.write.1.tlog

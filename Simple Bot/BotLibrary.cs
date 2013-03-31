@@ -697,13 +697,13 @@ namespace Simple_Bot
                         break;
                     }
                 }
-                Timer_OpenMySite = ToDateTime("00:23:30");
+                Timer_OpenMySite = ToDateTime("00:45:30");
                 return driver;
             }
             else
             {
                 IWebDriver driver = new FirefoxDriver();
-                Timer_OpenMySite = ToDateTime("00:25:30");
+                Timer_OpenMySite = ToDateTime("00:45:30");
                 return driver;
             }
         }
@@ -3967,27 +3967,31 @@ namespace Simple_Bot
 
         private void TryToClick2underTopBar()
         {
-            int advLink = rnd.Next(0, 5);
-            switch (advLink)
+            try
             {
-                case 0: driver.FindElement(By.CssSelector("#un1 a")).Click();
-                    ReHideWindow();
-                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
-                    break;
-                case 1:
-                case 2: driver.FindElement(By.CssSelector("#un5 a")).Click();
-                    ReHideWindow();
-                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
-                    break;
-                case 3:
-                case 4: driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("#un3 iframe")));
-                    driver.FindElement(By.CssSelector("a")).Click();
-                    ReHideWindow();
-                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
-                    driver.SwitchTo().DefaultContent();
-                    break;
-                default: break;
+                int advLink = rnd.Next(0, 5);
+                switch (advLink)
+                {
+                    case 0: driver.FindElement(By.CssSelector("#un1 a")).Click();
+                        ReHideWindow();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                        break;
+                    case 1:
+                    case 2: driver.FindElement(By.CssSelector("#un5 a")).Click();
+                        ReHideWindow();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                        break;
+                    case 3:
+                    case 4: driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("#un3 iframe")));
+                        driver.FindElement(By.CssSelector("a")).Click();
+                        ReHideWindow();
+                        System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                        driver.SwitchTo().DefaultContent();
+                        break;
+                    default: break;
+                }
             }
+            catch { }
         }
 
         private void TryToClick2underBelowTheHeader()
@@ -4016,7 +4020,7 @@ namespace Simple_Bot
 
         public void ClickRandomAdv()
         {
-            if (rnd.Next(0, 5) == 1)
+            if (rnd.Next(0, 4) == 1)
             {
                 int adv = rnd.Next(0, 3);
                 switch (adv)
@@ -4038,12 +4042,12 @@ namespace Simple_Bot
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(24, 37));
+            string randomMinutes = Convert.ToString(rnd.Next(29, 57));
             //if (randomMinutes.Length == 1)
             //{
             //    randomMinutes = "0" + randomMinutes;
             //}
-            Timer_OpenMySite = ToDateTime("00:" + randomMinutes + ":00");
+            Timer_OpenMySite = ToDateTime("01:" + randomMinutes + ":00");
         }
 
         private void ClickAdv()

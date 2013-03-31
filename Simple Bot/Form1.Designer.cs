@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.LoginBox = new System.Windows.Forms.GroupBox();
+            this.checkBoxHideBrowser = new System.Windows.Forms.CheckBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.button20 = new System.Windows.Forms.Button();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
@@ -328,7 +329,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.textBoxProdutName = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.checkBoxHideBrowser = new System.Windows.Forms.CheckBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -450,7 +450,6 @@
             // 
             this.LoginBox.Controls.Add(this.checkBoxHideBrowser);
             this.LoginBox.Controls.Add(this.pictureBox27);
-            this.LoginBox.Controls.Add(this.button20);
             this.LoginBox.Controls.Add(this.pictureBox26);
             this.LoginBox.Controls.Add(this.checkBoxTray);
             this.LoginBox.Controls.Add(this.button17);
@@ -482,6 +481,17 @@
             this.LoginBox.TabStop = false;
             this.LoginBox.Text = "Login:";
             // 
+            // checkBoxHideBrowser
+            // 
+            this.checkBoxHideBrowser.AutoSize = true;
+            this.checkBoxHideBrowser.Location = new System.Drawing.Point(74, 180);
+            this.checkBoxHideBrowser.Name = "checkBoxHideBrowser";
+            this.checkBoxHideBrowser.Size = new System.Drawing.Size(117, 17);
+            this.checkBoxHideBrowser.TabIndex = 22;
+            this.checkBoxHideBrowser.Text = "Спрятать браузер";
+            this.checkBoxHideBrowser.UseVisualStyleBackColor = true;
+            this.checkBoxHideBrowser.Visible = false;
+            // 
             // pictureBox27
             // 
             this.pictureBox27.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -496,13 +506,12 @@
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(53, 77);
+            this.button20.Location = new System.Drawing.Point(49, 465);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(75, 23);
             this.button20.TabIndex = 21;
             this.button20.Text = "button20";
             this.button20.UseVisualStyleBackColor = true;
-            this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
             // pictureBox26
@@ -762,6 +771,7 @@
             this.MenuBox.Controls.Add(this.checkBoxDayliGifts);
             this.MenuBox.Controls.Add(this.pictureBox25);
             this.MenuBox.Controls.Add(this.button7);
+            this.MenuBox.Controls.Add(this.button20);
             this.MenuBox.Controls.Add(this.checkBoxLitleGuru);
             this.MenuBox.Controls.Add(this.button10);
             this.MenuBox.Controls.Add(this.FarCountrBox);
@@ -3932,17 +3942,6 @@
             this.label38.Size = new System.Drawing.Size(98, 13);
             this.label38.TabIndex = 0;
             this.label38.Text = "Название товара:";
-            // 
-            // checkBoxHideBrowser
-            // 
-            this.checkBoxHideBrowser.AutoSize = true;
-            this.checkBoxHideBrowser.Location = new System.Drawing.Point(74, 180);
-            this.checkBoxHideBrowser.Name = "checkBoxHideBrowser";
-            this.checkBoxHideBrowser.Size = new System.Drawing.Size(117, 17);
-            this.checkBoxHideBrowser.TabIndex = 22;
-            this.checkBoxHideBrowser.Text = "Спрятать браузер";
-            this.checkBoxHideBrowser.UseVisualStyleBackColor = true;
-            this.checkBoxHideBrowser.Visible = false;
             // 
             // Form1
             // 
