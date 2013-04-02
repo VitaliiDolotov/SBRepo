@@ -4039,7 +4039,7 @@ namespace Simple_Bot
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(10, 57));
+            string randomMinutes = Convert.ToString(rnd.Next(10, 58));
             //if (randomMinutes.Length == 1)
             //{
             //    randomMinutes = "0" + randomMinutes;

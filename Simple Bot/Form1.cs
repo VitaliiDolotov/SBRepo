@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2475;
+        int BotVersion = 2476;
 
         Random rnd = new Random();
 
@@ -48,10 +48,10 @@ namespace Simple_Bot
 
             this.Size = new System.Drawing.Size(217, 242);
 
-            //Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
-            //Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
-            Timer_OpenSite = ToDateTime("00:00:02"); 
-            Timer_OpenWindow = ToDateTime("00:00:04");
+            Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
+            Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
+            //Timer_OpenSite = ToDateTime("00:00:02");
+            //Timer_OpenWindow = ToDateTime("00:00:04");
             //Timer_GoBack = ToDateTime("00:00:16");
 
             timer1.Start();
@@ -1571,27 +1571,29 @@ namespace Simple_Bot
             {
 
                 textBoxAdv.Text = Convert.ToString(DateTime.Now.Day);
-                if (webBrowser1.Document != null)
+                if (rnd.Next(0, 3) == 0)
                 {
-                    HtmlElementCollection elems = webBrowser1.Document.GetElementsByTagName("td");
-                    webBrowser1.Document.Body.ScrollTop = elems[3].OffsetRectangle.Top;
+                    if (webBrowser1.Document != null)
+                    {
+                        HtmlElementCollection elems = webBrowser1.Document.GetElementsByTagName("td");
+                        webBrowser1.Document.Body.ScrollTop = elems[3].OffsetRectangle.Top;
+                    }
+                    panelBrowser.Location = new Point(0, 0);
+                    this.Size = new System.Drawing.Size(panelBrowser.Width + 2, panelBrowser.Height + 2);
+                    this.MinimizeBox = false;
+                    this.WindowState = FormWindowState.Normal;
+                    this.Activate();
+                    this.Focus();
+                    webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
                 }
-                panelBrowser.Location = new Point(0, 0);
-                this.Size = new System.Drawing.Size(panelBrowser.Width + 2, panelBrowser.Height + 2);
-                this.MinimizeBox = false;
-                this.WindowState = FormWindowState.Normal;
-                this.Activate();
-                this.Focus();
-                webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
                 Timer_OpenWindow = ToDateTime("99:00:00");
-
                 //Additional Settings
-                //string[] AdditionalSettings = { Convert.ToString(checkBoxCryDust.Checked), Convert.ToString(checkBoxFish.Checked), Convert.ToString(checkBoxFly.Checked),
-                //                              Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
-                //                              Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
-                //                              Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
-                //                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text};
-                //CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
+                string[] AdditionalSettings = { Convert.ToString(checkBoxCryDust.Checked), Convert.ToString(checkBoxFish.Checked), Convert.ToString(checkBoxFly.Checked),
+                                              Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
+                                              Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
+                                              Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
+                                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text};
+                CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
             }
         }
 
