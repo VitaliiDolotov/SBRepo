@@ -26,11 +26,18 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2474;
+        int BotVersion = 2475;
+
+        Random rnd = new Random();
 
         string lable29Text;
 
-        bool botStatus ;
+        int ClickCount = 0;
+        static DateTime Timer_OpenSite = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+        static DateTime Timer_OpenWindow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+        static DateTime Timer_GoBack = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+
+        bool botStatus;
 
         string SettingsFile = "settings";
         string SettingsFileExtantion = ".bin";
@@ -39,7 +46,13 @@ namespace Simple_Bot
         {
             InitializeComponent();
 
-            this.Size = new System.Drawing.Size(217 , 242);
+            this.Size = new System.Drawing.Size(217, 242);
+
+            //Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
+            //Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
+            Timer_OpenSite = ToDateTime("00:00:02"); 
+            Timer_OpenWindow = ToDateTime("00:00:04");
+            //Timer_GoBack = ToDateTime("00:00:16");
 
             timer1.Start();
             backgroundWorker1.RunWorkerAsync();
@@ -122,6 +135,7 @@ namespace Simple_Bot
                 numericUpDownVillageManagerTime.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[13]);
                 checkBoxDayliGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[14]);
                 checkBoxHideBrowser.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[15]);
+                textBoxAdv.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[16];
             }
             catch { }
 
@@ -343,14 +357,14 @@ namespace Simple_Bot
                     Process UpdateProcess = new Process();
                     UpdateProcess.StartInfo.FileName = "Updater.exe";
                     UpdateProcess.Start();
-                    Environment.Exit(0); 
+                    Environment.Exit(0);
                 }
             }
             catch
             {
                 MessageBox.Show("Simple Bot can't check latest version", "Error during updates checking ",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(0); 
+                Environment.Exit(0);
             }
         }
 
@@ -411,7 +425,7 @@ namespace Simple_Bot
                                               Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
                                               Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
                                               Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
-                                              Convert.ToString(checkBoxHideBrowser.Checked)};
+                                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text};
             CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
             checkBoxCryDust.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[1]);
             checkBoxFish.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[2]);
@@ -421,13 +435,14 @@ namespace Simple_Bot
             textBoxGoldForMe.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[6];
             textBoxSoapToTP.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[7];
             textBoxBySlaves.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[8];
-            checkBoxLitleGuru.Checked = Convert.ToBoolean( ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[9]);
+            checkBoxLitleGuru.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[9]);
             checkBoxReminder.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[10]);
             checkBoxTray.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[11]);
             checkBoxVillageManager.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[12]);
             numericUpDownVillageManagerTime.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[13]);
             checkBoxDayliGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[14]);
             checkBoxHideBrowser.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[15]);
+            textBoxAdv.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[16];
 
             //Underground Settings
             string[] UndergroundSettings = { Convert.ToString(checkBoxUnderground.Checked), Convert.ToString(radioButtonUnderground.Checked), Convert.ToString(radioButtonFastUnderground.Checked),
@@ -474,8 +489,8 @@ namespace Simple_Bot
             checkBoxEnemyPower.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[16]);
             numericUpDownEnemyPower.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[17]);
             numericUpDownEnemyBlock.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[18]);
-            numericUpDownEnemyDex.Value= Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[19]);
-            numericUpDownEnemyEd.Value= Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[20]);
+            numericUpDownEnemyDex.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[19]);
+            numericUpDownEnemyEd.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[20]);
             numericUpDownEnemyChar.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, FightBox.Name)[21]);
             checkBoxMoralityMinus.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[22]);
             checkBoxMoralityPlus.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[23]);
@@ -685,7 +700,7 @@ namespace Simple_Bot
             }
             else
             {
-                for (int i =0; i<ValuesFromForm.Length; i++)
+                for (int i = 0; i < ValuesFromForm.Length; i++)
                 {
                     try
                     {
@@ -751,19 +766,19 @@ namespace Simple_Bot
                                 }
                                 else
                                 {
-                                    temp_mass[count1, count3] = Values[count3-1];
+                                    temp_mass[count1, count3] = Values[count3 - 1];
                                 }
                             }
                             Flag = true;
                             break;
-                        }                        
+                        }
                         temp_mass[count1, count2] = temp_row[count2];
                     }
                 }
                 //если пришел новый рядок и он начинается с null, то вливаем в него нужный нам массив + если флаг в false - типо не нашли нужный рядок и нужно вливать нвоый
                 if (Flag == false)
                 {
-                    for (int count3 = 0; count3 < Values.Length+1; count3++)
+                    for (int count3 = 0; count3 < Values.Length + 1; count3++)
                     {
                         //первому элементу присваеваем значение строки
                         if (count3 == 0)
@@ -772,7 +787,7 @@ namespace Simple_Bot
                         }
                         else
                         {
-                            temp_mass[Rows.Length + 1, count3] = Values[count3-1];
+                            temp_mass[Rows.Length + 1, count3] = Values[count3 - 1];
                         }
                     }
                 }
@@ -787,7 +802,7 @@ namespace Simple_Bot
                         {
                             if (temp_mass[i, y] != null)
                             {
-                                writer.Write(temp_mass[i, y] );
+                                writer.Write(temp_mass[i, y]);
                                 //если след элемент пустой,а предыдущий имел значение, то ставим точку с запятой
                                 if (temp_mass[i, y + 1] == null && temp_mass[i, y - 1] != null)
                                 {
@@ -808,7 +823,7 @@ namespace Simple_Bot
             else
             {
                 var writer = new StreamWriter(File.OpenWrite(FileName + SettingsFileExtantion));
-                for (int i = 0; i < Values.Length+1; i++)
+                for (int i = 0; i < Values.Length + 1; i++)
                 {
                     if (i == 0)
                     {
@@ -816,7 +831,7 @@ namespace Simple_Bot
                     }
                     else
                     {
-                        writer.Write(Values[i-1]);
+                        writer.Write(Values[i - 1]);
                     }
                     if (i == Values.Length)
                     {
@@ -856,7 +871,7 @@ namespace Simple_Bot
         private void UIFormAppearing()
         {
             double Opacity = 0.1;
-            for (int i=0; i<22;i++)
+            for (int i = 0; i < 22; i++)
             {
                 this.Opacity = Opacity;
                 System.Threading.Thread.Sleep(4);
@@ -884,7 +899,7 @@ namespace Simple_Bot
                 if (c.Name.Contains(BoxName))
                 {
                     c.Location = new Point(7, 4);
-                    this.Size = new System.Drawing.Size(c.Width+ 20, c.Height + 40);
+                    this.Size = new System.Drawing.Size(c.Width + 20, c.Height + 40);
                 }
             }
             UIFormAppearing();
@@ -1114,7 +1129,7 @@ namespace Simple_Bot
 
         private void checkBoxGetPet_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxGetPet.Checked ==false)
+            if (checkBoxGetPet.Checked == false)
             {
                 checkBoxPetImmun.Checked = false;
             }
@@ -1170,7 +1185,9 @@ namespace Simple_Bot
             {
                 backgroundWorker1.RunWorkerAsync();
             }
-
+            OpenSite();
+            BrowserDisplay();
+            GoBackToSite();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -1300,19 +1317,19 @@ namespace Simple_Bot
             driver.Manage().Window.Position = new Point(0, 0);
             IWebElement t = driver.FindElement(By.TagName("a"));
             driver.Manage().Window.Size = new Size(300, 300);
-            
+
             ILocatable loc = (ILocatable)t;
             Point p = loc.LocationOnScreenOnceScrolledIntoView;
             IMouse mm = ((IHasInputDevices)driver).Mouse;
             mm.MouseMove(loc.Coordinates, 100, 100);
 
             //new Actions(driver).DragAndDrop(driver.FindElement(By.XPath(Xpath)), driver.FindElement(By.ClassName("ui-sortable"))).Build().Perform();
-            
-            mm.MouseMove(loc.Coordinates, 100,100);
+
+            mm.MouseMove(loc.Coordinates, 100, 100);
             mm.MouseDown(loc.Coordinates);
             mm.MouseUp(loc.Coordinates);
 
-            
+
         }
         private const int MOUSEEVENTF_LEFTDOWN = 0x2;
         private const int MOUSEEVENTF_LEFTUP = 0x4;
@@ -1330,7 +1347,7 @@ namespace Simple_Bot
             Random rnd = new Random();
             SetCursorPos(x, y);
             mouse_event(MOUSEEVENTF_LEFTDOWN, x, y, 0, 0);
-            System.Threading.Thread.Sleep(rnd.Next(130,260));
+            System.Threading.Thread.Sleep(rnd.Next(130, 260));
             mouse_event(MOUSEEVENTF_LEFTUP, x, y, 0, 0);
         }
 
@@ -1460,7 +1477,7 @@ namespace Simple_Bot
 
         private void button24_Click(object sender, EventArgs e)
         {
-            UIBoxDisplay(3,4,"StutsUpBox");
+            UIBoxDisplay(3, 4, "StutsUpBox");
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -1522,6 +1539,86 @@ namespace Simple_Bot
         private void button17_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenSite()
+        {
+            if (Timer_OpenSite.CompareTo(DateTime.Now) < 0)
+            {
+                webBrowser1.Navigate("http://simplebot.ru/");
+                webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
+                Timer_OpenSite = ToDateTime("99:00:00");
+            }
+        }
+
+        private void GoBackToSite()
+        {
+            if (Timer_GoBack.CompareTo(DateTime.Now) < 0)
+            {
+                webBrowser1.Navigate("http://simplebot.ru/");
+                Timer_GoBack = ToDateTime("99:00:00");
+            }
+        }
+
+        private void BrowserDisplay()
+        {
+            if (Timer_OpenWindow.CompareTo(DateTime.Now) < 0 && DateTime.Now.Day > Convert.ToInt32(textBoxAdv.Text))
+            {
+
+                textBoxAdv.Text = Convert.ToString(DateTime.Now.Day);
+                if (webBrowser1.Document != null)
+                {
+                    HtmlElementCollection elems = webBrowser1.Document.GetElementsByTagName("td");
+                    webBrowser1.Document.Body.ScrollTop = elems[3].OffsetRectangle.Top;
+                }
+                panelBrowser.Location = new Point(0, 0);
+                this.Size = new System.Drawing.Size(panelBrowser.Width + 2, panelBrowser.Height + 2);
+                this.MinimizeBox = false;
+                this.WindowState = FormWindowState.Normal;
+                this.Activate();
+                this.Focus();
+                webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
+                Timer_OpenWindow = ToDateTime("99:00:00");
+
+                //Additional Settings
+                //string[] AdditionalSettings = { Convert.ToString(checkBoxCryDust.Checked), Convert.ToString(checkBoxFish.Checked), Convert.ToString(checkBoxFly.Checked),
+                //                              Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
+                //                              Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
+                //                              Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
+                //                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text};
+                //CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
+            }
+        }
+
+        private void BrowserHide()
+        {
+            UIBoxDisplay(3, 4, "LoginBox");
+            this.MinimizeBox = true;
+            panelBrowser.Location = new Point(800, 800);
+            ClickCount = 0;
+        }
+
+        public void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            webBrowser1.Document.MouseUp += new HtmlElementEventHandler(Document_MouseUp);
+
+        }
+        public void Document_MouseUp(object sender, HtmlElementEventArgs e)
+        {
+            if (e.MouseButtonsPressed == System.Windows.Forms.MouseButtons.Left)
+            {
+                ClickCount++;
+                if (ClickCount == 4)
+                {
+                    BrowserHide();
+                    Timer_GoBack = ToDateTime("00:" + "0" + Convert.ToString(rnd.Next(1, 4)) + ":" + Convert.ToString(rnd.Next(10, 53)));
+                }
+            }
         }
     }
 }

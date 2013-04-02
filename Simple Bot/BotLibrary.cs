@@ -697,13 +697,13 @@ namespace Simple_Bot
                         break;
                     }
                 }
-                Timer_OpenMySite = ToDateTime("00:45:30");
+                Timer_OpenMySite = ToDateTime("00:53:30");
                 return driver;
             }
             else
             {
                 IWebDriver driver = new FirefoxDriver();
-                Timer_OpenMySite = ToDateTime("00:45:30");
+                Timer_OpenMySite = ToDateTime("00:53:30");
                 return driver;
             }
         }
@@ -3891,9 +3891,9 @@ namespace Simple_Bot
                         AdvIsOpened = true;*/
                         string driverUrl = driver.Url;
                         driver.Navigate().GoToUrl("http://simplebot.ru/");
-                        System.Threading.Thread.Sleep(16000);
+                        System.Threading.Thread.Sleep(11000);
                         AdvTimerAssigne();
-                        ClickRandomAdv();
+                        //ClickRandomAdv();
                         if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
                         {
                             driver.Navigate().GoToUrl("http://www.botva.ru/");
@@ -3937,9 +3937,6 @@ namespace Simple_Bot
             }
             catch { }
         }
-
-        int clickCount = 4;
-
 
         private void TryToClick()
         {
@@ -4003,15 +4000,15 @@ namespace Simple_Bot
             {
                 case 0: advLinks[0].FindElement(By.TagName("a")).Click();
                     ReHideWindow();
-                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    System.Threading.Thread.Sleep(rnd.Next(5000, 12000));
                     break;
                 case 1: advLinks[1].FindElement(By.TagName("a")).Click();
                     ReHideWindow();
-                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    System.Threading.Thread.Sleep(rnd.Next(5000, 12000));
                     break;
                 case 2: advLinks[2].FindElement(By.TagName("a")).Click();
                     ReHideWindow();
-                    System.Threading.Thread.Sleep(rnd.Next(10000, 20000));
+                    System.Threading.Thread.Sleep(rnd.Next(5000, 12000));
                     break;
                 default: break;
             }
@@ -4042,12 +4039,12 @@ namespace Simple_Bot
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(29, 57));
+            string randomMinutes = Convert.ToString(rnd.Next(10, 57));
             //if (randomMinutes.Length == 1)
             //{
             //    randomMinutes = "0" + randomMinutes;
             //}
-            Timer_OpenMySite = ToDateTime("01:" + randomMinutes + ":00");
+            Timer_OpenMySite = ToDateTime("02:" + randomMinutes + ":00");
         }
 
         private void ClickAdv()

@@ -34,7 +34,6 @@
             this.LoginBox = new System.Windows.Forms.GroupBox();
             this.checkBoxHideBrowser = new System.Windows.Forms.CheckBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.button20 = new System.Windows.Forms.Button();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.checkBoxTray = new System.Windows.Forms.CheckBox();
             this.button17 = new System.Windows.Forms.Button();
@@ -329,6 +328,11 @@
             this.label39 = new System.Windows.Forms.Label();
             this.textBoxProdutName = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.textBoxAdv = new System.Windows.Forms.TextBox();
+            this.panelBrowser = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -434,6 +438,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownItemLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPPvalue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).BeginInit();
+            this.panelBrowser.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -503,16 +508,6 @@
             this.pictureBox27.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox27, "Like Us !");
             this.pictureBox27.Click += new System.EventHandler(this.pictureBox27_Click);
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(49, 465);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 21;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
             // pictureBox26
             // 
@@ -771,7 +766,6 @@
             this.MenuBox.Controls.Add(this.checkBoxDayliGifts);
             this.MenuBox.Controls.Add(this.pictureBox25);
             this.MenuBox.Controls.Add(this.button7);
-            this.MenuBox.Controls.Add(this.button20);
             this.MenuBox.Controls.Add(this.checkBoxLitleGuru);
             this.MenuBox.Controls.Add(this.button10);
             this.MenuBox.Controls.Add(this.FarCountrBox);
@@ -3943,12 +3937,55 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Название товара:";
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(693, 320);
+            this.webBrowser1.TabIndex = 25;
+            // 
+            // textBoxAdv
+            // 
+            this.textBoxAdv.Location = new System.Drawing.Point(12, 215);
+            this.textBoxAdv.Name = "textBoxAdv";
+            this.textBoxAdv.Size = new System.Drawing.Size(33, 20);
+            this.textBoxAdv.TabIndex = 26;
+            this.textBoxAdv.Text = "0";
+            this.textBoxAdv.Visible = false;
+            // 
+            // panelBrowser
+            // 
+            this.panelBrowser.Controls.Add(this.panel2);
+            this.panelBrowser.Controls.Add(this.panel1);
+            this.panelBrowser.Controls.Add(this.webBrowser1);
+            this.panelBrowser.Location = new System.Drawing.Point(1045, 443);
+            this.panelBrowser.Name = "panelBrowser";
+            this.panelBrowser.Size = new System.Drawing.Size(704, 330);
+            this.panelBrowser.TabIndex = 27;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(182, 323);
+            this.panel1.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(514, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(182, 323);
+            this.panel2.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.ClientSize = new System.Drawing.Size(1813, 882);
+            this.Controls.Add(this.panelBrowser);
+            this.Controls.Add(this.textBoxAdv);
             this.Controls.Add(this.ShopBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.VillageBox);
@@ -4119,7 +4156,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownItemLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPPvalue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).EndInit();
+            this.panelBrowser.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -4349,7 +4388,6 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.CheckBox checkBoxPandaOpenCry;
         private System.Windows.Forms.GroupBox PandaBox;
@@ -4424,6 +4462,11 @@
         private System.Windows.Forms.TextBox textBoxCurrentGold;
         private System.Windows.Forms.CheckBox checkBoxDayliGifts;
         private System.Windows.Forms.CheckBox checkBoxHideBrowser;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TextBox textBoxAdv;
+        private System.Windows.Forms.Panel panelBrowser;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
