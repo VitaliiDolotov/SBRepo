@@ -331,8 +331,11 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.textBoxAdv = new System.Windows.Forms.TextBox();
             this.panelBrowser = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -439,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPPvalue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).BeginInit();
             this.panelBrowser.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -3964,13 +3968,6 @@
             this.panelBrowser.Size = new System.Drawing.Size(704, 330);
             this.panelBrowser.TabIndex = 27;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(182, 323);
-            this.panel1.TabIndex = 26;
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(514, 2);
@@ -3978,12 +3975,49 @@
             this.panel2.Size = new System.Drawing.Size(182, 323);
             this.panel2.TabIndex = 27;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label49);
+            this.panel1.Controls.Add(this.label48);
+            this.panel1.Controls.Add(this.label47);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(182, 323);
+            this.panel1.TabIndex = 26;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(20, 75);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(155, 13);
+            this.label47.TabIndex = 0;
+            this.label47.Text = "Несколько кликов по банеру";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(36, 97);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(107, 13);
+            this.label48.TabIndex = 1;
+            this.label48.Text = "вернут Вас обратно";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(34, 121);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(116, 13);
+            this.label49.TabIndex = 2;
+            this.label49.Text = "на главное окно бота";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1813, 882);
+            this.ClientSize = new System.Drawing.Size(1604, 882);
             this.Controls.Add(this.panelBrowser);
             this.Controls.Add(this.textBoxAdv);
             this.Controls.Add(this.ShopBox);
@@ -4157,6 +4191,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPPvalue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).EndInit();
             this.panelBrowser.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4467,6 +4503,9 @@
         private System.Windows.Forms.Panel panelBrowser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
     }
 }
 
