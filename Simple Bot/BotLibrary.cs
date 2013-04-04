@@ -74,6 +74,7 @@ namespace Simple_Bot
         static DateTime Timer_VillageManager = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_Shop = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_DayliGifts = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+        static DateTime Timer_DrinkOborotka = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
 
         static DateTime Timer_Grif = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_Mont = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
@@ -3398,6 +3399,35 @@ namespace Simple_Bot
             bool Anti = false;
             string PageContent = driver.PageSource;
 
+            //Выпиваем оборотку
+            try
+            {
+                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[25]) == true)
+                {
+                    if (!PageContent.Contains("Действие оборотного зелья: возможность нападения 3 раза подряд"))
+                    {
+                        driver.FindElement(By.LinkText("Персонаж")).Click();
+                        Delays();
+                        //Click on botles section
+                        driver.FindElement(By.CssSelector(".tabs_mini div:nth-of-type(2)")).Click();
+                        Delays();
+                        Actions builder = new Actions(driver);
+                        builder.MoveToElement(driver.FindElement(By.CssSelector(".ico_item_404"))).Build().Perform();
+                        driver.FindElement(By.XPath("//div[contains(@class,'ico_item_404')]//span[text()='ВЫПИТЬ']")).Click();
+                        Delays();
+                        driver.FindElement(By.XPath("//div[contains(@class,'box_controls')]//span[text()='ВЫПИТЬ']")).Click();
+                        try
+                        {
+                            //если есть надпись что можно стать козленочком
+                            driver.FindElement(By.XPath("//span[text()='close']")).Click();
+                            Delays();
+                        }
+                        catch { }
+                    }
+                }
+            }
+            catch { }
+
             try
             {
                 if (Convert.ToBoolean(ReadFromFile(SettingsFile, "EffectsBox")[1]) == true)
@@ -4218,6 +4248,12 @@ namespace Simple_Bot
                     Timer_DayliGifts = ToDateTime("00:" + minutes + ":06");
                 }
             }
+        }
+
+        public void DrinkOborotka()
+        {
+            string PageContent = driver.PageSource;
+
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2477;
+        int BotVersion = 2479;
 
         Random rnd = new Random();
 
@@ -36,6 +36,7 @@ namespace Simple_Bot
         static DateTime Timer_OpenSite = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_OpenWindow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_GoBack = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+        static DateTime Timer_Reload = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
 
         bool botStatus;
 
@@ -50,6 +51,7 @@ namespace Simple_Bot
 
             Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
             Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
+            Timer_Reload = ToDateTime("01:" + Convert.ToString(rnd.Next(10, 57)) + ":00");
             //Timer_OpenSite = ToDateTime("00:00:02");
             //Timer_OpenWindow = ToDateTime("00:00:04");
             //Timer_GoBack = ToDateTime("00:00:16");
@@ -186,6 +188,7 @@ namespace Simple_Bot
                 checkBoxMoralityMinus.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[22]);
                 checkBoxMoralityPlus.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[23]);
                 checkBoxMoralityZero.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[24]);
+                checkBoxDrinkOborotka.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[25]);
             }
             catch { }
 
@@ -469,7 +472,8 @@ namespace Simple_Bot
             //Fight settings
             string[] FightSettings = { Convert.ToString(checkBoxFightMonsters.Checked), Convert.ToString(checkBoxFightZorro.Checked), Convert.ToString(radioButtonZorroLvl.Checked), Convert.ToString(radioButtonZorroList.Checked), Convert.ToString(checkBoxFight.Checked), Convert.ToString(radioButtonFightLvl.Checked), Convert.ToString(radioButtonFightList.Checked), Convert.ToString(checkBoxOborotka.Checked), Convert.ToString(checkBoxGetPet.Checked), Convert.ToString(checkBoxImmunOgl.Checked), Convert.ToString(checkBoxImmunAnti.Checked), Convert.ToString(radioButtonImmunPir.Checked), Convert.ToString(radioButtonImmunCry.Checked), Convert.ToString(checkBoxPetImmun.Checked), Convert.ToString(numericUpDownPetImmun.Value), Convert.ToString(checkBoxEnemyPower.Checked),
                                          Convert.ToString(numericUpDownEnemyPower.Value),Convert.ToString(numericUpDownEnemyBlock.Value),Convert.ToString(numericUpDownEnemyDex.Value),Convert.ToString(numericUpDownEnemyEd.Value),Convert.ToString(numericUpDownEnemyChar.Value),
-                                         Convert.ToString(checkBoxMoralityMinus.Checked),Convert.ToString(checkBoxMoralityPlus.Checked),Convert.ToString(checkBoxMoralityZero.Checked)};
+                                         Convert.ToString(checkBoxMoralityMinus.Checked),Convert.ToString(checkBoxMoralityPlus.Checked),Convert.ToString(checkBoxMoralityZero.Checked),
+                                         Convert.ToString(checkBoxDrinkOborotka.Checked)};
             CompareValuesInFile(FightBox.Name, FightSettings);
             checkBoxFightMonsters.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[1]);
             checkBoxFightZorro.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[2]);
@@ -495,6 +499,7 @@ namespace Simple_Bot
             checkBoxMoralityMinus.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[22]);
             checkBoxMoralityPlus.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[23]);
             checkBoxMoralityZero.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[24]);
+            checkBoxDrinkOborotka.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, FightBox.Name)[25]);
 
             //Heal settings
             string[] HealSettings = { Convert.ToString(checkBoxHeal.Checked), Convert.ToString(numericUpDownHeal.Value), Convert.ToString(checkBoxPetHeal.Checked), Convert.ToString(numericUpDownPetHeal.Value) };
@@ -1188,6 +1193,7 @@ namespace Simple_Bot
             OpenSite();
             BrowserDisplay();
             GoBackToSite();
+            BrowserReloadContent();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -1597,6 +1603,18 @@ namespace Simple_Bot
             }
         }
 
+        private void BrowserReloadContent()
+        {
+            if (Timer_Reload.CompareTo(DateTime.Now) < 0)
+            {
+                if (webBrowser1.Document != null)
+                {
+                    webBrowser1.Refresh();
+                }
+                Timer_Reload = ToDateTime("01:" + Convert.ToString(rnd.Next(10, 57)) + ":00");
+            }
+        }
+
         private void BrowserHide()
         {
             UIBoxDisplay(3, 4, "LoginBox");
@@ -1621,6 +1639,26 @@ namespace Simple_Bot
                     Timer_GoBack = ToDateTime("00:" + "0" + Convert.ToString(rnd.Next(1, 4)) + ":" + Convert.ToString(rnd.Next(10, 53)));
                 }
             }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            BrowserHide();
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button30_Click_1(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "FightBox");
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "MenuBox");
         }
     }
 }
