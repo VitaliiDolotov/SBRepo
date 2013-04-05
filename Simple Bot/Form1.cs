@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2479;
+        int BotVersion = 2480;
 
         Random rnd = new Random();
 
@@ -1577,7 +1577,7 @@ namespace Simple_Bot
             {
 
                 textBoxAdv.Text = Convert.ToString(DateTime.Now.Day);
-                if (rnd.Next(0, 2) == 0)
+                if (rnd.Next(0, 4) == 0)
                 {
                     if (webBrowser1.Document != null)
                     {

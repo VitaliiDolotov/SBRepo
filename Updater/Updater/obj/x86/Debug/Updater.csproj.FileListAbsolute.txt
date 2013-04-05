@@ -42,3 +42,12 @@ E:\Botva\SBRepo\Updater\Updater\bin\Debug\Updater.pdb
 E:\Botva\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Form1.resources
 E:\Botva\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
 E:\Botva\SBRepo\Updater\Updater\obj\x86\Debug\Updater.csproj.GenerateResource.Cache
+D:\SBRepo\Updater\Updater\bin\Debug\Updater.exe.config
+D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.exe
+D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.pdb
+D:\SBRepo\Updater\Updater\bin\Debug\Updater.exe
+D:\SBRepo\Updater\Updater\bin\Debug\Updater.pdb
+D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.csprojResolveAssemblyReference.cache
+D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Form1.resources
+D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
+D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.csproj.GenerateResource.Cache

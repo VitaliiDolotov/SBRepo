@@ -120,3 +120,18 @@ F:\SBRepo\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.exe.manifest
 F:\SBRepo\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.application
 F:\SBRepo\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.exe
 F:\SBRepo\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.pdb
+D:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe.config
+D:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe.manifest
+D:\SBRepo\Simple Bot\bin\Release\Simple Bot.application
+D:\SBRepo\Simple Bot\bin\Release\Simple Bot.exe
+D:\SBRepo\Simple Bot\bin\Release\Simple Bot.pdb
+D:\SBRepo\Simple Bot\bin\Release\WebDriver.pdb
+D:\SBRepo\Simple Bot\bin\Release\WebDriver.xml
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.csprojResolveAssemblyReference.cache
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple_Bot.Form1.resources
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple_Bot.Properties.Resources.resources
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.csproj.GenerateResource.Cache
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.exe.manifest
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.application
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.exe
+D:\SBRepo\Simple Bot\obj\x86\Release\Simple Bot.pdb
