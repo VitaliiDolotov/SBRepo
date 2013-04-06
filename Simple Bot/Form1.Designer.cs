@@ -59,15 +59,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
             this.MenuBox = new System.Windows.Forms.GroupBox();
-            this.checkBoxDayliGifts = new System.Windows.Forms.CheckBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.button30 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.checkBoxLitleGuru = new System.Windows.Forms.CheckBox();
+            this.button28 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.FarCountrBox = new System.Windows.Forms.GroupBox();
             this.radioButtonSecondBoat = new System.Windows.Forms.RadioButton();
             this.radioButtonFirstBoat = new System.Windows.Forms.RadioButton();
             this.checkBoxGetRP = new System.Windows.Forms.CheckBox();
+            this.button24 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.UndergroundBox = new System.Windows.Forms.GroupBox();
             this.button21 = new System.Windows.Forms.Button();
@@ -105,7 +105,39 @@
             this.numericUpDownMaxSmallFields = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownMaxBigFields = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
+            this.HealBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.numericUpDownPetHeal = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownHeal = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxPetHeal = new System.Windows.Forms.CheckBox();
+            this.checkBoxHeal = new System.Windows.Forms.CheckBox();
+            this.PotionMakingBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.panelPotionMaking = new System.Windows.Forms.Panel();
+            this.checkBoxBoilRent = new System.Windows.Forms.CheckBox();
+            this.checkBoxTankMaking = new System.Windows.Forms.CheckBox();
+            this.checkBoxPotionMaking = new System.Windows.Forms.CheckBox();
+            this.AdditionalSettingsBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.checkBoxDayliGifts = new System.Windows.Forms.CheckBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.checkBoxShop = new System.Windows.Forms.CheckBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.checkBoxMassAbilitys = new System.Windows.Forms.CheckBox();
+            this.checkBoxLitleGuru = new System.Windows.Forms.CheckBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.checkBoxSoapMaking = new System.Windows.Forms.CheckBox();
+            this.checkBoxFly = new System.Windows.Forms.CheckBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.checkBoxFish = new System.Windows.Forms.CheckBox();
+            this.checkBoxCryDust = new System.Windows.Forms.CheckBox();
             this.FightBox = new System.Windows.Forms.GroupBox();
+            this.checkBoxDrinkOborotka = new System.Windows.Forms.CheckBox();
+            this.button31 = new System.Windows.Forms.Button();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.button19 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -127,34 +159,6 @@
             this.checkBoxOborotka = new System.Windows.Forms.CheckBox();
             this.radioButtonFightList = new System.Windows.Forms.RadioButton();
             this.radioButtonFightLvl = new System.Windows.Forms.RadioButton();
-            this.HealBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.numericUpDownPetHeal = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownHeal = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxPetHeal = new System.Windows.Forms.CheckBox();
-            this.checkBoxHeal = new System.Windows.Forms.CheckBox();
-            this.PotionMakingBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.panelPotionMaking = new System.Windows.Forms.Panel();
-            this.checkBoxBoilRent = new System.Windows.Forms.CheckBox();
-            this.checkBoxTankMaking = new System.Windows.Forms.CheckBox();
-            this.checkBoxPotionMaking = new System.Windows.Forms.CheckBox();
-            this.AdditionalSettingsBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.checkBoxShop = new System.Windows.Forms.CheckBox();
-            this.pictureBox31 = new System.Windows.Forms.PictureBox();
-            this.button28 = new System.Windows.Forms.Button();
-            this.checkBoxMassAbilitys = new System.Windows.Forms.CheckBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.button24 = new System.Windows.Forms.Button();
-            this.checkBoxSoapMaking = new System.Windows.Forms.CheckBox();
-            this.checkBoxFly = new System.Windows.Forms.CheckBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.checkBoxFish = new System.Windows.Forms.CheckBox();
-            this.checkBoxCryDust = new System.Windows.Forms.CheckBox();
             this.checkBoxPandaOpenCry = new System.Windows.Forms.CheckBox();
             this.checkBoxOpenPanda = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -333,13 +337,11 @@
             this.panelBrowser = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label47 = new System.Windows.Forms.Label();
             this.button20 = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.checkBoxDrinkOborotka = new System.Windows.Forms.CheckBox();
+            this.button33 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -348,7 +350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureStatusFalse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.MenuBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.FarCountrBox.SuspendLayout();
             this.UndergroundBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -369,15 +370,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxSmallFields)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxBigFields)).BeginInit();
-            this.FightBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPetImmun)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.ZorroFightPanel.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.FightPanel.SuspendLayout();
             this.HealBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -387,11 +379,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.panelPotionMaking.SuspendLayout();
             this.AdditionalSettingsBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.FightBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPetImmun)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.ZorroFightPanel.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.FightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPandaLvl)).BeginInit();
             this.StutsUpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEnemyPower)).BeginInit();
@@ -447,7 +450,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).BeginInit();
             this.panelBrowser.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -462,6 +464,8 @@
             // 
             // LoginBox
             // 
+            this.LoginBox.Controls.Add(this.textBox3);
+            this.LoginBox.Controls.Add(this.button33);
             this.LoginBox.Controls.Add(this.checkBoxHideBrowser);
             this.LoginBox.Controls.Add(this.pictureBox27);
             this.LoginBox.Controls.Add(this.pictureBox26);
@@ -792,25 +796,15 @@
             this.MenuBox.TabStop = false;
             this.MenuBox.Text = " Settings ";
             // 
-            // checkBoxDayliGifts
+            // button30
             // 
-            this.checkBoxDayliGifts.AutoSize = true;
-            this.checkBoxDayliGifts.Location = new System.Drawing.Point(12, 77);
-            this.checkBoxDayliGifts.Name = "checkBoxDayliGifts";
-            this.checkBoxDayliGifts.Size = new System.Drawing.Size(119, 17);
-            this.checkBoxDayliGifts.TabIndex = 19;
-            this.checkBoxDayliGifts.Text = "Собирать дейлики";
-            this.checkBoxDayliGifts.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::Simple_Bot.Properties.Resources.medal_gold_3;
-            this.pictureBox25.Location = new System.Drawing.Point(129, 55);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox25.TabIndex = 18;
-            this.pictureBox25.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox25, "Прокачка медали \"Малый гуру\"");
+            this.button30.Location = new System.Drawing.Point(13, 327);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(146, 23);
+            this.button30.TabIndex = 23;
+            this.button30.Text = "Бодалка";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click_1);
             // 
             // button7
             // 
@@ -822,16 +816,15 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // checkBoxLitleGuru
+            // button28
             // 
-            this.checkBoxLitleGuru.AutoSize = true;
-            this.checkBoxLitleGuru.Location = new System.Drawing.Point(12, 55);
-            this.checkBoxLitleGuru.Name = "checkBoxLitleGuru";
-            this.checkBoxLitleGuru.Size = new System.Drawing.Size(85, 17);
-            this.checkBoxLitleGuru.TabIndex = 17;
-            this.checkBoxLitleGuru.Text = "Малый гуру";
-            this.checkBoxLitleGuru.UseVisualStyleBackColor = true;
-            this.checkBoxLitleGuru.CheckedChanged += new System.EventHandler(this.checkBoxLitleGuru_CheckedChanged);
+            this.button28.Location = new System.Drawing.Point(13, 358);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(146, 23);
+            this.button28.TabIndex = 22;
+            this.button28.Text = "Ферма";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button10
             // 
@@ -887,6 +880,16 @@
             this.checkBoxGetRP.Text = "Добывать РП";
             this.checkBoxGetRP.UseVisualStyleBackColor = true;
             this.checkBoxGetRP.CheckedChanged += new System.EventHandler(this.checkBoxGetRP_CheckedChanged);
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(164, 357);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(139, 23);
+            this.button24.TabIndex = 19;
+            this.button24.Text = "Прокачка статов";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button5
             // 
@@ -1330,6 +1333,362 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // HealBox
+            // 
+            this.HealBox.Controls.Add(this.pictureBox14);
+            this.HealBox.Controls.Add(this.pictureBox13);
+            this.HealBox.Controls.Add(this.numericUpDownPetHeal);
+            this.HealBox.Controls.Add(this.numericUpDownHeal);
+            this.HealBox.Controls.Add(this.checkBoxPetHeal);
+            this.HealBox.Controls.Add(this.checkBoxHeal);
+            this.HealBox.Location = new System.Drawing.Point(164, 245);
+            this.HealBox.Name = "HealBox";
+            this.HealBox.Size = new System.Drawing.Size(142, 75);
+            this.HealBox.TabIndex = 12;
+            this.HealBox.TabStop = false;
+            this.HealBox.Text = "Лечение";
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox14.Location = new System.Drawing.Point(114, 21);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox14.TabIndex = 12;
+            this.pictureBox14.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox14, "Не меньше 70%, т.к. бедт лечится средними бутылочками");
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox13.Location = new System.Drawing.Point(114, 46);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox13.TabIndex = 11;
+            this.pictureBox13.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox13, "Не меньше 70%, т.к. бедт лечится средними бутылочками");
+            // 
+            // numericUpDownPetHeal
+            // 
+            this.numericUpDownPetHeal.Location = new System.Drawing.Point(65, 45);
+            this.numericUpDownPetHeal.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDownPetHeal.Minimum = new decimal(new int[] {
+            69,
+            0,
+            0,
+            0});
+            this.numericUpDownPetHeal.Name = "numericUpDownPetHeal";
+            this.numericUpDownPetHeal.Size = new System.Drawing.Size(43, 20);
+            this.numericUpDownPetHeal.TabIndex = 3;
+            this.numericUpDownPetHeal.Value = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownHeal
+            // 
+            this.numericUpDownHeal.Location = new System.Drawing.Point(65, 20);
+            this.numericUpDownHeal.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDownHeal.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownHeal.Name = "numericUpDownHeal";
+            this.numericUpDownHeal.Size = new System.Drawing.Size(43, 20);
+            this.numericUpDownHeal.TabIndex = 2;
+            this.numericUpDownHeal.Value = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            // 
+            // checkBoxPetHeal
+            // 
+            this.checkBoxPetHeal.AutoSize = true;
+            this.checkBoxPetHeal.Location = new System.Drawing.Point(8, 46);
+            this.checkBoxPetHeal.Name = "checkBoxPetHeal";
+            this.checkBoxPetHeal.Size = new System.Drawing.Size(57, 17);
+            this.checkBoxPetHeal.TabIndex = 1;
+            this.checkBoxPetHeal.Text = "Зверя";
+            this.checkBoxPetHeal.UseVisualStyleBackColor = true;
+            this.checkBoxPetHeal.CheckedChanged += new System.EventHandler(this.checkBoxPetHeal_CheckedChanged);
+            // 
+            // checkBoxHeal
+            // 
+            this.checkBoxHeal.AutoSize = true;
+            this.checkBoxHeal.Location = new System.Drawing.Point(8, 21);
+            this.checkBoxHeal.Name = "checkBoxHeal";
+            this.checkBoxHeal.Size = new System.Drawing.Size(51, 17);
+            this.checkBoxHeal.TabIndex = 0;
+            this.checkBoxHeal.Text = "Себя";
+            this.checkBoxHeal.UseVisualStyleBackColor = true;
+            this.checkBoxHeal.CheckedChanged += new System.EventHandler(this.checkBoxHeal_CheckedChanged);
+            // 
+            // PotionMakingBox
+            // 
+            this.PotionMakingBox.Controls.Add(this.pictureBox24);
+            this.PotionMakingBox.Controls.Add(this.panelPotionMaking);
+            this.PotionMakingBox.Controls.Add(this.checkBoxPotionMaking);
+            this.PotionMakingBox.Location = new System.Drawing.Point(309, 245);
+            this.PotionMakingBox.Name = "PotionMakingBox";
+            this.PotionMakingBox.Size = new System.Drawing.Size(141, 75);
+            this.PotionMakingBox.TabIndex = 10;
+            this.PotionMakingBox.TabStop = false;
+            this.PotionMakingBox.Text = "                              ";
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox24.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox24.Location = new System.Drawing.Point(103, 0);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox24.TabIndex = 16;
+            this.pictureBox24.TabStop = false;
+            this.pictureBox24.Click += new System.EventHandler(this.pictureBox24_Click);
+            // 
+            // panelPotionMaking
+            // 
+            this.panelPotionMaking.Controls.Add(this.checkBoxBoilRent);
+            this.panelPotionMaking.Controls.Add(this.checkBoxTankMaking);
+            this.panelPotionMaking.Location = new System.Drawing.Point(4, 20);
+            this.panelPotionMaking.Name = "panelPotionMaking";
+            this.panelPotionMaking.Size = new System.Drawing.Size(134, 48);
+            this.panelPotionMaking.TabIndex = 3;
+            // 
+            // checkBoxBoilRent
+            // 
+            this.checkBoxBoilRent.AutoSize = true;
+            this.checkBoxBoilRent.Location = new System.Drawing.Point(3, 26);
+            this.checkBoxBoilRent.Name = "checkBoxBoilRent";
+            this.checkBoxBoilRent.Size = new System.Drawing.Size(118, 17);
+            this.checkBoxBoilRent.TabIndex = 2;
+            this.checkBoxBoilRent.Text = "Арендовать котел";
+            this.checkBoxBoilRent.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTankMaking
+            // 
+            this.checkBoxTankMaking.AutoSize = true;
+            this.checkBoxTankMaking.Location = new System.Drawing.Point(2, 3);
+            this.checkBoxTankMaking.Name = "checkBoxTankMaking";
+            this.checkBoxTankMaking.Size = new System.Drawing.Size(128, 17);
+            this.checkBoxTankMaking.TabIndex = 1;
+            this.checkBoxTankMaking.Text = "Изготовливать тару";
+            this.checkBoxTankMaking.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPotionMaking
+            // 
+            this.checkBoxPotionMaking.AutoSize = true;
+            this.checkBoxPotionMaking.Location = new System.Drawing.Point(12, 0);
+            this.checkBoxPotionMaking.Name = "checkBoxPotionMaking";
+            this.checkBoxPotionMaking.Size = new System.Drawing.Size(95, 17);
+            this.checkBoxPotionMaking.TabIndex = 0;
+            this.checkBoxPotionMaking.Text = "Варить зелья";
+            this.checkBoxPotionMaking.UseVisualStyleBackColor = true;
+            this.checkBoxPotionMaking.CheckedChanged += new System.EventHandler(this.checkBoxPotionMaking_CheckedChanged);
+            // 
+            // AdditionalSettingsBox
+            // 
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox34);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxDayliGifts);
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox33);
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox25);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxShop);
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox31);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxMassAbilitys);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxLitleGuru);
+            this.AdditionalSettingsBox.Controls.Add(this.label32);
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox22);
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox19);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxSoapMaking);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxFly);
+            this.AdditionalSettingsBox.Controls.Add(this.pictureBox4);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxFish);
+            this.AdditionalSettingsBox.Controls.Add(this.checkBoxCryDust);
+            this.AdditionalSettingsBox.Location = new System.Drawing.Point(158, 14);
+            this.AdditionalSettingsBox.Name = "AdditionalSettingsBox";
+            this.AdditionalSettingsBox.Size = new System.Drawing.Size(292, 103);
+            this.AdditionalSettingsBox.TabIndex = 9;
+            this.AdditionalSettingsBox.TabStop = false;
+            this.AdditionalSettingsBox.Text = " Дополнительные ";
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox34.Location = new System.Drawing.Point(129, 76);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox34.TabIndex = 26;
+            this.pictureBox34.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox34, "Собираем доступные дейлики раз в 30-40 мин.");
+            // 
+            // checkBoxDayliGifts
+            // 
+            this.checkBoxDayliGifts.AutoSize = true;
+            this.checkBoxDayliGifts.Location = new System.Drawing.Point(12, 77);
+            this.checkBoxDayliGifts.Name = "checkBoxDayliGifts";
+            this.checkBoxDayliGifts.Size = new System.Drawing.Size(119, 17);
+            this.checkBoxDayliGifts.TabIndex = 19;
+            this.checkBoxDayliGifts.Text = "Собирать дейлики";
+            this.checkBoxDayliGifts.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox33.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox33.Location = new System.Drawing.Point(129, 33);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox33.TabIndex = 25;
+            this.pictureBox33.TabStop = false;
+            this.pictureBox33.Click += new System.EventHandler(this.pictureBox33_Click);
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::Simple_Bot.Properties.Resources.medal_gold_3;
+            this.pictureBox25.Location = new System.Drawing.Point(129, 55);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox25.TabIndex = 18;
+            this.pictureBox25.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox25, "Прокачка медали \"Малый гуру\"");
+            // 
+            // checkBoxShop
+            // 
+            this.checkBoxShop.AutoSize = true;
+            this.checkBoxShop.Enabled = false;
+            this.checkBoxShop.Location = new System.Drawing.Point(12, 33);
+            this.checkBoxShop.Name = "checkBoxShop";
+            this.checkBoxShop.Size = new System.Drawing.Size(64, 17);
+            this.checkBoxShop.TabIndex = 24;
+            this.checkBoxShop.Text = "Сбытня";
+            this.checkBoxShop.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox31.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox31.Location = new System.Drawing.Point(129, 14);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox31.TabIndex = 23;
+            this.pictureBox31.TabStop = false;
+            this.pictureBox31.Click += new System.EventHandler(this.pictureBox31_Click);
+            // 
+            // checkBoxMassAbilitys
+            // 
+            this.checkBoxMassAbilitys.AutoSize = true;
+            this.checkBoxMassAbilitys.Location = new System.Drawing.Point(12, 15);
+            this.checkBoxMassAbilitys.Name = "checkBoxMassAbilitys";
+            this.checkBoxMassAbilitys.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxMassAbilitys.TabIndex = 22;
+            this.checkBoxMassAbilitys.Text = "Качать массухи";
+            this.checkBoxMassAbilitys.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLitleGuru
+            // 
+            this.checkBoxLitleGuru.AutoSize = true;
+            this.checkBoxLitleGuru.Location = new System.Drawing.Point(12, 55);
+            this.checkBoxLitleGuru.Name = "checkBoxLitleGuru";
+            this.checkBoxLitleGuru.Size = new System.Drawing.Size(85, 17);
+            this.checkBoxLitleGuru.TabIndex = 17;
+            this.checkBoxLitleGuru.Text = "Малый гуру";
+            this.checkBoxLitleGuru.UseVisualStyleBackColor = true;
+            this.checkBoxLitleGuru.CheckedChanged += new System.EventHandler(this.checkBoxLitleGuru_CheckedChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(173, 37);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(97, 13);
+            this.label32.TabIndex = 16;
+            this.label32.Text = "Мыльный камень";
+            this.toolTip1.SetToolTip(this.label32, "Изготавливать мыльный камень");
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox22.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox22.Location = new System.Drawing.Point(272, 37);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox22.TabIndex = 14;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click);
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox19.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox19.Location = new System.Drawing.Point(272, 77);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox19.TabIndex = 13;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
+            // 
+            // checkBoxSoapMaking
+            // 
+            this.checkBoxSoapMaking.AutoSize = true;
+            this.checkBoxSoapMaking.Location = new System.Drawing.Point(157, 37);
+            this.checkBoxSoapMaking.Name = "checkBoxSoapMaking";
+            this.checkBoxSoapMaking.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxSoapMaking.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.checkBoxSoapMaking, "Изготавливать мыльный камень");
+            this.checkBoxSoapMaking.UseVisualStyleBackColor = true;
+            this.checkBoxSoapMaking.CheckedChanged += new System.EventHandler(this.checkBoxSoapMaking_CheckedChanged);
+            // 
+            // checkBoxFly
+            // 
+            this.checkBoxFly.AutoSize = true;
+            this.checkBoxFly.Location = new System.Drawing.Point(157, 77);
+            this.checkBoxFly.Name = "checkBoxFly";
+            this.checkBoxFly.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxFly.TabIndex = 9;
+            this.checkBoxFly.Text = "Летуны     ------->";
+            this.checkBoxFly.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(273, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, "Добывать Крисстальную пыль");
+            // 
+            // checkBoxFish
+            // 
+            this.checkBoxFish.AutoSize = true;
+            this.checkBoxFish.Location = new System.Drawing.Point(157, 56);
+            this.checkBoxFish.Name = "checkBoxFish";
+            this.checkBoxFish.Size = new System.Drawing.Size(126, 17);
+            this.checkBoxFish.TabIndex = 8;
+            this.checkBoxFish.Text = "Судно с пирашками";
+            this.checkBoxFish.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCryDust
+            // 
+            this.checkBoxCryDust.AutoSize = true;
+            this.checkBoxCryDust.Location = new System.Drawing.Point(157, 16);
+            this.checkBoxCryDust.Name = "checkBoxCryDust";
+            this.checkBoxCryDust.Size = new System.Drawing.Size(121, 17);
+            this.checkBoxCryDust.TabIndex = 7;
+            this.checkBoxCryDust.Text = "Кристальная пыль";
+            this.checkBoxCryDust.UseVisualStyleBackColor = true;
+            // 
             // FightBox
             // 
             this.FightBox.Controls.Add(this.checkBoxDrinkOborotka);
@@ -1346,6 +1705,26 @@
             this.FightBox.TabIndex = 3;
             this.FightBox.TabStop = false;
             this.FightBox.Text = "Бодалка";
+            // 
+            // checkBoxDrinkOborotka
+            // 
+            this.checkBoxDrinkOborotka.AutoSize = true;
+            this.checkBoxDrinkOborotka.Location = new System.Drawing.Point(19, 157);
+            this.checkBoxDrinkOborotka.Name = "checkBoxDrinkOborotka";
+            this.checkBoxDrinkOborotka.Size = new System.Drawing.Size(100, 17);
+            this.checkBoxDrinkOborotka.TabIndex = 26;
+            this.checkBoxDrinkOborotka.Text = "Пить оборотку";
+            this.checkBoxDrinkOborotka.UseVisualStyleBackColor = true;
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(5, 207);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(280, 23);
+            this.button31.TabIndex = 25;
+            this.button31.Text = "Back";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // pictureBox32
             // 
@@ -1583,341 +1962,6 @@
             this.radioButtonFightLvl.TabStop = true;
             this.radioButtonFightLvl.Text = "По уровню";
             this.radioButtonFightLvl.UseVisualStyleBackColor = true;
-            // 
-            // HealBox
-            // 
-            this.HealBox.Controls.Add(this.pictureBox14);
-            this.HealBox.Controls.Add(this.pictureBox13);
-            this.HealBox.Controls.Add(this.numericUpDownPetHeal);
-            this.HealBox.Controls.Add(this.numericUpDownHeal);
-            this.HealBox.Controls.Add(this.checkBoxPetHeal);
-            this.HealBox.Controls.Add(this.checkBoxHeal);
-            this.HealBox.Location = new System.Drawing.Point(164, 245);
-            this.HealBox.Name = "HealBox";
-            this.HealBox.Size = new System.Drawing.Size(142, 75);
-            this.HealBox.TabIndex = 12;
-            this.HealBox.TabStop = false;
-            this.HealBox.Text = "Лечение";
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox14.Location = new System.Drawing.Point(114, 21);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox14.TabIndex = 12;
-            this.pictureBox14.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox14, "Не меньше 70%, т.к. бедт лечится средними бутылочками");
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox13.Location = new System.Drawing.Point(114, 46);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox13.TabIndex = 11;
-            this.pictureBox13.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox13, "Не меньше 70%, т.к. бедт лечится средними бутылочками");
-            // 
-            // numericUpDownPetHeal
-            // 
-            this.numericUpDownPetHeal.Location = new System.Drawing.Point(65, 45);
-            this.numericUpDownPetHeal.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDownPetHeal.Minimum = new decimal(new int[] {
-            69,
-            0,
-            0,
-            0});
-            this.numericUpDownPetHeal.Name = "numericUpDownPetHeal";
-            this.numericUpDownPetHeal.Size = new System.Drawing.Size(43, 20);
-            this.numericUpDownPetHeal.TabIndex = 3;
-            this.numericUpDownPetHeal.Value = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDownHeal
-            // 
-            this.numericUpDownHeal.Location = new System.Drawing.Point(65, 20);
-            this.numericUpDownHeal.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDownHeal.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownHeal.Name = "numericUpDownHeal";
-            this.numericUpDownHeal.Size = new System.Drawing.Size(43, 20);
-            this.numericUpDownHeal.TabIndex = 2;
-            this.numericUpDownHeal.Value = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            // 
-            // checkBoxPetHeal
-            // 
-            this.checkBoxPetHeal.AutoSize = true;
-            this.checkBoxPetHeal.Location = new System.Drawing.Point(8, 46);
-            this.checkBoxPetHeal.Name = "checkBoxPetHeal";
-            this.checkBoxPetHeal.Size = new System.Drawing.Size(57, 17);
-            this.checkBoxPetHeal.TabIndex = 1;
-            this.checkBoxPetHeal.Text = "Зверя";
-            this.checkBoxPetHeal.UseVisualStyleBackColor = true;
-            this.checkBoxPetHeal.CheckedChanged += new System.EventHandler(this.checkBoxPetHeal_CheckedChanged);
-            // 
-            // checkBoxHeal
-            // 
-            this.checkBoxHeal.AutoSize = true;
-            this.checkBoxHeal.Location = new System.Drawing.Point(8, 21);
-            this.checkBoxHeal.Name = "checkBoxHeal";
-            this.checkBoxHeal.Size = new System.Drawing.Size(51, 17);
-            this.checkBoxHeal.TabIndex = 0;
-            this.checkBoxHeal.Text = "Себя";
-            this.checkBoxHeal.UseVisualStyleBackColor = true;
-            this.checkBoxHeal.CheckedChanged += new System.EventHandler(this.checkBoxHeal_CheckedChanged);
-            // 
-            // PotionMakingBox
-            // 
-            this.PotionMakingBox.Controls.Add(this.pictureBox24);
-            this.PotionMakingBox.Controls.Add(this.panelPotionMaking);
-            this.PotionMakingBox.Controls.Add(this.checkBoxPotionMaking);
-            this.PotionMakingBox.Location = new System.Drawing.Point(309, 245);
-            this.PotionMakingBox.Name = "PotionMakingBox";
-            this.PotionMakingBox.Size = new System.Drawing.Size(141, 75);
-            this.PotionMakingBox.TabIndex = 10;
-            this.PotionMakingBox.TabStop = false;
-            this.PotionMakingBox.Text = "                              ";
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox24.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox24.Location = new System.Drawing.Point(103, 0);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox24.TabIndex = 16;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Click += new System.EventHandler(this.pictureBox24_Click);
-            // 
-            // panelPotionMaking
-            // 
-            this.panelPotionMaking.Controls.Add(this.checkBoxBoilRent);
-            this.panelPotionMaking.Controls.Add(this.checkBoxTankMaking);
-            this.panelPotionMaking.Location = new System.Drawing.Point(4, 20);
-            this.panelPotionMaking.Name = "panelPotionMaking";
-            this.panelPotionMaking.Size = new System.Drawing.Size(134, 48);
-            this.panelPotionMaking.TabIndex = 3;
-            // 
-            // checkBoxBoilRent
-            // 
-            this.checkBoxBoilRent.AutoSize = true;
-            this.checkBoxBoilRent.Location = new System.Drawing.Point(3, 26);
-            this.checkBoxBoilRent.Name = "checkBoxBoilRent";
-            this.checkBoxBoilRent.Size = new System.Drawing.Size(118, 17);
-            this.checkBoxBoilRent.TabIndex = 2;
-            this.checkBoxBoilRent.Text = "Арендовать котел";
-            this.checkBoxBoilRent.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTankMaking
-            // 
-            this.checkBoxTankMaking.AutoSize = true;
-            this.checkBoxTankMaking.Location = new System.Drawing.Point(2, 3);
-            this.checkBoxTankMaking.Name = "checkBoxTankMaking";
-            this.checkBoxTankMaking.Size = new System.Drawing.Size(128, 17);
-            this.checkBoxTankMaking.TabIndex = 1;
-            this.checkBoxTankMaking.Text = "Изготовливать тару";
-            this.checkBoxTankMaking.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxPotionMaking
-            // 
-            this.checkBoxPotionMaking.AutoSize = true;
-            this.checkBoxPotionMaking.Location = new System.Drawing.Point(12, 0);
-            this.checkBoxPotionMaking.Name = "checkBoxPotionMaking";
-            this.checkBoxPotionMaking.Size = new System.Drawing.Size(95, 17);
-            this.checkBoxPotionMaking.TabIndex = 0;
-            this.checkBoxPotionMaking.Text = "Варить зелья";
-            this.checkBoxPotionMaking.UseVisualStyleBackColor = true;
-            this.checkBoxPotionMaking.CheckedChanged += new System.EventHandler(this.checkBoxPotionMaking_CheckedChanged);
-            // 
-            // AdditionalSettingsBox
-            // 
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox34);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxDayliGifts);
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox33);
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox25);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxShop);
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox31);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxMassAbilitys);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxLitleGuru);
-            this.AdditionalSettingsBox.Controls.Add(this.label32);
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox22);
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox19);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxSoapMaking);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxFly);
-            this.AdditionalSettingsBox.Controls.Add(this.pictureBox4);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxFish);
-            this.AdditionalSettingsBox.Controls.Add(this.checkBoxCryDust);
-            this.AdditionalSettingsBox.Location = new System.Drawing.Point(158, 14);
-            this.AdditionalSettingsBox.Name = "AdditionalSettingsBox";
-            this.AdditionalSettingsBox.Size = new System.Drawing.Size(292, 103);
-            this.AdditionalSettingsBox.TabIndex = 9;
-            this.AdditionalSettingsBox.TabStop = false;
-            this.AdditionalSettingsBox.Text = " Дополнительные ";
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox33.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox33.Location = new System.Drawing.Point(129, 33);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox33.TabIndex = 25;
-            this.pictureBox33.TabStop = false;
-            this.pictureBox33.Click += new System.EventHandler(this.pictureBox33_Click);
-            // 
-            // checkBoxShop
-            // 
-            this.checkBoxShop.AutoSize = true;
-            this.checkBoxShop.Enabled = false;
-            this.checkBoxShop.Location = new System.Drawing.Point(12, 33);
-            this.checkBoxShop.Name = "checkBoxShop";
-            this.checkBoxShop.Size = new System.Drawing.Size(64, 17);
-            this.checkBoxShop.TabIndex = 24;
-            this.checkBoxShop.Text = "Сбытня";
-            this.checkBoxShop.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox31
-            // 
-            this.pictureBox31.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox31.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox31.Location = new System.Drawing.Point(129, 14);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox31.TabIndex = 23;
-            this.pictureBox31.TabStop = false;
-            this.pictureBox31.Click += new System.EventHandler(this.pictureBox31_Click);
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(13, 358);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(146, 23);
-            this.button28.TabIndex = 22;
-            this.button28.Text = "Ферма";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // checkBoxMassAbilitys
-            // 
-            this.checkBoxMassAbilitys.AutoSize = true;
-            this.checkBoxMassAbilitys.Location = new System.Drawing.Point(12, 15);
-            this.checkBoxMassAbilitys.Name = "checkBoxMassAbilitys";
-            this.checkBoxMassAbilitys.Size = new System.Drawing.Size(106, 17);
-            this.checkBoxMassAbilitys.TabIndex = 22;
-            this.checkBoxMassAbilitys.Text = "Качать массухи";
-            this.checkBoxMassAbilitys.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(173, 37);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(97, 13);
-            this.label32.TabIndex = 16;
-            this.label32.Text = "Мыльный камень";
-            this.toolTip1.SetToolTip(this.label32, "Изготавливать мыльный камень");
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox22.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox22.Location = new System.Drawing.Point(272, 37);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox22.TabIndex = 14;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox19.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox19.Location = new System.Drawing.Point(272, 77);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox19.TabIndex = 13;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(164, 357);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(139, 23);
-            this.button24.TabIndex = 19;
-            this.button24.Text = "Прокачка статов";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // checkBoxSoapMaking
-            // 
-            this.checkBoxSoapMaking.AutoSize = true;
-            this.checkBoxSoapMaking.Location = new System.Drawing.Point(157, 37);
-            this.checkBoxSoapMaking.Name = "checkBoxSoapMaking";
-            this.checkBoxSoapMaking.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxSoapMaking.TabIndex = 10;
-            this.toolTip1.SetToolTip(this.checkBoxSoapMaking, "Изготавливать мыльный камень");
-            this.checkBoxSoapMaking.UseVisualStyleBackColor = true;
-            this.checkBoxSoapMaking.CheckedChanged += new System.EventHandler(this.checkBoxSoapMaking_CheckedChanged);
-            // 
-            // checkBoxFly
-            // 
-            this.checkBoxFly.AutoSize = true;
-            this.checkBoxFly.Location = new System.Drawing.Point(157, 77);
-            this.checkBoxFly.Name = "checkBoxFly";
-            this.checkBoxFly.Size = new System.Drawing.Size(106, 17);
-            this.checkBoxFly.TabIndex = 9;
-            this.checkBoxFly.Text = "Летуны     ------->";
-            this.checkBoxFly.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(273, 15);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox4, "Добывать Крисстальную пыль");
-            // 
-            // checkBoxFish
-            // 
-            this.checkBoxFish.AutoSize = true;
-            this.checkBoxFish.Location = new System.Drawing.Point(157, 56);
-            this.checkBoxFish.Name = "checkBoxFish";
-            this.checkBoxFish.Size = new System.Drawing.Size(126, 17);
-            this.checkBoxFish.TabIndex = 8;
-            this.checkBoxFish.Text = "Судно с пирашками";
-            this.checkBoxFish.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCryDust
-            // 
-            this.checkBoxCryDust.AutoSize = true;
-            this.checkBoxCryDust.Location = new System.Drawing.Point(157, 16);
-            this.checkBoxCryDust.Name = "checkBoxCryDust";
-            this.checkBoxCryDust.Size = new System.Drawing.Size(121, 17);
-            this.checkBoxCryDust.TabIndex = 7;
-            this.checkBoxCryDust.Text = "Кристальная пыль";
-            this.checkBoxCryDust.UseVisualStyleBackColor = true;
             // 
             // checkBoxPandaOpenCry
             // 
@@ -3992,16 +4036,6 @@
             this.panel1.Size = new System.Drawing.Size(182, 323);
             this.panel1.TabIndex = 26;
             // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(36, 64);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(105, 13);
-            this.label47.TabIndex = 0;
-            this.label47.Text = "Я жмакнул банер и";
-            this.label47.Click += new System.EventHandler(this.label47_Click);
-            // 
             // button20
             // 
             this.button20.Location = new System.Drawing.Point(31, 91);
@@ -4012,6 +4046,16 @@
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(36, 64);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(105, 13);
+            this.label47.TabIndex = 0;
+            this.label47.Text = "Я жмакнул банер и";
+            this.label47.Click += new System.EventHandler(this.label47_Click);
+            // 
             // groupBox10
             // 
             this.groupBox10.Location = new System.Drawing.Point(1480, 16);
@@ -4021,52 +4065,29 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "groupBox10";
             // 
-            // button30
+            // button33
             // 
-            this.button30.Location = new System.Drawing.Point(13, 327);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(146, 23);
-            this.button30.TabIndex = 23;
-            this.button30.Text = "Бодалка";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click_1);
+            this.button33.Location = new System.Drawing.Point(25, 64);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 23;
+            this.button33.Text = "button33";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
-            // button31
+            // textBox3
             // 
-            this.button31.Location = new System.Drawing.Point(5, 207);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(280, 23);
-            this.button31.TabIndex = 25;
-            this.button31.Text = "Back";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button31_Click);
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox34.Location = new System.Drawing.Point(129, 76);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox34.TabIndex = 26;
-            this.pictureBox34.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox34, "Собираем доступные дейлики раз в 30-40 мин.");
-            // 
-            // checkBoxDrinkOborotka
-            // 
-            this.checkBoxDrinkOborotka.AutoSize = true;
-            this.checkBoxDrinkOborotka.Location = new System.Drawing.Point(19, 157);
-            this.checkBoxDrinkOborotka.Name = "checkBoxDrinkOborotka";
-            this.checkBoxDrinkOborotka.Size = new System.Drawing.Size(100, 17);
-            this.checkBoxDrinkOborotka.TabIndex = 26;
-            this.checkBoxDrinkOborotka.Text = "Пить оборотку";
-            this.checkBoxDrinkOborotka.UseVisualStyleBackColor = true;
+            this.textBox3.Location = new System.Drawing.Point(60, 127);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 24;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1934, 882);
+            this.ClientSize = new System.Drawing.Size(1604, 882);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.panelBrowser);
             this.Controls.Add(this.textBoxAdv);
@@ -4106,7 +4127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureStatusFalse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.MenuBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.FarCountrBox.ResumeLayout(false);
             this.FarCountrBox.PerformLayout();
             this.UndergroundBox.ResumeLayout(false);
@@ -4133,6 +4153,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxSmallFields)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxBigFields)).EndInit();
+            this.HealBox.ResumeLayout(false);
+            this.HealBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPetHeal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeal)).EndInit();
+            this.PotionMakingBox.ResumeLayout(false);
+            this.PotionMakingBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            this.panelPotionMaking.ResumeLayout(false);
+            this.panelPotionMaking.PerformLayout();
+            this.AdditionalSettingsBox.ResumeLayout(false);
+            this.AdditionalSettingsBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.FightBox.ResumeLayout(false);
             this.FightBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
@@ -4148,24 +4188,6 @@
             this.groupBox4.PerformLayout();
             this.FightPanel.ResumeLayout(false);
             this.FightPanel.PerformLayout();
-            this.HealBox.ResumeLayout(false);
-            this.HealBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPetHeal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeal)).EndInit();
-            this.PotionMakingBox.ResumeLayout(false);
-            this.PotionMakingBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            this.panelPotionMaking.ResumeLayout(false);
-            this.panelPotionMaking.PerformLayout();
-            this.AdditionalSettingsBox.ResumeLayout(false);
-            this.AdditionalSettingsBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPandaLvl)).EndInit();
             this.StutsUpBox.ResumeLayout(false);
             this.StutsUpBox.PerformLayout();
@@ -4243,7 +4265,6 @@
             this.panelBrowser.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4561,6 +4582,8 @@
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.CheckBox checkBoxDrinkOborotka;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

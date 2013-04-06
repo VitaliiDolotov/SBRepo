@@ -1660,5 +1660,35 @@ namespace Simple_Bot
         {
             UIBoxDisplay(3, 4, "MenuBox");
         }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("http://ya.ru/");
+            driver.FindElement(By.ClassName("b-form-input__input")).SendKeys(textBox3.Text);
+            driver.FindElement(By.XPath("//input[@type='submit']")).Click();
+            while (true)
+            {
+                try
+                {
+                    System.Threading.Thread.Sleep(1500);
+                    driver.FindElement(By.XPath("//b[text()='simplebot']/..")).Click();
+                    break;
+                }
+                catch
+                {
+                    try
+                    {
+                        driver.FindElement(By.XPath("//div[@class='b-pager__pages']/b/following-sibling::a[1]")).Click();
+                    }
+                    catch { }
+                }
+            }
+            driver.Manage().Window.Size = new Size(800, 400);
+            System.Threading.Thread.Sleep(1500);
+            IList<string> tr = driver.WindowHandles;
+            driver.SwitchTo().Window(tr[1]);
+            new Actions(driver).MoveToElement(driver.FindElement(By.XPath("//div[@class='google']"))).Perform();
+        }
     }
 }
