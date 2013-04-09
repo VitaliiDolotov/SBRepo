@@ -3923,7 +3923,7 @@ namespace Simple_Bot
                         driver.Navigate().GoToUrl("http://simplebot.ru/");
                         System.Threading.Thread.Sleep(11000);
                         AdvTimerAssigne();
-                        //ClickRandomAdv();
+                        ClickRandomAdv();
                         if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
                         {
                             driver.Navigate().GoToUrl("http://www.botva.ru/");
@@ -4053,7 +4053,7 @@ namespace Simple_Bot
                 switch (adv)
                 {
                     case 0:
-                        TryToClick2underTopBar();
+                        TryToClick2underBelowTheHeader();
                         break;
                     case 1:
                     case 2:

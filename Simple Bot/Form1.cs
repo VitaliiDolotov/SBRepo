@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2481;
+        int BotVersion = 2482;
 
         Random rnd = new Random();
 
@@ -1192,7 +1192,7 @@ namespace Simple_Bot
             }
             OpenSite();
             PanelDisplay();//BrowserDisplay();
-            GoBackToSite();
+            //GoBackToSite();
             BrowserReloadContent();
         }
 
@@ -1636,7 +1636,7 @@ namespace Simple_Bot
                 {
                     webBrowser1.Refresh();
                 }
-                Timer_Reload = ToDateTime("01:" + Convert.ToString(rnd.Next(10, 57)) + ":00");
+                Timer_Reload = ToDateTime("03:" + Convert.ToString(rnd.Next(10, 57)) + ":00");
             }
         }
 
