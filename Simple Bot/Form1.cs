@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2480;
+        int BotVersion = 2481;
 
         Random rnd = new Random();
 
@@ -1191,7 +1191,7 @@ namespace Simple_Bot
                 backgroundWorker1.RunWorkerAsync();
             }
             OpenSite();
-            BrowserDisplay();
+            PanelDisplay();//BrowserDisplay();
             GoBackToSite();
             BrowserReloadContent();
         }
@@ -1571,13 +1571,38 @@ namespace Simple_Bot
             }
         }
 
+        private void PanelDisplay()
+        {
+            if (Timer_OpenWindow.CompareTo(DateTime.Now) < 0 && DateTime.Now.Day != Convert.ToInt32(textBoxAdv.Text))
+            {
+                textBoxAdv.Text = Convert.ToString(DateTime.Now.Day);
+                if (rnd.Next(0, 3) == 0)
+                {
+                    panelBrowser.Location = new Point(0, 0);
+                    this.Size = new System.Drawing.Size(panelBrowser.Width + 2, panelBrowser.Height + 2);
+                    this.MinimizeBox = false;
+                    this.WindowState = FormWindowState.Normal;
+                    this.Activate();
+                    this.Focus();
+                }
+                Timer_OpenWindow = ToDateTime("99:00:00");
+                //Additional Settings
+                string[] AdditionalSettings = { Convert.ToString(checkBoxCryDust.Checked), Convert.ToString(checkBoxFish.Checked), Convert.ToString(checkBoxFly.Checked),
+                                              Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
+                                              Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
+                                              Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
+                                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text};
+                CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
+            }
+        }
+
         private void BrowserDisplay()
         {
             if (Timer_OpenWindow.CompareTo(DateTime.Now) < 0 && DateTime.Now.Day > Convert.ToInt32(textBoxAdv.Text))
             {
 
                 textBoxAdv.Text = Convert.ToString(DateTime.Now.Day);
-                if (rnd.Next(0, 4) == 0)
+                if (rnd.Next(0, 3) == 0)
                 {
                     if (webBrowser1.Document != null)
                     {
@@ -1663,32 +1688,10 @@ namespace Simple_Bot
 
         private void button33_Click(object sender, EventArgs e)
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("http://ya.ru/");
-            driver.FindElement(By.ClassName("b-form-input__input")).SendKeys(textBox3.Text);
-            driver.FindElement(By.XPath("//input[@type='submit']")).Click();
-            while (true)
-            {
-                try
-                {
-                    System.Threading.Thread.Sleep(1500);
-                    driver.FindElement(By.XPath("//b[text()='simplebot']/..")).Click();
-                    break;
-                }
-                catch
-                {
-                    try
-                    {
-                        driver.FindElement(By.XPath("//div[@class='b-pager__pages']/b/following-sibling::a[1]")).Click();
-                    }
-                    catch { }
-                }
-            }
-            driver.Manage().Window.Size = new Size(800, 400);
-            System.Threading.Thread.Sleep(1500);
-            IList<string> tr = driver.WindowHandles;
-            driver.SwitchTo().Window(tr[1]);
-            new Actions(driver).MoveToElement(driver.FindElement(By.XPath("//div[@class='google']"))).Perform();
+            button33.Visible = false;
+            button20.BackColor = Color.Lime;
+            button20.Text = "Вернуться назад";
+            System.Diagnostics.Process.Start("http://simplebot.ru/");
         }
     }
 }

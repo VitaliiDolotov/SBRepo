@@ -341,7 +341,7 @@
             this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.button33 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -464,8 +464,6 @@
             // 
             // LoginBox
             // 
-            this.LoginBox.Controls.Add(this.textBox3);
-            this.LoginBox.Controls.Add(this.button33);
             this.LoginBox.Controls.Add(this.checkBoxHideBrowser);
             this.LoginBox.Controls.Add(this.pictureBox27);
             this.LoginBox.Controls.Add(this.pictureBox26);
@@ -3995,10 +3993,10 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.Location = new System.Drawing.Point(1299, 808);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(693, 320);
+            this.webBrowser1.Size = new System.Drawing.Size(306, 84);
             this.webBrowser1.TabIndex = 25;
             // 
             // textBoxAdv
@@ -4012,38 +4010,38 @@
             // 
             // panelBrowser
             // 
-            this.panelBrowser.Controls.Add(this.panel2);
-            this.panelBrowser.Controls.Add(this.panel1);
-            this.panelBrowser.Controls.Add(this.webBrowser1);
-            this.panelBrowser.Location = new System.Drawing.Point(1045, 443);
+            this.panelBrowser.Controls.Add(this.label48);
+            this.panelBrowser.Controls.Add(this.button33);
+            this.panelBrowser.Controls.Add(this.button20);
+            this.panelBrowser.Location = new System.Drawing.Point(1144, 572);
             this.panelBrowser.Name = "panelBrowser";
-            this.panelBrowser.Size = new System.Drawing.Size(704, 330);
+            this.panelBrowser.Size = new System.Drawing.Size(177, 141);
             this.panelBrowser.TabIndex = 27;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(514, 2);
+            this.panel2.Location = new System.Drawing.Point(1109, 808);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(182, 323);
             this.panel2.TabIndex = 27;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button20);
             this.panel1.Controls.Add(this.label47);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(916, 808);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(182, 323);
+            this.panel1.Size = new System.Drawing.Size(182, 294);
             this.panel1.TabIndex = 26;
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(31, 91);
+            this.button20.BackColor = System.Drawing.Color.Red;
+            this.button20.Location = new System.Drawing.Point(29, 80);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(118, 23);
             this.button20.TabIndex = 3;
-            this.button20.Text = "хочу назад!";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Text = "Хочу назад!";
+            this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label47
@@ -4067,20 +4065,23 @@
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(25, 64);
+            this.button33.BackColor = System.Drawing.Color.Lime;
+            this.button33.Location = new System.Drawing.Point(29, 38);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 23;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Size = new System.Drawing.Size(118, 23);
+            this.button33.TabIndex = 4;
+            this.button33.Text = "Кликнуть рекламу";
+            this.button33.UseVisualStyleBackColor = false;
             this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
-            // textBox3
+            // label48
             // 
-            this.textBox3.Location = new System.Drawing.Point(60, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 24;
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(45, 11);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(80, 13);
+            this.label48.TabIndex = 5;
+            this.label48.Text = "Помочь боту и";
             // 
             // Form1
             // 
@@ -4088,7 +4089,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBrowser);
             this.Controls.Add(this.textBoxAdv);
             this.Controls.Add(this.ShopBox);
@@ -4263,6 +4267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPPvalue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).EndInit();
             this.panelBrowser.ResumeLayout(false);
+            this.panelBrowser.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -4582,8 +4587,8 @@
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.CheckBox checkBoxDrinkOborotka;
+        private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

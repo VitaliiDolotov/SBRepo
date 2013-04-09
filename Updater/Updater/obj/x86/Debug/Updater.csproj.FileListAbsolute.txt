@@ -51,3 +51,4 @@ D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.csprojResolveAssemblyReference.c
 D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Form1.resources
 D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.Properties.Resources.resources
 D:\SBRepo\Updater\Updater\obj\x86\Debug\Updater.csproj.GenerateResource.Cache
+E:\Botva\SBRepo\Updater\Updater\obj\x86\Debug\Updater.csprojResolveAssemblyReference.cache
