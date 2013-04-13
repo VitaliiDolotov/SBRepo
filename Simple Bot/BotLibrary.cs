@@ -75,6 +75,7 @@ namespace Simple_Bot
         static DateTime Timer_Shop = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_DayliGifts = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_DrinkOborotka = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+        static DateTime Timer_ForestFarmer = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
 
         static DateTime Timer_Grif = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_Mont = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
@@ -4260,22 +4261,30 @@ namespace Simple_Bot
         {
             if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[17]) == true || Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[18]) == true)
             {
-                if (CharacterIsFree() == true)
+                if (Timer_ForestFarmer.CompareTo(DateTime.Now) < 0)
                 {
-                    driver.FindElement(By.LinkText("Клан")).Click();
-                    Delays();
-                    driver.FindElement(By.CssSelector(".clan_main_sawmill")).Click();
-                    Delays();
-                    if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[17]) == true)
+                    if (CharacterIsFree() == true)
                     {
-                        driver.FindElement(By.CssSelector("#forest_work input[value='ПОЙТИ']")).Click();
-                        Delays();
+                        try
+                        {
+                            driver.FindElement(By.LinkText("Клан")).Click();
+                            Delays();
+                            driver.FindElement(By.CssSelector(".clan_main_sawmill")).Click();
+                            Delays();
+                            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[17]) == true)
+                            {
+                                driver.FindElement(By.CssSelector("#forest_work input[value='ПОЙТИ']")).Click();
+                                Delays();
+                            }
+                            else
+                            {
+                                driver.FindElement(By.CssSelector("#cutter_work input[value='ПОЙТИ']")).Click();
+                                Delays();
+                            }
+                        }
+                        catch { }
                     }
-                    else
-                    {
-                        driver.FindElement(By.CssSelector("#cutter_work input[value='ПОЙТИ']")).Click();
-                        Delays();
-                    }
+                    Timer_ForestFarmer = ToDateTime("00:21:00");
                 }
             }
         }

@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2484;
+        int BotVersion = 2486;
 
         Random rnd = new Random();
 

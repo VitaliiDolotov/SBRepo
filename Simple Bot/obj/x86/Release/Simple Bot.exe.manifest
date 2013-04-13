@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Simple Bot.exe" size="217600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Simple Bot.exe" size="218112">
       <assemblyIdentity name="Simple Bot" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gem3IfNIuefkxFm9gHoHeGMQXv0=</dsig:DigestValue>
+        <dsig:DigestValue>9FeGGulJJ8D005arc7wYdXeTt90=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="3320320">
-      <assemblyIdentity name="WebDriver" version="2.30.0.0" publicKeyToken="1C2BD1631853048F" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="3794944">
+      <assemblyIdentity name="WebDriver" version="2.32.0.0" publicKeyToken="1C2BD1631853048F" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KHYsl7xEyKWN8SMGvp9VXvoSPHk=</dsig:DigestValue>
+        <dsig:DigestValue>8xXloJSKJIouhkb2f9P1Fmw9JO0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
