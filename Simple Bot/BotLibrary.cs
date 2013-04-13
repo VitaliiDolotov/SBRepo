@@ -4255,5 +4255,29 @@ namespace Simple_Bot
             string PageContent = driver.PageSource;
 
         }
+
+        public void Sawmill()
+        {
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[17]) == true || Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[18]) == true)
+            {
+                if (CharacterIsFree() == true)
+                {
+                    driver.FindElement(By.LinkText("Клан")).Click();
+                    Delays();
+                    driver.FindElement(By.CssSelector(".clan_main_sawmill")).Click();
+                    Delays();
+                    if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[17]) == true)
+                    {
+                        driver.FindElement(By.CssSelector("#forest_work input[value='ПОЙТИ']")).Click();
+                        Delays();
+                    }
+                    else
+                    {
+                        driver.FindElement(By.CssSelector("#cutter_work input[value='ПОЙТИ']")).Click();
+                        Delays();
+                    }
+                }
+            }
+        }
     }
 }

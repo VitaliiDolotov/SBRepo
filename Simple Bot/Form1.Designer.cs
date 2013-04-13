@@ -335,13 +335,18 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.textBoxAdv = new System.Windows.Forms.TextBox();
             this.panelBrowser = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
             this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button33 = new System.Windows.Forms.Button();
-            this.label48 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.radioButtonGoToForest = new System.Windows.Forms.RadioButton();
+            this.radioButtonMakeTree = new System.Windows.Forms.RadioButton();
+            this.radioButtonDontWork = new System.Windows.Forms.RadioButton();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -450,6 +455,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).BeginInit();
             this.panelBrowser.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -830,7 +837,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(141, 21);
             this.button10.TabIndex = 16;
-            this.button10.Text = "Казна";
+            this.button10.Text = "Клан";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -2125,24 +2132,20 @@
             // BankBox
             // 
             this.BankBox.Controls.Add(this.button11);
-            this.BankBox.Controls.Add(this.pictureBox21);
-            this.BankBox.Controls.Add(this.textBoxGoldForMe);
-            this.BankBox.Controls.Add(this.label23);
-            this.BankBox.Controls.Add(this.pictureBox12);
-            this.BankBox.Controls.Add(this.label10);
-            this.BankBox.Controls.Add(this.textBoxGold);
-            this.BankBox.Location = new System.Drawing.Point(952, 115);
+            this.BankBox.Controls.Add(this.groupBox12);
+            this.BankBox.Controls.Add(this.groupBox11);
+            this.BankBox.Location = new System.Drawing.Point(210, 433);
             this.BankBox.Name = "BankBox";
-            this.BankBox.Size = new System.Drawing.Size(254, 102);
+            this.BankBox.Size = new System.Drawing.Size(273, 189);
             this.BankBox.TabIndex = 13;
             this.BankBox.TabStop = false;
-            this.BankBox.Text = "Казна";
+            this.BankBox.Text = "Клан";
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(12, 72);
+            this.button11.Location = new System.Drawing.Point(158, 93);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(236, 23);
+            this.button11.Size = new System.Drawing.Size(107, 84);
             this.button11.TabIndex = 18;
             this.button11.Text = "Back";
             this.button11.UseVisualStyleBackColor = true;
@@ -2151,7 +2154,7 @@
             // pictureBox21
             // 
             this.pictureBox21.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox21.Location = new System.Drawing.Point(232, 48);
+            this.pictureBox21.Location = new System.Drawing.Point(229, 45);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(16, 17);
             this.pictureBox21.TabIndex = 13;
@@ -2160,7 +2163,7 @@
             // 
             // textBoxGoldForMe
             // 
-            this.textBoxGoldForMe.Location = new System.Drawing.Point(132, 46);
+            this.textBoxGoldForMe.Location = new System.Drawing.Point(129, 43);
             this.textBoxGoldForMe.Name = "textBoxGoldForMe";
             this.textBoxGoldForMe.Size = new System.Drawing.Size(94, 20);
             this.textBoxGoldForMe.TabIndex = 12;
@@ -2170,7 +2173,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(9, 49);
+            this.label23.Location = new System.Drawing.Point(6, 46);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(119, 13);
             this.label23.TabIndex = 11;
@@ -2179,7 +2182,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox12.Location = new System.Drawing.Point(232, 21);
+            this.pictureBox12.Location = new System.Drawing.Point(229, 18);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(16, 17);
             this.pictureBox12.TabIndex = 10;
@@ -2189,7 +2192,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 22);
+            this.label10.Location = new System.Drawing.Point(6, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(117, 13);
             this.label10.TabIndex = 1;
@@ -2197,7 +2200,7 @@
             // 
             // textBoxGold
             // 
-            this.textBoxGold.Location = new System.Drawing.Point(132, 19);
+            this.textBoxGold.Location = new System.Drawing.Point(129, 16);
             this.textBoxGold.Name = "textBoxGold";
             this.textBoxGold.Size = new System.Drawing.Size(94, 20);
             this.textBoxGold.TabIndex = 0;
@@ -3260,7 +3263,7 @@
             this.SoapBox.Controls.Add(this.pictureBox10);
             this.SoapBox.Controls.Add(this.textBoxSoapToTP);
             this.SoapBox.Controls.Add(this.label30);
-            this.SoapBox.Location = new System.Drawing.Point(209, 567);
+            this.SoapBox.Location = new System.Drawing.Point(947, 115);
             this.SoapBox.Name = "SoapBox";
             this.SoapBox.Size = new System.Drawing.Size(277, 108);
             this.SoapBox.TabIndex = 15;
@@ -4018,6 +4021,37 @@
             this.panelBrowser.Size = new System.Drawing.Size(177, 141);
             this.panelBrowser.TabIndex = 27;
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(45, 11);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(80, 13);
+            this.label48.TabIndex = 5;
+            this.label48.Text = "Помочь боту и";
+            // 
+            // button33
+            // 
+            this.button33.BackColor = System.Drawing.Color.Lime;
+            this.button33.Location = new System.Drawing.Point(29, 38);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(118, 23);
+            this.button33.TabIndex = 4;
+            this.button33.Text = "Кликнуть рекламу";
+            this.button33.UseVisualStyleBackColor = false;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.Red;
+            this.button20.Location = new System.Drawing.Point(29, 80);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(118, 23);
+            this.button20.TabIndex = 3;
+            this.button20.Text = "Хочу назад!";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(1109, 808);
@@ -4032,17 +4066,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(182, 294);
             this.panel1.TabIndex = 26;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Red;
-            this.button20.Location = new System.Drawing.Point(29, 80);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(118, 23);
-            this.button20.TabIndex = 3;
-            this.button20.Text = "Хочу назад!";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label47
             // 
@@ -4063,25 +4086,64 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "groupBox10";
             // 
-            // button33
+            // groupBox11
             // 
-            this.button33.BackColor = System.Drawing.Color.Lime;
-            this.button33.Location = new System.Drawing.Point(29, 38);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(118, 23);
-            this.button33.TabIndex = 4;
-            this.button33.Text = "Кликнуть рекламу";
-            this.button33.UseVisualStyleBackColor = false;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
+            this.groupBox11.Controls.Add(this.label10);
+            this.groupBox11.Controls.Add(this.textBoxGold);
+            this.groupBox11.Controls.Add(this.pictureBox21);
+            this.groupBox11.Controls.Add(this.pictureBox12);
+            this.groupBox11.Controls.Add(this.label23);
+            this.groupBox11.Controls.Add(this.textBoxGoldForMe);
+            this.groupBox11.Location = new System.Drawing.Point(10, 17);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(255, 70);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Казна";
             // 
-            // label48
+            // groupBox12
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(45, 11);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(80, 13);
-            this.label48.TabIndex = 5;
-            this.label48.Text = "Помочь боту и";
+            this.groupBox12.Controls.Add(this.radioButtonDontWork);
+            this.groupBox12.Controls.Add(this.radioButtonMakeTree);
+            this.groupBox12.Controls.Add(this.radioButtonGoToForest);
+            this.groupBox12.Location = new System.Drawing.Point(10, 89);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(144, 88);
+            this.groupBox12.TabIndex = 1;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Лесопилка";
+            // 
+            // radioButtonGoToForest
+            // 
+            this.radioButtonGoToForest.AutoSize = true;
+            this.radioButtonGoToForest.Location = new System.Drawing.Point(12, 39);
+            this.radioButtonGoToForest.Name = "radioButtonGoToForest";
+            this.radioButtonGoToForest.Size = new System.Drawing.Size(96, 17);
+            this.radioButtonGoToForest.TabIndex = 0;
+            this.radioButtonGoToForest.Text = "Сходить в лес";
+            this.radioButtonGoToForest.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMakeTree
+            // 
+            this.radioButtonMakeTree.AutoSize = true;
+            this.radioButtonMakeTree.Location = new System.Drawing.Point(12, 62);
+            this.radioButtonMakeTree.Name = "radioButtonMakeTree";
+            this.radioButtonMakeTree.Size = new System.Drawing.Size(124, 17);
+            this.radioButtonMakeTree.TabIndex = 1;
+            this.radioButtonMakeTree.Text = "Обработать дерево";
+            this.radioButtonMakeTree.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDontWork
+            // 
+            this.radioButtonDontWork.AutoSize = true;
+            this.radioButtonDontWork.Checked = true;
+            this.radioButtonDontWork.Location = new System.Drawing.Point(12, 16);
+            this.radioButtonDontWork.Name = "radioButtonDontWork";
+            this.radioButtonDontWork.Size = new System.Drawing.Size(130, 17);
+            this.radioButtonDontWork.TabIndex = 2;
+            this.radioButtonDontWork.TabStop = true;
+            this.radioButtonDontWork.Text = "Не работать на клан";
+            this.radioButtonDontWork.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -4197,7 +4259,6 @@
             this.StutsUpBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEnemyPower)).EndInit();
             this.BankBox.ResumeLayout(false);
-            this.BankBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.EffectsBox.ResumeLayout(false);
@@ -4270,6 +4331,10 @@
             this.panelBrowser.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4589,6 +4654,11 @@
         private System.Windows.Forms.CheckBox checkBoxDrinkOborotka;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.RadioButton radioButtonMakeTree;
+        private System.Windows.Forms.RadioButton radioButtonGoToForest;
+        private System.Windows.Forms.RadioButton radioButtonDontWork;
     }
 }
 

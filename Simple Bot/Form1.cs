@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2483;
+        int BotVersion = 2484;
 
         Random rnd = new Random();
 
@@ -138,6 +138,9 @@ namespace Simple_Bot
                 checkBoxDayliGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[14]);
                 checkBoxHideBrowser.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[15]);
                 textBoxAdv.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[16];
+                radioButtonGoToForest.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[17]);
+                radioButtonMakeTree.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[18]);
+                radioButtonDontWork.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[19]);
             }
             catch { }
 
@@ -428,7 +431,8 @@ namespace Simple_Bot
                                               Convert.ToString(checkBoxSoapMaking.Checked), textBoxGold.Text, textBoxGoldForMe.Text, textBoxSoapToTP.Text, textBoxBySlaves.Text,
                                               Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
                                               Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
-                                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text};
+                                              Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text, Convert.ToString(radioButtonGoToForest.Checked), Convert.ToString(radioButtonMakeTree.Checked),
+                                              Convert.ToString(radioButtonDontWork.Checked)};
             CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
             checkBoxCryDust.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[1]);
             checkBoxFish.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[2]);
@@ -446,6 +450,9 @@ namespace Simple_Bot
             checkBoxDayliGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[14]);
             checkBoxHideBrowser.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[15]);
             textBoxAdv.Text = ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[16];
+            radioButtonGoToForest.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[17]);
+            radioButtonMakeTree.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[18]);
+            radioButtonDontWork.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[19]);
 
             //Underground Settings
             string[] UndergroundSettings = { Convert.ToString(checkBoxUnderground.Checked), Convert.ToString(radioButtonUnderground.Checked), Convert.ToString(radioButtonFastUnderground.Checked),
@@ -660,6 +667,7 @@ namespace Simple_Bot
                         Bot.GoldDiscard();
                         Bot.MineByInventory();
                         Bot.MineGoWork();
+                        Bot.Sawmill();
                         Bot.CrystalDustMaking();
                         Bot.SoapMaking();
                         Bot.Fishing();
@@ -1692,6 +1700,11 @@ namespace Simple_Bot
             button20.BackColor = Color.Lime;
             button20.Text = "Вернуться назад";
             System.Diagnostics.Process.Start("http://simplebot.ru/");
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "MenuBox");
         }
     }
 }
