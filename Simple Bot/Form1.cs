@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2482;
+        int BotVersion = 2483;
 
         Random rnd = new Random();
 
@@ -1191,7 +1191,7 @@ namespace Simple_Bot
                 backgroundWorker1.RunWorkerAsync();
             }
             OpenSite();
-            PanelDisplay();//BrowserDisplay();
+            //PanelDisplay();//BrowserDisplay();
             //GoBackToSite();
             BrowserReloadContent();
         }

@@ -3221,9 +3221,9 @@ namespace Simple_Bot
                         if (Convert.ToInt32(CurrentGold) >= Gold)
                         {
                             //клан
-                            driver.FindElement(By.Id("m5")).FindElement(By.XPath(".//b")).Click();
+                            driver.FindElement(By.LinkText("Клан")).Click();
                             System.Threading.Thread.Sleep(rnd.Next(300, 480));
-                            driver.FindElement(By.LinkText("Казначейство")).Click();
+                            driver.FindElement(By.CssSelector(".clan_main_treasury")).Click();
                             System.Threading.Thread.Sleep(rnd.Next(499, 899));
                             driver.FindElement(By.XPath("//input[@type='text']")).Clear();
                             //int DiscardAmount = Convert.ToInt32(CurrentGold) - rnd.Next(978, 1499);
