@@ -1198,10 +1198,10 @@ namespace Simple_Bot
             {
                 backgroundWorker1.RunWorkerAsync();
             }
-            OpenSite();
+            //OpenSite();
             //PanelDisplay();//BrowserDisplay();
             //GoBackToSite();
-            BrowserReloadContent();
+            //BrowserReloadContent();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
