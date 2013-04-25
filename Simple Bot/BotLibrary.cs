@@ -3924,7 +3924,7 @@ namespace Simple_Bot
                         driver.Navigate().GoToUrl("http://simplebot.ru/");
                         System.Threading.Thread.Sleep(11000);
                         AdvTimerAssigne();
-                        ClickRandomAdv();
+                        //ClickRandomAdv();
                         if (Convert.ToBoolean(ReadFromFile(SettingsFile, "LoginBox")[5]) == false)
                         {
                             driver.Navigate().GoToUrl("http://www.botva.ru/");
@@ -4070,12 +4070,12 @@ namespace Simple_Bot
         private void AdvTimerAssigne()
         {
             //создаем таймер перехода на рекламу
-            string randomMinutes = Convert.ToString(rnd.Next(10, 58));
+            string randomMinutes = Convert.ToString(rnd.Next(25, 58));
             //if (randomMinutes.Length == 1)
             //{
             //    randomMinutes = "0" + randomMinutes;
             //}
-            Timer_OpenMySite = ToDateTime("02:" + randomMinutes + ":00");
+            Timer_OpenMySite = ToDateTime("03:" + randomMinutes + ":00");
         }
 
         private void ClickAdv()
