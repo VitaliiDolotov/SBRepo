@@ -2320,7 +2320,7 @@ namespace Simple_Bot
                                 //берем пета
                                 if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[12]) == true)
                                 {
-                                    GetPet();
+                                    GetPet(true);
                                 }
                                 //переходим в шахту и кликаем "по лебедке"/"по веревке"
                                 driver.FindElement(By.Id("m6")).FindElement(By.XPath(".//b")).Click();
@@ -2522,7 +2522,7 @@ namespace Simple_Bot
                                     //берем пета
                                     if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[12]) == true)
                                     {
-                                        GetPet();
+                                        GetPet(true);
                                     }
                                     //переходим в шахту и кликаем "по лебедке"/"по веревке"
                                     driver.FindElement(By.Id("m6")).FindElement(By.XPath(".//b")).Click();
@@ -3145,7 +3145,7 @@ namespace Simple_Bot
             return RetVal;
         }
 
-        private void GetPet()
+        private void GetPet(bool isUnderground = false)
         {
             try
             {
@@ -3158,16 +3158,45 @@ namespace Simple_Bot
             {
                 //Деревня
                 driver.FindElement(By.Id("m3")).FindElement(By.XPath(".//b")).Click();
-                System.Threading.Thread.Sleep(rnd.Next(300, 480));
+                Delays();
                 //Жилище
                 driver.FindElement(By.LinkText("Жилище")).Click();
-                System.Threading.Thread.Sleep(rnd.Next(598, 899));
+                Delays();
                 //клетка
                 driver.FindElement(By.LinkText("Клетка")).Click();
-                System.Threading.Thread.Sleep(rnd.Next(598, 899));
+                Delays();
                 //вытащить с клетки
-                driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
-                System.Threading.Thread.Sleep(rnd.Next(300, 480));
+                if (!isUnderground)
+                {
+                    driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
+                    Delays();
+                }
+                //если дефолтный зверек
+                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[15]) && isUnderground)
+                {
+                    driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
+                    Delays();
+                }
+                //Если червячелло
+                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[16]) && isUnderground)
+                {
+                    try
+                    {
+                        driver.FindElement(By.XPath("//img[contains(@src,'Pet_7s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                        Delays();
+                    }
+                    catch{}
+                }
+                //Если синий дух червячелло
+                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[17]) && isUnderground)
+                {
+                    try
+                    {
+                        driver.FindElement(By.XPath("//img[contains(@src,'Pet_16s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                        Delays();
+                    }
+                    catch { }
+                }
             }
         }
 

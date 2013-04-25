@@ -161,6 +161,9 @@ namespace Simple_Bot
                 checkBoxUndGetPet.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[12]);
                 checkBoxPandaOpenCry.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[13]);
                 numericUpDownPandaLvlForSale.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, UndergroundBox.Name)[14]);
+                radioButtonWorbBlueSoul.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[15]);
+                radioButtonWormPet.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[16]);
+                radioButtonDefaultUndrPet.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[17]);
             }
             catch { }
 
@@ -459,7 +462,8 @@ namespace Simple_Bot
                                                Convert.ToString(radioButtonWinch.Checked), Convert.ToString(radioButtonCord.Checked), Convert.ToString(checkBoxByKeys.Checked),
                                                Convert.ToString(numericUpDownUndergroundImm.Value), Convert.ToString(checkBoxOpenPanda.Checked), Convert.ToString(checkBoxSalePanda.Checked),
                                                Convert.ToString(numericUpDownPandaLvl.Value), Convert.ToString(checkBoxUndergroundSetPet.Checked), Convert.ToString(checkBoxUndGetPet.Checked),
-                                               Convert.ToString(checkBoxPandaOpenCry.Checked), Convert.ToString(numericUpDownPandaLvlForSale.Value)};
+                                               Convert.ToString(checkBoxPandaOpenCry.Checked), Convert.ToString(numericUpDownPandaLvlForSale.Value), Convert.ToString(radioButtonWorbBlueSoul.Checked),
+                                               Convert.ToString(radioButtonWormPet.Checked), Convert.ToString(radioButtonDefaultUndrPet.Checked)};
             CompareValuesInFile(UndergroundBox.Name, UndergroundSettings);
             checkBoxUnderground.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[1]);
             radioButtonUnderground.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[2]);
@@ -475,6 +479,9 @@ namespace Simple_Bot
             checkBoxUndGetPet.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[12]);
             checkBoxPandaOpenCry.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[13]);
             numericUpDownPandaLvlForSale.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, UndergroundBox.Name)[14]);
+            radioButtonDefaultUndrPet.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[15]);
+            radioButtonWormPet.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[16]);
+            radioButtonWorbBlueSoul.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, UndergroundBox.Name)[17]);
 
             //Fight settings
             string[] FightSettings = { Convert.ToString(checkBoxFightMonsters.Checked), Convert.ToString(checkBoxFightZorro.Checked), Convert.ToString(radioButtonZorroLvl.Checked), Convert.ToString(radioButtonZorroList.Checked), Convert.ToString(checkBoxFight.Checked), Convert.ToString(radioButtonFightLvl.Checked), Convert.ToString(radioButtonFightList.Checked), Convert.ToString(checkBoxOborotka.Checked), Convert.ToString(checkBoxGetPet.Checked), Convert.ToString(checkBoxImmunOgl.Checked), Convert.ToString(checkBoxImmunAnti.Checked), Convert.ToString(radioButtonImmunPir.Checked), Convert.ToString(radioButtonImmunCry.Checked), Convert.ToString(checkBoxPetImmun.Checked), Convert.ToString(numericUpDownPetImmun.Value), Convert.ToString(checkBoxEnemyPower.Checked),
@@ -1703,6 +1710,16 @@ namespace Simple_Bot
         }
 
         private void button34_Click(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "MenuBox");
+        }
+
+        private void pictureBox35_Click(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "PetForUndergr");
+        }
+
+        private void button34_Click_1(object sender, EventArgs e)
         {
             UIBoxDisplay(3, 4, "MenuBox");
         }

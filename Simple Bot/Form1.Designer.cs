@@ -174,12 +174,17 @@
             this.numericUpDownEnemyPower = new System.Windows.Forms.NumericUpDown();
             this.BankBox = new System.Windows.Forms.GroupBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.textBoxGoldForMe = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.radioButtonDontWork = new System.Windows.Forms.RadioButton();
+            this.radioButtonMakeTree = new System.Windows.Forms.RadioButton();
+            this.radioButtonGoToForest = new System.Windows.Forms.RadioButton();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxGold = new System.Windows.Forms.TextBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxGoldForMe = new System.Windows.Forms.TextBox();
             this.EffectsBox = new System.Windows.Forms.GroupBox();
             this.checkBoxEffAnti = new System.Windows.Forms.CheckBox();
             this.checkBoxEffGold = new System.Windows.Forms.CheckBox();
@@ -342,11 +347,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.radioButtonGoToForest = new System.Windows.Forms.RadioButton();
-            this.radioButtonMakeTree = new System.Windows.Forms.RadioButton();
-            this.radioButtonDontWork = new System.Windows.Forms.RadioButton();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.PetForUndergrBox = new System.Windows.Forms.GroupBox();
+            this.radioButtonDefaultUndrPet = new System.Windows.Forms.RadioButton();
+            this.radioButtonWormPet = new System.Windows.Forms.RadioButton();
+            this.radioButtonWorbBlueSoul = new System.Windows.Forms.RadioButton();
+            this.button34 = new System.Windows.Forms.Button();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -404,6 +411,8 @@
             this.StutsUpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEnemyPower)).BeginInit();
             this.BankBox.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.EffectsBox.SuspendLayout();
@@ -455,8 +464,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).BeginInit();
             this.panelBrowser.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            this.PetForUndergrBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -908,6 +918,7 @@
             // 
             // UndergroundBox
             // 
+            this.UndergroundBox.Controls.Add(this.pictureBox35);
             this.UndergroundBox.Controls.Add(this.button21);
             this.UndergroundBox.Controls.Add(this.pictureBox11);
             this.UndergroundBox.Controls.Add(this.pictureBox15);
@@ -2151,43 +2162,64 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // pictureBox21
+            // groupBox12
             // 
-            this.pictureBox21.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox21.Location = new System.Drawing.Point(229, 45);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox21.TabIndex = 13;
-            this.pictureBox21.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox21, "Оставлять себе не меньше указанного значения");
+            this.groupBox12.Controls.Add(this.radioButtonDontWork);
+            this.groupBox12.Controls.Add(this.radioButtonMakeTree);
+            this.groupBox12.Controls.Add(this.radioButtonGoToForest);
+            this.groupBox12.Location = new System.Drawing.Point(10, 89);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(144, 88);
+            this.groupBox12.TabIndex = 1;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Лесопилка";
             // 
-            // textBoxGoldForMe
+            // radioButtonDontWork
             // 
-            this.textBoxGoldForMe.Location = new System.Drawing.Point(129, 43);
-            this.textBoxGoldForMe.Name = "textBoxGoldForMe";
-            this.textBoxGoldForMe.Size = new System.Drawing.Size(94, 20);
-            this.textBoxGoldForMe.TabIndex = 12;
-            this.textBoxGoldForMe.Text = "не оставлять";
-            this.textBoxGoldForMe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.radioButtonDontWork.AutoSize = true;
+            this.radioButtonDontWork.Checked = true;
+            this.radioButtonDontWork.Location = new System.Drawing.Point(12, 16);
+            this.radioButtonDontWork.Name = "radioButtonDontWork";
+            this.radioButtonDontWork.Size = new System.Drawing.Size(130, 17);
+            this.radioButtonDontWork.TabIndex = 2;
+            this.radioButtonDontWork.TabStop = true;
+            this.radioButtonDontWork.Text = "Не работать на клан";
+            this.radioButtonDontWork.UseVisualStyleBackColor = true;
             // 
-            // label23
+            // radioButtonMakeTree
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 46);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(119, 13);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "Оставлять не меньше";
+            this.radioButtonMakeTree.AutoSize = true;
+            this.radioButtonMakeTree.Location = new System.Drawing.Point(12, 62);
+            this.radioButtonMakeTree.Name = "radioButtonMakeTree";
+            this.radioButtonMakeTree.Size = new System.Drawing.Size(124, 17);
+            this.radioButtonMakeTree.TabIndex = 1;
+            this.radioButtonMakeTree.Text = "Обработать дерево";
+            this.radioButtonMakeTree.UseVisualStyleBackColor = true;
             // 
-            // pictureBox12
+            // radioButtonGoToForest
             // 
-            this.pictureBox12.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox12.Location = new System.Drawing.Point(229, 18);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox12.TabIndex = 10;
-            this.pictureBox12.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox12, "Если на руках злота больше указанного значения\r\nсливать золото в казнy");
+            this.radioButtonGoToForest.AutoSize = true;
+            this.radioButtonGoToForest.Location = new System.Drawing.Point(12, 39);
+            this.radioButtonGoToForest.Name = "radioButtonGoToForest";
+            this.radioButtonGoToForest.Size = new System.Drawing.Size(96, 17);
+            this.radioButtonGoToForest.TabIndex = 0;
+            this.radioButtonGoToForest.Text = "Сходить в лес";
+            this.radioButtonGoToForest.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.label10);
+            this.groupBox11.Controls.Add(this.textBoxGold);
+            this.groupBox11.Controls.Add(this.pictureBox21);
+            this.groupBox11.Controls.Add(this.pictureBox12);
+            this.groupBox11.Controls.Add(this.label23);
+            this.groupBox11.Controls.Add(this.textBoxGoldForMe);
+            this.groupBox11.Location = new System.Drawing.Point(10, 17);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(255, 70);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Казна";
             // 
             // label10
             // 
@@ -2206,6 +2238,44 @@
             this.textBoxGold.TabIndex = 0;
             this.textBoxGold.Text = "не сливать";
             this.textBoxGold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox21.Location = new System.Drawing.Point(229, 45);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox21.TabIndex = 13;
+            this.pictureBox21.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox21, "Оставлять себе не меньше указанного значения");
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox12.Location = new System.Drawing.Point(229, 18);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox12.TabIndex = 10;
+            this.pictureBox12.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox12, "Если на руках злота больше указанного значения\r\nсливать золото в казнy");
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 46);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(119, 13);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Оставлять не меньше";
+            // 
+            // textBoxGoldForMe
+            // 
+            this.textBoxGoldForMe.Location = new System.Drawing.Point(129, 43);
+            this.textBoxGoldForMe.Name = "textBoxGoldForMe";
+            this.textBoxGoldForMe.Size = new System.Drawing.Size(94, 20);
+            this.textBoxGoldForMe.TabIndex = 12;
+            this.textBoxGoldForMe.Text = "не оставлять";
+            this.textBoxGoldForMe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // EffectsBox
             // 
@@ -4086,64 +4156,82 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "groupBox10";
             // 
-            // groupBox11
+            // pictureBox35
             // 
-            this.groupBox11.Controls.Add(this.label10);
-            this.groupBox11.Controls.Add(this.textBoxGold);
-            this.groupBox11.Controls.Add(this.pictureBox21);
-            this.groupBox11.Controls.Add(this.pictureBox12);
-            this.groupBox11.Controls.Add(this.label23);
-            this.groupBox11.Controls.Add(this.textBoxGoldForMe);
-            this.groupBox11.Location = new System.Drawing.Point(10, 17);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(255, 70);
-            this.groupBox11.TabIndex = 0;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Казна";
+            this.pictureBox35.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox35.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox35.Location = new System.Drawing.Point(398, 15);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox35.TabIndex = 14;
+            this.pictureBox35.TabStop = false;
+            this.pictureBox35.Click += new System.EventHandler(this.pictureBox35_Click);
             // 
-            // groupBox12
+            // PetForUndergrBox
             // 
-            this.groupBox12.Controls.Add(this.radioButtonDontWork);
-            this.groupBox12.Controls.Add(this.radioButtonMakeTree);
-            this.groupBox12.Controls.Add(this.radioButtonGoToForest);
-            this.groupBox12.Location = new System.Drawing.Point(10, 89);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(144, 88);
-            this.groupBox12.TabIndex = 1;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Лесопилка";
+            this.PetForUndergrBox.Controls.Add(this.pictureBox36);
+            this.PetForUndergrBox.Controls.Add(this.button34);
+            this.PetForUndergrBox.Controls.Add(this.radioButtonWorbBlueSoul);
+            this.PetForUndergrBox.Controls.Add(this.radioButtonWormPet);
+            this.PetForUndergrBox.Controls.Add(this.radioButtonDefaultUndrPet);
+            this.PetForUndergrBox.Location = new System.Drawing.Point(488, 438);
+            this.PetForUndergrBox.Name = "PetForUndergrBox";
+            this.PetForUndergrBox.Size = new System.Drawing.Size(183, 117);
+            this.PetForUndergrBox.TabIndex = 29;
+            this.PetForUndergrBox.TabStop = false;
+            this.PetForUndergrBox.Text = "Зверек для подзема";
             // 
-            // radioButtonGoToForest
+            // radioButtonDefaultUndrPet
             // 
-            this.radioButtonGoToForest.AutoSize = true;
-            this.radioButtonGoToForest.Location = new System.Drawing.Point(12, 39);
-            this.radioButtonGoToForest.Name = "radioButtonGoToForest";
-            this.radioButtonGoToForest.Size = new System.Drawing.Size(96, 17);
-            this.radioButtonGoToForest.TabIndex = 0;
-            this.radioButtonGoToForest.Text = "Сходить в лес";
-            this.radioButtonGoToForest.UseVisualStyleBackColor = true;
+            this.radioButtonDefaultUndrPet.AutoSize = true;
+            this.radioButtonDefaultUndrPet.Checked = true;
+            this.radioButtonDefaultUndrPet.Location = new System.Drawing.Point(15, 22);
+            this.radioButtonDefaultUndrPet.Name = "radioButtonDefaultUndrPet";
+            this.radioButtonDefaultUndrPet.Size = new System.Drawing.Size(103, 17);
+            this.radioButtonDefaultUndrPet.TabIndex = 0;
+            this.radioButtonDefaultUndrPet.TabStop = true;
+            this.radioButtonDefaultUndrPet.Text = "Текущий зверь";
+            this.radioButtonDefaultUndrPet.UseVisualStyleBackColor = true;
             // 
-            // radioButtonMakeTree
+            // radioButtonWormPet
             // 
-            this.radioButtonMakeTree.AutoSize = true;
-            this.radioButtonMakeTree.Location = new System.Drawing.Point(12, 62);
-            this.radioButtonMakeTree.Name = "radioButtonMakeTree";
-            this.radioButtonMakeTree.Size = new System.Drawing.Size(124, 17);
-            this.radioButtonMakeTree.TabIndex = 1;
-            this.radioButtonMakeTree.Text = "Обработать дерево";
-            this.radioButtonMakeTree.UseVisualStyleBackColor = true;
+            this.radioButtonWormPet.AutoSize = true;
+            this.radioButtonWormPet.Location = new System.Drawing.Point(15, 43);
+            this.radioButtonWormPet.Name = "radioButtonWormPet";
+            this.radioButtonWormPet.Size = new System.Drawing.Size(86, 17);
+            this.radioButtonWormPet.TabIndex = 1;
+            this.radioButtonWormPet.Text = "Червячелло";
+            this.radioButtonWormPet.UseVisualStyleBackColor = true;
             // 
-            // radioButtonDontWork
+            // radioButtonWorbBlueSoul
             // 
-            this.radioButtonDontWork.AutoSize = true;
-            this.radioButtonDontWork.Checked = true;
-            this.radioButtonDontWork.Location = new System.Drawing.Point(12, 16);
-            this.radioButtonDontWork.Name = "radioButtonDontWork";
-            this.radioButtonDontWork.Size = new System.Drawing.Size(130, 17);
-            this.radioButtonDontWork.TabIndex = 2;
-            this.radioButtonDontWork.TabStop = true;
-            this.radioButtonDontWork.Text = "Не работать на клан";
-            this.radioButtonDontWork.UseVisualStyleBackColor = true;
+            this.radioButtonWorbBlueSoul.AutoSize = true;
+            this.radioButtonWorbBlueSoul.Location = new System.Drawing.Point(15, 65);
+            this.radioButtonWorbBlueSoul.Name = "radioButtonWorbBlueSoul";
+            this.radioButtonWorbBlueSoul.Size = new System.Drawing.Size(105, 17);
+            this.radioButtonWorbBlueSoul.TabIndex = 2;
+            this.radioButtonWorbBlueSoul.Text = "Дух червячелло";
+            this.radioButtonWorbBlueSoul.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(7, 88);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(167, 23);
+            this.button34.TabIndex = 17;
+            this.button34.Text = "Back";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click_1);
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox36.Location = new System.Drawing.Point(154, 22);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox36.TabIndex = 19;
+            this.pictureBox36.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox36, "Тот за которого не нужно платить 3 кристалла");
             // 
             // Form1
             // 
@@ -4151,6 +4239,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.Controls.Add(this.PetForUndergrBox);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox10);
@@ -4259,6 +4348,10 @@
             this.StutsUpBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEnemyPower)).EndInit();
             this.BankBox.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.EffectsBox.ResumeLayout(false);
@@ -4331,10 +4424,10 @@
             this.panelBrowser.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            this.PetForUndergrBox.ResumeLayout(false);
+            this.PetForUndergrBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4659,6 +4752,13 @@
         private System.Windows.Forms.RadioButton radioButtonMakeTree;
         private System.Windows.Forms.RadioButton radioButtonGoToForest;
         private System.Windows.Forms.RadioButton radioButtonDontWork;
+        private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.GroupBox PetForUndergrBox;
+        private System.Windows.Forms.PictureBox pictureBox36;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.RadioButton radioButtonWorbBlueSoul;
+        private System.Windows.Forms.RadioButton radioButtonWormPet;
+        private System.Windows.Forms.RadioButton radioButtonDefaultUndrPet;
     }
 }
 
