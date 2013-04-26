@@ -2320,7 +2320,7 @@ namespace Simple_Bot
                                 //берем пета
                                 if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[12]) == true)
                                 {
-                                    GetPet(true);
+                                    GetPet(PetTypeProvider());
                                 }
                                 //переходим в шахту и кликаем "по лебедке"/"по веревке"
                                 driver.FindElement(By.Id("m6")).FindElement(By.XPath(".//b")).Click();
@@ -2522,7 +2522,7 @@ namespace Simple_Bot
                                     //берем пета
                                     if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[12]) == true)
                                     {
-                                        GetPet(true);
+                                        GetPet(PetTypeProvider());
                                     }
                                     //переходим в шахту и кликаем "по лебедке"/"по веревке"
                                     driver.FindElement(By.Id("m6")).FindElement(By.XPath(".//b")).Click();
@@ -3145,7 +3145,7 @@ namespace Simple_Bot
             return RetVal;
         }
 
-        private void GetPet(bool isUnderground = false)
+        private void GetPet(PetType pet = PetType.currentPet)
         {
             try
             {
@@ -3166,38 +3166,71 @@ namespace Simple_Bot
                 driver.FindElement(By.LinkText("Клетка")).Click();
                 Delays();
                 //вытащить с клетки
-                if (!isUnderground)
+                switch (pet)
                 {
-                    driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
-                    Delays();
-                }
-                //если дефолтный зверек
-                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[15]) && isUnderground)
-                {
-                    driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
-                    Delays();
-                }
-                //Если червячелло
-                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[16]) && isUnderground)
-                {
-                    try
-                    {
-                        driver.FindElement(By.XPath("//img[contains(@src,'Pet_7s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                        //выпустить дефолтного зверя
+                    case PetType.currentPet: driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
                         Delays();
-                    }
-                    catch{}
-                }
-                //Если синий дух червячелло
-                if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[17]) && isUnderground)
-                {
-                    try
-                    {
-                        driver.FindElement(By.XPath("//img[contains(@src,'Pet_16s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
-                        Delays();
-                    }
-                    catch { }
+                        break;
+
+                        //выпустить червя обычного
+                    case PetType.worm: try
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_7')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
+                            Delays();
+                        }
+                        catch
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_7s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                            Delays();
+                        };
+                        break;
+                        
+                        //выпустить синего духа
+                    case PetType.wormBlueSoul: try
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_16')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
+                            Delays();
+                        }
+                        catch
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_16s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                            Delays();
+                        };
+                        break;
+
+                    default: break;
                 }
             }
+        }
+
+        private enum PetType
+        {
+            currentPet,
+            worm,
+            wormBlueSoul
+        }
+
+        private PetType PetTypeProvider()
+        {
+            var retRep = PetType.currentPet;
+
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[15]))
+            {
+                retRep = PetType.wormBlueSoul;
+            }
+
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[16]))
+            {
+                retRep = PetType.worm;
+            }
+
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[17]))
+            {
+                retRep = PetType.currentPet;
+            }
+
+            return retRep;
         }
 
         private void SetPet()
@@ -4317,5 +4350,37 @@ namespace Simple_Bot
                 }
             }
         }
+
+        public void BuyGifts()
+        {
+            if (!Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[23]))
+            {
+                try
+                {
+                    int currenCry = Convert.ToInt32(driver.FindElement(By.Id("crystal")).FindElement(By.TagName("b")).Text.Replace(".", ""));
+                    if (currenCry > Convert.ToInt32(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[20]))
+                    {
+                        driver.FindElement(By.LinkText("Деревня")).Click();
+                        Delays();
+                        driver.FindElement(By.LinkText("Лавка")).Click();
+                        Delays();
+                        driver.FindElement(By.LinkText("ПОДРОБНЕЕ")).Click();
+                        Delays();
+                        if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[21]))
+                        {
+                            driver.FindElement(By.XPath("//div[contains(@title,'Детская')]/../input")).Click();
+                            Delays();
+                        }
+                        else
+                        {
+                            driver.FindElement(By.XPath("//div[contains(@title,'Просто')]/../input")).Click();
+                            Delays();
+                        }
+                    }
+                }
+                catch { }
+            }
+        }
+
     }
 }

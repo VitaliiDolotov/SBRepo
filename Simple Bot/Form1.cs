@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2488;
+        int BotVersion = 2489;
 
         Random rnd = new Random();
 
@@ -141,6 +141,10 @@ namespace Simple_Bot
                 radioButtonGoToForest.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[17]);
                 radioButtonMakeTree.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[18]);
                 radioButtonDontWork.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[19]);
+                numericUpDownGiftsCryNumber.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[20]);
+                radioButtonSmallGift.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[21]);
+                radioButtonMiddleGift.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[22]);
+                radioButtonDonBuyGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[23]);
             }
             catch { }
 
@@ -435,7 +439,8 @@ namespace Simple_Bot
                                               Convert.ToString(checkBoxLitleGuru.Checked), Convert.ToString(checkBoxReminder.Checked), Convert.ToString(checkBoxTray.Checked),
                                               Convert.ToString(checkBoxVillageManager.Checked), Convert.ToString(numericUpDownVillageManagerTime.Value), Convert.ToString(checkBoxDayliGifts.Checked),
                                               Convert.ToString(checkBoxHideBrowser.Checked), textBoxAdv.Text, Convert.ToString(radioButtonGoToForest.Checked), Convert.ToString(radioButtonMakeTree.Checked),
-                                              Convert.ToString(radioButtonDontWork.Checked)};
+                                              Convert.ToString(radioButtonDontWork.Checked),Convert.ToString(numericUpDownGiftsCryNumber.Value),Convert.ToString(radioButtonSmallGift.Checked),Convert.ToString(radioButtonMiddleGift.Checked),
+                                              Convert.ToString(radioButtonDonBuyGifts.Checked)};
             CompareValuesInFile(AdditionalSettingsBox.Name, AdditionalSettings);
             checkBoxCryDust.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[1]);
             checkBoxFish.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[2]);
@@ -456,6 +461,10 @@ namespace Simple_Bot
             radioButtonGoToForest.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[17]);
             radioButtonMakeTree.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[18]);
             radioButtonDontWork.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[19]);
+            numericUpDownGiftsCryNumber.Value = Convert.ToDecimal(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[20]);
+            radioButtonSmallGift.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[21]);
+            radioButtonMiddleGift.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[22]);
+            radioButtonDonBuyGifts.Checked = Convert.ToBoolean(ReadFromFile(SettingsFile, AdditionalSettingsBox.Name)[23]);
 
             //Underground Settings
             string[] UndergroundSettings = { Convert.ToString(checkBoxUnderground.Checked), Convert.ToString(radioButtonUnderground.Checked), Convert.ToString(radioButtonFastUnderground.Checked),
@@ -691,6 +700,7 @@ namespace Simple_Bot
                         Bot.CheckForNest();
                         Bot.VillageManager();
                         Bot.DayliGifts();
+                        Bot.BuyGifts();
 
                         //Adv
                         Bot.OpenAdvPage();
@@ -1720,6 +1730,16 @@ namespace Simple_Bot
         }
 
         private void button34_Click_1(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "MenuBox");
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            UIBoxDisplay(3, 4, "GiftsBox");
+        }
+
+        private void button36_Click(object sender, EventArgs e)
         {
             UIBoxDisplay(3, 4, "MenuBox");
         }

@@ -70,6 +70,7 @@
             this.button24 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.UndergroundBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.button21 = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -204,6 +205,7 @@
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.PandaEffectsBox = new System.Windows.Forms.GroupBox();
             this.radioButtonPEcry = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
@@ -347,13 +349,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.PetForUndergrBox = new System.Windows.Forms.GroupBox();
-            this.radioButtonDefaultUndrPet = new System.Windows.Forms.RadioButton();
-            this.radioButtonWormPet = new System.Windows.Forms.RadioButton();
-            this.radioButtonWorbBlueSoul = new System.Windows.Forms.RadioButton();
             this.button34 = new System.Windows.Forms.Button();
-            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.radioButtonWorbBlueSoul = new System.Windows.Forms.RadioButton();
+            this.radioButtonWormPet = new System.Windows.Forms.RadioButton();
+            this.radioButtonDefaultUndrPet = new System.Windows.Forms.RadioButton();
+            this.button35 = new System.Windows.Forms.Button();
+            this.GiftsBox = new System.Windows.Forms.GroupBox();
+            this.radioButtonSmallGift = new System.Windows.Forms.RadioButton();
+            this.radioButtonMiddleGift = new System.Windows.Forms.RadioButton();
+            this.numericUpDownGiftsCryNumber = new System.Windows.Forms.NumericUpDown();
+            this.label49 = new System.Windows.Forms.Label();
+            this.pictureBox37 = new System.Windows.Forms.PictureBox();
+            this.button36 = new System.Windows.Forms.Button();
+            this.radioButtonDonBuyGifts = new System.Windows.Forms.RadioButton();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -364,6 +373,7 @@
             this.MenuBox.SuspendLayout();
             this.FarCountrBox.SuspendLayout();
             this.UndergroundBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panelUnderground.SuspendLayout();
@@ -425,6 +435,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             this.PandaEffectsBox.SuspendLayout();
             this.ImmunEffetsBox.SuspendLayout();
             this.FlyBox.SuspendLayout();
@@ -464,9 +475,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryByMin)).BeginInit();
             this.panelBrowser.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             this.PetForUndergrBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            this.GiftsBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGiftsCryNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -791,6 +803,7 @@
             // 
             // MenuBox
             // 
+            this.MenuBox.Controls.Add(this.button35);
             this.MenuBox.Controls.Add(this.button30);
             this.MenuBox.Controls.Add(this.button7);
             this.MenuBox.Controls.Add(this.button28);
@@ -933,6 +946,17 @@
             this.UndergroundBox.TabIndex = 3;
             this.UndergroundBox.TabStop = false;
             this.UndergroundBox.Text = "  ";
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox35.Image = global::Simple_Bot.Properties.Resources.settings;
+            this.pictureBox35.Location = new System.Drawing.Point(398, 15);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox35.TabIndex = 14;
+            this.pictureBox35.TabStop = false;
+            this.pictureBox35.Click += new System.EventHandler(this.pictureBox35_Click);
             // 
             // button21
             // 
@@ -1341,9 +1365,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(10, 391);
+            this.button4.Location = new System.Drawing.Point(164, 391);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(440, 21);
+            this.button4.Size = new System.Drawing.Size(286, 21);
             this.button4.TabIndex = 8;
             this.button4.Text = "-==>> Save and Back <<==--";
             this.button4.UseVisualStyleBackColor = true;
@@ -2465,6 +2489,16 @@
             this.pictureBox30.TabIndex = 24;
             this.pictureBox30.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox30, "Отправлять летуна на 10 мин в МП");
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox36.Location = new System.Drawing.Point(154, 22);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox36.TabIndex = 19;
+            this.pictureBox36.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox36, "Текущий активный пет");
             // 
             // PandaEffectsBox
             // 
@@ -4156,17 +4190,6 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "groupBox10";
             // 
-            // pictureBox35
-            // 
-            this.pictureBox35.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox35.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox35.Location = new System.Drawing.Point(398, 15);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox35.TabIndex = 14;
-            this.pictureBox35.TabStop = false;
-            this.pictureBox35.Click += new System.EventHandler(this.pictureBox35_Click);
-            // 
             // PetForUndergrBox
             // 
             this.PetForUndergrBox.Controls.Add(this.pictureBox36);
@@ -4181,6 +4204,36 @@
             this.PetForUndergrBox.TabStop = false;
             this.PetForUndergrBox.Text = "Зверек для подзема";
             // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(7, 88);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(167, 23);
+            this.button34.TabIndex = 17;
+            this.button34.Text = "Back";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click_1);
+            // 
+            // radioButtonWorbBlueSoul
+            // 
+            this.radioButtonWorbBlueSoul.AutoSize = true;
+            this.radioButtonWorbBlueSoul.Location = new System.Drawing.Point(15, 65);
+            this.radioButtonWorbBlueSoul.Name = "radioButtonWorbBlueSoul";
+            this.radioButtonWorbBlueSoul.Size = new System.Drawing.Size(105, 17);
+            this.radioButtonWorbBlueSoul.TabIndex = 2;
+            this.radioButtonWorbBlueSoul.Text = "Дух червячелло";
+            this.radioButtonWorbBlueSoul.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonWormPet
+            // 
+            this.radioButtonWormPet.AutoSize = true;
+            this.radioButtonWormPet.Location = new System.Drawing.Point(15, 43);
+            this.radioButtonWormPet.Name = "radioButtonWormPet";
+            this.radioButtonWormPet.Size = new System.Drawing.Size(86, 17);
+            this.radioButtonWormPet.TabIndex = 1;
+            this.radioButtonWormPet.Text = "Червячелло";
+            this.radioButtonWormPet.UseVisualStyleBackColor = true;
+            // 
             // radioButtonDefaultUndrPet
             // 
             this.radioButtonDefaultUndrPet.AutoSize = true;
@@ -4193,45 +4246,114 @@
             this.radioButtonDefaultUndrPet.Text = "Текущий зверь";
             this.radioButtonDefaultUndrPet.UseVisualStyleBackColor = true;
             // 
-            // radioButtonWormPet
+            // button35
             // 
-            this.radioButtonWormPet.AutoSize = true;
-            this.radioButtonWormPet.Location = new System.Drawing.Point(15, 43);
-            this.radioButtonWormPet.Name = "radioButtonWormPet";
-            this.radioButtonWormPet.Size = new System.Drawing.Size(86, 17);
-            this.radioButtonWormPet.TabIndex = 1;
-            this.radioButtonWormPet.Text = "Червячелло";
-            this.radioButtonWormPet.UseVisualStyleBackColor = true;
+            this.button35.Location = new System.Drawing.Point(13, 390);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(146, 23);
+            this.button35.TabIndex = 24;
+            this.button35.Text = "Подарки";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
-            // radioButtonWorbBlueSoul
+            // GiftsBox
             // 
-            this.radioButtonWorbBlueSoul.AutoSize = true;
-            this.radioButtonWorbBlueSoul.Location = new System.Drawing.Point(15, 65);
-            this.radioButtonWorbBlueSoul.Name = "radioButtonWorbBlueSoul";
-            this.radioButtonWorbBlueSoul.Size = new System.Drawing.Size(105, 17);
-            this.radioButtonWorbBlueSoul.TabIndex = 2;
-            this.radioButtonWorbBlueSoul.Text = "Дух червячелло";
-            this.radioButtonWorbBlueSoul.UseVisualStyleBackColor = true;
+            this.GiftsBox.Controls.Add(this.radioButtonDonBuyGifts);
+            this.GiftsBox.Controls.Add(this.button36);
+            this.GiftsBox.Controls.Add(this.pictureBox37);
+            this.GiftsBox.Controls.Add(this.label49);
+            this.GiftsBox.Controls.Add(this.numericUpDownGiftsCryNumber);
+            this.GiftsBox.Controls.Add(this.radioButtonMiddleGift);
+            this.GiftsBox.Controls.Add(this.radioButtonSmallGift);
+            this.GiftsBox.Location = new System.Drawing.Point(210, 628);
+            this.GiftsBox.Name = "GiftsBox";
+            this.GiftsBox.Size = new System.Drawing.Size(244, 100);
+            this.GiftsBox.TabIndex = 30;
+            this.GiftsBox.TabStop = false;
+            this.GiftsBox.Text = "Скупка подарков";
             // 
-            // button34
+            // radioButtonSmallGift
             // 
-            this.button34.Location = new System.Drawing.Point(7, 88);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(167, 23);
-            this.button34.TabIndex = 17;
-            this.button34.Text = "Back";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click_1);
+            this.radioButtonSmallGift.AutoSize = true;
+            this.radioButtonSmallGift.Location = new System.Drawing.Point(89, 24);
+            this.radioButtonSmallGift.Name = "radioButtonSmallGift";
+            this.radioButtonSmallGift.Size = new System.Drawing.Size(82, 17);
+            this.radioButtonSmallGift.TabIndex = 0;
+            this.radioButtonSmallGift.Text = "Маленькие";
+            this.radioButtonSmallGift.UseVisualStyleBackColor = true;
             // 
-            // pictureBox36
+            // radioButtonMiddleGift
             // 
-            this.pictureBox36.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox36.Location = new System.Drawing.Point(154, 22);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(16, 17);
-            this.pictureBox36.TabIndex = 19;
-            this.pictureBox36.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox36, "Тот за которого не нужно платить 3 кристалла");
+            this.radioButtonMiddleGift.AutoSize = true;
+            this.radioButtonMiddleGift.Location = new System.Drawing.Point(169, 24);
+            this.radioButtonMiddleGift.Name = "radioButtonMiddleGift";
+            this.radioButtonMiddleGift.Size = new System.Drawing.Size(68, 17);
+            this.radioButtonMiddleGift.TabIndex = 1;
+            this.radioButtonMiddleGift.Text = "Средние";
+            this.radioButtonMiddleGift.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownGiftsCryNumber
+            // 
+            this.numericUpDownGiftsCryNumber.Location = new System.Drawing.Point(151, 46);
+            this.numericUpDownGiftsCryNumber.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDownGiftsCryNumber.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDownGiftsCryNumber.Name = "numericUpDownGiftsCryNumber";
+            this.numericUpDownGiftsCryNumber.Size = new System.Drawing.Size(58, 20);
+            this.numericUpDownGiftsCryNumber.TabIndex = 2;
+            this.numericUpDownGiftsCryNumber.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(15, 48);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(135, 13);
+            this.label49.TabIndex = 3;
+            this.label49.Text = "Если кристаллов больше";
+            // 
+            // pictureBox37
+            // 
+            this.pictureBox37.Image = global::Simple_Bot.Properties.Resources.info_icon;
+            this.pictureBox37.Location = new System.Drawing.Point(215, 46);
+            this.pictureBox37.Name = "pictureBox37";
+            this.pictureBox37.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox37.TabIndex = 20;
+            this.pictureBox37.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox37, "Покупать, если на счету кристаллов\r\nбольше указанного значения");
+            // 
+            // button36
+            // 
+            this.button36.Location = new System.Drawing.Point(12, 69);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(219, 23);
+            this.button36.TabIndex = 20;
+            this.button36.Text = "Back";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // radioButtonDonBuyGifts
+            // 
+            this.radioButtonDonBuyGifts.AutoSize = true;
+            this.radioButtonDonBuyGifts.Checked = true;
+            this.radioButtonDonBuyGifts.Location = new System.Drawing.Point(18, 24);
+            this.radioButtonDonBuyGifts.Name = "radioButtonDonBuyGifts";
+            this.radioButtonDonBuyGifts.Size = new System.Drawing.Size(71, 17);
+            this.radioButtonDonBuyGifts.TabIndex = 21;
+            this.radioButtonDonBuyGifts.TabStop = true;
+            this.radioButtonDonBuyGifts.Text = "Не брать";
+            this.radioButtonDonBuyGifts.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -4239,6 +4361,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.Controls.Add(this.GiftsBox);
             this.Controls.Add(this.PetForUndergrBox);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.panel2);
@@ -4286,6 +4409,7 @@
             this.FarCountrBox.PerformLayout();
             this.UndergroundBox.ResumeLayout(false);
             this.UndergroundBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panelUnderground.ResumeLayout(false);
@@ -4366,6 +4490,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             this.PandaEffectsBox.ResumeLayout(false);
             this.PandaEffectsBox.PerformLayout();
             this.ImmunEffetsBox.ResumeLayout(false);
@@ -4424,10 +4549,12 @@
             this.panelBrowser.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             this.PetForUndergrBox.ResumeLayout(false);
             this.PetForUndergrBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            this.GiftsBox.ResumeLayout(false);
+            this.GiftsBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGiftsCryNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4759,6 +4886,15 @@
         private System.Windows.Forms.RadioButton radioButtonWorbBlueSoul;
         private System.Windows.Forms.RadioButton radioButtonWormPet;
         private System.Windows.Forms.RadioButton radioButtonDefaultUndrPet;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.GroupBox GiftsBox;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.PictureBox pictureBox37;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.NumericUpDown numericUpDownGiftsCryNumber;
+        private System.Windows.Forms.RadioButton radioButtonMiddleGift;
+        private System.Windows.Forms.RadioButton radioButtonSmallGift;
+        private System.Windows.Forms.RadioButton radioButtonDonBuyGifts;
     }
 }
 
