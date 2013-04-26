@@ -348,7 +348,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.PetForUndergrBox = new System.Windows.Forms.GroupBox();
             this.button34 = new System.Windows.Forms.Button();
             this.radioButtonWorbBlueSoul = new System.Windows.Forms.RadioButton();
@@ -363,6 +362,9 @@
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.button36 = new System.Windows.Forms.Button();
             this.radioButtonDonBuyGifts = new System.Windows.Forms.RadioButton();
+            this.radioButtonWhale = new System.Windows.Forms.RadioButton();
+            this.radioButtonParot = new System.Windows.Forms.RadioButton();
+            this.radioButtonCurrentPet = new System.Windows.Forms.RadioButton();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -1733,15 +1735,16 @@
             // 
             this.FightBox.Controls.Add(this.checkBoxDrinkOborotka);
             this.FightBox.Controls.Add(this.button31);
+            this.FightBox.Controls.Add(this.checkBoxOborotka);
             this.FightBox.Controls.Add(this.pictureBox32);
-            this.FightBox.Controls.Add(this.button19);
             this.FightBox.Controls.Add(this.groupBox8);
+            this.FightBox.Controls.Add(this.button19);
             this.FightBox.Controls.Add(this.checkBoxFightMonsters);
             this.FightBox.Controls.Add(this.groupBox5);
             this.FightBox.Controls.Add(this.groupBox4);
-            this.FightBox.Location = new System.Drawing.Point(1480, 127);
+            this.FightBox.Location = new System.Drawing.Point(473, 743);
             this.FightBox.Name = "FightBox";
-            this.FightBox.Size = new System.Drawing.Size(291, 236);
+            this.FightBox.Size = new System.Drawing.Size(291, 279);
             this.FightBox.TabIndex = 3;
             this.FightBox.TabStop = false;
             this.FightBox.Text = "Бодалка";
@@ -1749,7 +1752,7 @@
             // checkBoxDrinkOborotka
             // 
             this.checkBoxDrinkOborotka.AutoSize = true;
-            this.checkBoxDrinkOborotka.Location = new System.Drawing.Point(19, 157);
+            this.checkBoxDrinkOborotka.Location = new System.Drawing.Point(157, 116);
             this.checkBoxDrinkOborotka.Name = "checkBoxDrinkOborotka";
             this.checkBoxDrinkOborotka.Size = new System.Drawing.Size(100, 17);
             this.checkBoxDrinkOborotka.TabIndex = 26;
@@ -1758,7 +1761,7 @@
             // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(5, 207);
+            this.button31.Location = new System.Drawing.Point(7, 250);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(280, 23);
             this.button31.TabIndex = 25;
@@ -1770,7 +1773,7 @@
             // 
             this.pictureBox32.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox32.Image = global::Simple_Bot.Properties.Resources.settings;
-            this.pictureBox32.Location = new System.Drawing.Point(262, 158);
+            this.pictureBox32.Location = new System.Drawing.Point(263, 117);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(16, 16);
             this.pictureBox32.TabIndex = 24;
@@ -1778,7 +1781,7 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(5, 179);
+            this.button19.Location = new System.Drawing.Point(6, 221);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(280, 23);
             this.button19.TabIndex = 4;
@@ -1788,13 +1791,16 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.radioButtonCurrentPet);
+            this.groupBox8.Controls.Add(this.radioButtonParot);
+            this.groupBox8.Controls.Add(this.radioButtonWhale);
             this.groupBox8.Controls.Add(this.pictureBox18);
             this.groupBox8.Controls.Add(this.checkBoxPetImmun);
             this.groupBox8.Controls.Add(this.numericUpDownPetImmun);
             this.groupBox8.Controls.Add(this.checkBoxGetPet);
-            this.groupBox8.Location = new System.Drawing.Point(148, 81);
+            this.groupBox8.Location = new System.Drawing.Point(6, 139);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(135, 69);
+            this.groupBox8.Size = new System.Drawing.Size(277, 69);
             this.groupBox8.TabIndex = 3;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Зверь";
@@ -1802,7 +1808,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox18.Location = new System.Drawing.Point(113, 40);
+            this.pictureBox18.Location = new System.Drawing.Point(242, 17);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(16, 17);
             this.pictureBox18.TabIndex = 11;
@@ -1812,7 +1818,7 @@
             // checkBoxPetImmun
             // 
             this.checkBoxPetImmun.AutoSize = true;
-            this.checkBoxPetImmun.Location = new System.Drawing.Point(6, 41);
+            this.checkBoxPetImmun.Location = new System.Drawing.Point(142, 17);
             this.checkBoxPetImmun.Name = "checkBoxPetImmun";
             this.checkBoxPetImmun.Size = new System.Drawing.Size(64, 17);
             this.checkBoxPetImmun.TabIndex = 4;
@@ -1822,7 +1828,7 @@
             // 
             // numericUpDownPetImmun
             // 
-            this.numericUpDownPetImmun.Location = new System.Drawing.Point(77, 38);
+            this.numericUpDownPetImmun.Location = new System.Drawing.Point(206, 16);
             this.numericUpDownPetImmun.Maximum = new decimal(new int[] {
             25,
             0,
@@ -1845,7 +1851,7 @@
             // checkBoxGetPet
             // 
             this.checkBoxGetPet.AutoSize = true;
-            this.checkBoxGetPet.Location = new System.Drawing.Point(6, 19);
+            this.checkBoxGetPet.Location = new System.Drawing.Point(12, 17);
             this.checkBoxGetPet.Name = "checkBoxGetPet";
             this.checkBoxGetPet.Size = new System.Drawing.Size(89, 17);
             this.checkBoxGetPet.TabIndex = 2;
@@ -1856,7 +1862,7 @@
             // checkBoxFightMonsters
             // 
             this.checkBoxFightMonsters.AutoSize = true;
-            this.checkBoxFightMonsters.Location = new System.Drawing.Point(154, 158);
+            this.checkBoxFightMonsters.Location = new System.Drawing.Point(157, 100);
             this.checkBoxFightMonsters.Name = "checkBoxFightMonsters";
             this.checkBoxFightMonsters.Size = new System.Drawing.Size(82, 17);
             this.checkBoxFightMonsters.TabIndex = 0;
@@ -1922,7 +1928,7 @@
             this.groupBox4.Controls.Add(this.FightPanel);
             this.groupBox4.Location = new System.Drawing.Point(5, 13);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(136, 137);
+            this.groupBox4.Size = new System.Drawing.Size(136, 120);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "   ";
@@ -1942,12 +1948,11 @@
             // 
             this.FightPanel.Controls.Add(this.checkBoxEnemyPower);
             this.FightPanel.Controls.Add(this.button12);
-            this.FightPanel.Controls.Add(this.checkBoxOborotka);
             this.FightPanel.Controls.Add(this.radioButtonFightList);
             this.FightPanel.Controls.Add(this.radioButtonFightLvl);
             this.FightPanel.Location = new System.Drawing.Point(6, 14);
             this.FightPanel.Name = "FightPanel";
-            this.FightPanel.Size = new System.Drawing.Size(124, 117);
+            this.FightPanel.Size = new System.Drawing.Size(124, 102);
             this.FightPanel.TabIndex = 0;
             // 
             // checkBoxEnemyPower
@@ -1974,7 +1979,7 @@
             // checkBoxOborotka
             // 
             this.checkBoxOborotka.AutoSize = true;
-            this.checkBoxOborotka.Location = new System.Drawing.Point(7, 97);
+            this.checkBoxOborotka.Location = new System.Drawing.Point(157, 83);
             this.checkBoxOborotka.Name = "checkBoxOborotka";
             this.checkBoxOborotka.Size = new System.Drawing.Size(105, 17);
             this.checkBoxOborotka.TabIndex = 3;
@@ -3806,7 +3811,7 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(1304, 14);
+            this.groupBox1.Location = new System.Drawing.Point(1299, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(170, 100);
             this.groupBox1.TabIndex = 22;
@@ -3872,7 +3877,7 @@
             this.ShopBox.Controls.Add(this.label39);
             this.ShopBox.Controls.Add(this.textBoxProdutName);
             this.ShopBox.Controls.Add(this.label38);
-            this.ShopBox.Location = new System.Drawing.Point(1218, 247);
+            this.ShopBox.Location = new System.Drawing.Point(1181, 247);
             this.ShopBox.Name = "ShopBox";
             this.ShopBox.Size = new System.Drawing.Size(241, 280);
             this.ShopBox.TabIndex = 24;
@@ -4181,15 +4186,6 @@
             this.label47.Text = "Я жмакнул банер и";
             this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Location = new System.Drawing.Point(1480, 16);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(200, 100);
-            this.groupBox10.TabIndex = 28;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "groupBox10";
-            // 
             // PetForUndergrBox
             // 
             this.PetForUndergrBox.Controls.Add(this.pictureBox36);
@@ -4355,17 +4351,49 @@
             this.radioButtonDonBuyGifts.Text = "Не брать";
             this.radioButtonDonBuyGifts.UseVisualStyleBackColor = true;
             // 
+            // radioButtonWhale
+            // 
+            this.radioButtonWhale.AutoSize = true;
+            this.radioButtonWhale.Location = new System.Drawing.Point(203, 40);
+            this.radioButtonWhale.Name = "radioButtonWhale";
+            this.radioButtonWhale.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonWhale.TabIndex = 12;
+            this.radioButtonWhale.Text = "Китушку";
+            this.radioButtonWhale.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonParot
+            // 
+            this.radioButtonParot.AutoSize = true;
+            this.radioButtonParot.Location = new System.Drawing.Point(121, 40);
+            this.radioButtonParot.Name = "radioButtonParot";
+            this.radioButtonParot.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonParot.TabIndex = 13;
+            this.radioButtonParot.Text = "Попугана";
+            this.radioButtonParot.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCurrentPet
+            // 
+            this.radioButtonCurrentPet.AutoSize = true;
+            this.radioButtonCurrentPet.Checked = true;
+            this.radioButtonCurrentPet.Location = new System.Drawing.Point(12, 40);
+            this.radioButtonCurrentPet.Name = "radioButtonCurrentPet";
+            this.radioButtonCurrentPet.Size = new System.Drawing.Size(103, 17);
+            this.radioButtonCurrentPet.TabIndex = 14;
+            this.radioButtonCurrentPet.TabStop = true;
+            this.radioButtonCurrentPet.Text = "Текущий зверь";
+            this.radioButtonCurrentPet.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.ClientSize = new System.Drawing.Size(1604, 1064);
             this.Controls.Add(this.GiftsBox);
             this.Controls.Add(this.PetForUndergrBox);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.FightBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBrowser);
             this.Controls.Add(this.textBoxAdv);
@@ -4376,7 +4404,6 @@
             this.Controls.Add(this.MoralityControlBox);
             this.Controls.Add(this.PandaBox);
             this.Controls.Add(this.button16);
-            this.Controls.Add(this.FightBox);
             this.Controls.Add(this.StiringBox);
             this.Controls.Add(this.StutsUpBox);
             this.Controls.Add(this.SoapBox);
@@ -4868,7 +4895,6 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.CheckBox checkBoxDrinkOborotka;
@@ -4895,6 +4921,9 @@
         private System.Windows.Forms.RadioButton radioButtonMiddleGift;
         private System.Windows.Forms.RadioButton radioButtonSmallGift;
         private System.Windows.Forms.RadioButton radioButtonDonBuyGifts;
+        private System.Windows.Forms.RadioButton radioButtonParot;
+        private System.Windows.Forms.RadioButton radioButtonWhale;
+        private System.Windows.Forms.RadioButton radioButtonCurrentPet;
     }
 }
 

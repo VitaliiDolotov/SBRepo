@@ -2829,13 +2829,13 @@ namespace Simple_Bot
                     if (Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[9]) == true && Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[14]) == false)
                     {
 
-                        GetPet();
+                        GetPet(FightPetProvider());
                     }
                     else
                     {
                         if (Convert.ToBoolean(ReadFromFile(SettingsFile, "FightBox")[14]) == true && ImmunTime() > Convert.ToInt32(ReadFromFile(SettingsFile, "FightBox")[15]))
                         {
-                            GetPet();
+                            GetPet(FightPetProvider());
                         }
                     }
                     try
@@ -3199,6 +3199,32 @@ namespace Simple_Bot
                         };
                         break;
 
+                    //выпустить кита
+                    case PetType.whale: try
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_21')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
+                            Delays();
+                        }
+                        catch
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_21s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                            Delays();
+                        };
+                        break;
+
+                    //выпустить попоугая
+                    case PetType.parot: try
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_23')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
+                            Delays();
+                        }
+                        catch
+                        {
+                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_23s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
+                            Delays();
+                        };
+                        break;
+
                     default: break;
                 }
             }
@@ -3208,7 +3234,9 @@ namespace Simple_Bot
         {
             currentPet,
             worm,
-            wormBlueSoul
+            wormBlueSoul,
+            whale,
+            parot
         }
 
         private PetType PetTypeProvider()
@@ -3228,6 +3256,23 @@ namespace Simple_Bot
             if (Convert.ToBoolean(ReadFromFile(SettingsFile, "UndergroundBox")[17]))
             {
                 retRep = PetType.currentPet;
+            }
+
+            return retRep;
+        }
+
+        private PetType FightPetProvider()
+        {
+            var retRep = PetType.currentPet;
+
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[24]))
+            {
+                retRep = PetType.whale;
+            }
+
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[25]))
+            {
+                retRep = PetType.parot;
             }
 
             return retRep;
