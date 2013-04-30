@@ -4427,5 +4427,24 @@ namespace Simple_Bot
             }
         }
 
+        public void AlertFight()
+        {
+            if (Convert.ToBoolean(ReadFromFile(SettingsFile, "AdditionalSettingsBox")[27]))
+            {
+                try
+                {
+                    driver.FindElement(By.CssSelector("#m2.active")).Click();
+                    if (IsAlertFightPresent("Тигранище")) SetPet();
+                }
+                catch { }
+            }
+        }
+
+        private bool IsAlertFightPresent(string alertEnemy)
+        {
+            IList<IWebElement> fightList = driver.FindElements(By.CssSelector(".font_normal"));
+            return fightList.FirstOrDefault(enemy => enemy.Text.Contains(alertEnemy + " атаковал вас")).Displayed;
+        }
+
     }
 }
