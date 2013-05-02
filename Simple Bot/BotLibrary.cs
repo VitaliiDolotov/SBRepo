@@ -3149,8 +3149,53 @@ namespace Simple_Bot
         {
             try
             {
-                if (driver.FindElement(By.XPath("//a[@title='Посадить в клетку']")).Displayed == false)
+                //если есть линка посадить в клетку, то проверяем на правильность зверя
+                if (driver.FindElement(By.XPath("//a[@title='Посадить в клетку']")).Displayed == true)
                 {
+                    //если зверь не дефолтный, то сверяем текущего зверя с нужным
+                    if (PetNumberProvider(pet) != 0)
+                    {
+                        string css = string.Format(".pet{0}", PetNumberProvider(pet));
+                        //Если нет иконки нужного зверя попадаем в кетч и садим невалидного зверя в клетку,а нужного достаем
+                        try
+                        {
+                            IWebElement temp = driver.FindElement(By.CssSelector(css));
+                        }
+                        catch
+                        {
+                            SetPet();
+
+                            //Деревня
+                            driver.FindElement(By.Id("m3")).FindElement(By.XPath(".//b")).Click();
+                            Delays();
+                            //Жилище
+                            driver.FindElement(By.LinkText("Жилище")).Click();
+                            Delays();
+                            //клетка
+                            driver.FindElement(By.LinkText("Клетка")).Click();
+                            Delays();
+                            //вытащить с клетки
+                            if (PetNumberProvider(pet) == 0)
+                            {
+                                driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    string xPath = string.Format("//img[contains(@src,'Pet_{0}')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]", PetNumberProvider(pet));
+                                    driver.FindElement(By.XPath(xPath)).Click();
+                                    Delays();
+                                }
+                                catch
+                                {
+                                    string xPath = string.Format("//img[contains(@src,'Pet_{0}s')]/..//input[@value='ВЗЯТЬ В БОЙ']", PetNumberProvider(pet));
+                                    driver.FindElement(By.XPath(xPath)).Click();
+                                    Delays();
+                                };
+                            }
+                        }
+                    }
                 }
             }
             //проверка есть ли зверь
@@ -3166,68 +3211,62 @@ namespace Simple_Bot
                 driver.FindElement(By.LinkText("Клетка")).Click();
                 Delays();
                 //вытащить с клетки
-                switch (pet)
+                if (PetNumberProvider(pet) == 0)
                 {
-                        //выпустить дефолтного зверя
-                    case PetType.currentPet: driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
+                    driver.FindElement(By.XPath("//input[@value='ВЫПУСТИТЬ ИЗ КЛЕТКИ']")).Click();
+                }
+                else
+                {
+                    try
+                    {
+                        string xPath = string.Format("//img[contains(@src,'Pet_{0}')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]", PetNumberProvider(pet));
+                        driver.FindElement(By.XPath(xPath)).Click();
                         Delays();
-                        break;
+                    }
+                    catch
+                    {
+                        string xPath = string.Format("//img[contains(@src,'Pet_{0}s')]/..//input[@value='ВЗЯТЬ В БОЙ']", PetNumberProvider(pet));
+                        driver.FindElement(By.XPath(xPath)).Click();
+                        Delays();
+                    };
+                }
+            }
+        }
 
-                        //выпустить червя обычного
-                    case PetType.worm: try
+        private int PetNumberProvider(PetType pet)
+        {
+            int retPet = 0;
+            switch (pet)
+            {
+					case PetType.worm: 
                         {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_7')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
-                            Delays();
+                            retPet = 7;
                         }
-                        catch
-                        {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_7s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
-                            Delays();
-                        };
                         break;
                         
                         //выпустить синего духа
-                    case PetType.wormBlueSoul: try
+                    case PetType.wormBlueSoul: 
                         {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_16')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
-                            Delays();
+							retPet = 16;
                         }
-                        catch
-                        {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_16s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
-                            Delays();
-                        };
                         break;
 
                     //выпустить кита
-                    case PetType.whale: try
+                    case PetType.whale: 
                         {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_21')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
-                            Delays();
+                            retPet = 21;
                         }
-                        catch
-                        {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_21s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
-                            Delays();
-                        };
                         break;
 
                     //выпустить попоугая
-                    case PetType.parot: try
+                    case PetType.parot: 
                         {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_23')]/ancestor::div[contains(@class,'round_block_round_border')]//input[contains(@value,'ВЫПУСТИТЬ')]")).Click();
-                            Delays();
+                            retPet = 23;
                         }
-                        catch
-                        {
-                            driver.FindElement(By.XPath("//img[contains(@src,'Pet_23s')]/..//input[@value='ВЗЯТЬ В БОЙ']")).Click();
-                            Delays();
-                        };
                         break;
-
-                    default: break;
-                }
+                default: break;
             }
+            return retPet;
         }
 
         private enum PetType
