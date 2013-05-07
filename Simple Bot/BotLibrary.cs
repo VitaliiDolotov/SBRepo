@@ -809,8 +809,8 @@ namespace Simple_Bot
                                             //добываем
                                             if (Timer_Temp.CompareTo(Timer_MineWork) > 0)
                                             {
-                                                driver.FindElement(By.XPath("//table/tbody/tr/td[2]/div/div[3]/center/a[1]")).Click();
-                                                System.Threading.Thread.Sleep(rnd.Next(456, 521));
+                                                driver.FindElement(By.LinkText("ДОБЫТЬ КРИСТАЛЛ")).Click();
+                                                Delays();
                                             }
                                             else break;
                                         }
@@ -819,7 +819,7 @@ namespace Simple_Bot
                                             break;
                                         }
                                     }
-                                    Timer_MineWork = ToDateTime(driver.FindElement(By.ClassName("mine_manager")).FindElement(By.TagName("span")).Text);
+                                    Timer_MineWork = ToDateTime(driver.FindElement(By.CssSelector("p.mine_manager span")).Text);
                                     FinishFieldsOpening();
                                 }
                                 catch { }
@@ -871,7 +871,7 @@ namespace Simple_Bot
                                 {
                                     if (CahrCurrentWork == true)
                                     {
-                                        driver.FindElement(By.XPath("//table/tbody/tr/td[2]/div/div[3]/center/a[1]")).Click();
+                                        driver.FindElement(By.LinkText("ДОБЫТЬ КРИСТАЛЛ")).Click();
                                         System.Threading.Thread.Sleep(rnd.Next(899, 1099));
                                     }
                                 }
@@ -2094,7 +2094,7 @@ namespace Simple_Bot
                         try
                         {
                             //если зверушка не в большом приключении
-                            if (driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/b/a[contains(@href,'castle')]")).Text == "Мини-игра")
+                            if (driver.FindElement(By.CssSelector(".content:nth-of-type(" + Convert.ToString(FlyNumber) + ") a")).Text.Contains("Мини"))//if (driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/b/a[contains(@href,'castle')]")).Text == "Мини-игра")
                             {
                                 //проверяем нет ли миниигры
                                 try
@@ -2147,12 +2147,12 @@ namespace Simple_Bot
                         try
                         {
                             //если зверушка не в большом приключении
-                            if (driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/b/a[contains(@href,'castle')]")).Text == "Нападение на летуна!")
+                            if (driver.FindElement(By.CssSelector(".content:nth-of-type(" + Convert.ToString(FlyNumber) + ") a")).Text.Contains("Нападение"))//if (driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/b/a[contains(@href,'castle')]")).Text == "Нападение на летуна!")
                             {
                                 //проверяем нет ли миниигры
                                 try
                                 {
-                                    driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/form/input[@value='ПОСМОТРЕТЬ']")).Click();
+                                    driver.FindElement(By.CssSelector(".content:nth-of-type(" + Convert.ToString(FlyNumber) + ") input[value='ПОСМОТРЕТЬ']")).Click();
                                     System.Threading.Thread.Sleep(rnd.Next(898, 1125));
                                     try
                                     {
@@ -2199,12 +2199,12 @@ namespace Simple_Bot
                         //кормим если голоден
                         try
                         {
-                            string satiety = driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/u[1]/a")).Text;
+                            string satiety = driver.FindElement(By.CssSelector(".content:nth-of-type(" + Convert.ToString(FlyNumber) + ") u:nth-of-type(1) a")).Text;
                             satiety = satiety.TrimEnd('%');
                             if (Convert.ToInt32(satiety) < 75)
                             {
                                 //кликаем по грибочкув боковой панели
-                                driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/u[1]/a/b[@title='Сытость зверушки']")).Click();
+                                driver.FindElement(By.Id("accordion")).FindElement(By.CssSelector(".content:nth-of-type(" + Convert.ToString(FlyNumber) + ") u:nth-of-type(1) a b")).Click();
                                 System.Threading.Thread.Sleep(rnd.Next(899, 1399));
                                 driver.FindElement(By.Id("feed_zoo_did")).FindElement(By.XPath(".//input[@value='КОРМИТЬ']")).Click();
                                 IsInTrip = false;
@@ -2217,7 +2217,7 @@ namespace Simple_Bot
                         try
                         {
                             //если зверушка не в большом приключении
-                            if (driver.FindElement(By.Id("accordion")).FindElement(By.XPath("//div[2]/div/div[" + Convert.ToString(FlyNumber) + "]/center/b/a[contains(@href,'castle')]")).Text != "Большое приключение" && MinigameFightFood == false)
+                            if (driver.FindElement(By.CssSelector(".content:nth-of-type(" + Convert.ToString(FlyNumber) + ") b a")).Text.Contains("Большое") && MinigameFightFood == false)
                             {
 
                             }
@@ -2226,7 +2226,8 @@ namespace Simple_Bot
                         {
                             try
                             {
-                                driver.FindElement(By.Id("accordion")).FindElement(By.XPath(".//div[2]/div/div[" + Convert.ToString(FlyNumber - 1) + "]/a/b")).Click();
+                                driver.FindElement(By.CssSelector(".title:nth-of-type(" + Convert.ToString(FlyNumber - 1) + ") a b")).Click();
+                                //driver.FindElement(By.Id("accordion")).FindElement(By.XPath(".//div[2]/div/div[" + Convert.ToString(FlyNumber - 1) + "]/a/b")).Click();
                                 System.Threading.Thread.Sleep(rnd.Next(659, 899));
                                 IsInTrip = false;
                                 MinigameFightFood = false;
