@@ -3239,32 +3239,32 @@ namespace Simple_Bot
             int retPet = 0;
             switch (pet)
             {
-					case PetType.worm: 
-                        {
-                            retPet = 7;
-                        }
-                        break;
-                        
-                        //выпустить синего духа
-                    case PetType.wormBlueSoul: 
-                        {
-							retPet = 16;
-                        }
-                        break;
+                case PetType.worm:
+                    {
+                        retPet = 7;
+                    }
+                    break;
 
-                    //выпустить кита
-                    case PetType.whale: 
-                        {
-                            retPet = 21;
-                        }
-                        break;
+                //выпустить синего духа
+                case PetType.wormBlueSoul:
+                    {
+                        retPet = 16;
+                    }
+                    break;
 
-                    //выпустить попоугая
-                    case PetType.parot: 
-                        {
-                            retPet = 23;
-                        }
-                        break;
+                //выпустить кита
+                case PetType.whale:
+                    {
+                        retPet = 21;
+                    }
+                    break;
+
+                //выпустить попоугая
+                case PetType.parot:
+                    {
+                        retPet = 23;
+                    }
+                    break;
                 default: break;
             }
             return retPet;
@@ -4486,5 +4486,61 @@ namespace Simple_Bot
             return fightList.FirstOrDefault(enemy => enemy.Text.Contains(alertEnemy + " атаковал вас")).Displayed;
         }
 
+        public void MassFight()
+        {
+            GoToMassFight();
+            MHealing();
+            MBeat();
+            MFood();
+            MGetSomeFood();
+            
+
+
+        }
+
+        private void GoToMassFight()
+        {
+            if (driver.FindElement(By.CssSelector("[title='Горная слеза']")).Displayed)
+            {
+                driver.FindElement(By.CssSelector(".single[data-id='4'] a")).FindElement(By.LinkText("ВСТУПИТЬ")).Click();
+            }
+        }
+
+        private int MGetCurrentHeal()
+        {
+            return Convert.ToInt32(  driver.FindElement(By.CssSelector(".bg_health_scale_left")).GetAttribute("title").Split('/').FirstOrDefault());
+        }
+
+        private int MMinHeal()
+        {
+            return 30 * MGetCurrentHeal() / 100;
+        }
+
+        private void MHealing()
+        {
+            if (MMinHeal() <= MGetCurrentHeal())
+            {
+                driver.FindElement(By.CssSelector(".talant_ico_520")).Click();
+            }
+        }
+
+        private void MFood()
+        {
+
+        }
+
+        private void MBeat()
+        {
+
+        }
+
+        private void MGetSomeFood()
+        {
+            try
+            {
+                driver.FindElement(By.CssSelector(".talant_ico_800")).Click();
+            }
+            catch { }
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2495;
+        int BotVersion = 2496;
 
         Random rnd = new Random();
 
@@ -37,6 +37,7 @@ namespace Simple_Bot
         static DateTime Timer_OpenWindow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_GoBack = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
         static DateTime Timer_Reload = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
+        static DateTime Timer_CloseBot = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second - 1);
 
         bool botStatus;
 
@@ -48,6 +49,8 @@ namespace Simple_Bot
             InitializeComponent();
 
             this.Size = new System.Drawing.Size(217, 242);
+
+            Timer_CloseBot = ToDateTime("06:00:00");
 
             Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
             Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
@@ -1224,6 +1227,10 @@ namespace Simple_Bot
             if (backgroundWorker1.IsBusy == false)
             {
                 backgroundWorker1.RunWorkerAsync();
+            }
+            if (Timer_CloseBot.CompareTo(DateTime.Now) < 0 & textBox1.Text.Contains("aksis"))
+            {
+                this.Close();
             }
             //OpenSite();
             //PanelDisplay();//BrowserDisplay();
