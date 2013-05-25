@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2496;
+        int BotVersion = 2497;
 
         Random rnd = new Random();
 
@@ -48,9 +48,9 @@ namespace Simple_Bot
         {
             InitializeComponent();
 
-            this.Size = new System.Drawing.Size(217, 242);
+            this.Size = new System.Drawing.Size(217, 242); 
 
-            Timer_CloseBot = ToDateTime("06:00:00");
+            Timer_CloseBot = ToDateTime(string.Format("05:{0}:00",(rnd.Next(11, 46))));
 
             Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
             Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
@@ -1228,7 +1228,8 @@ namespace Simple_Bot
             {
                 backgroundWorker1.RunWorkerAsync();
             }
-            if (Timer_CloseBot.CompareTo(DateTime.Now) < 0 & textBox1.Text.Contains("aksis"))
+            bool varBool = textBox1.Text.Contains("aksis");
+            if (Timer_CloseBot.CompareTo(DateTime.Now) < 0 & varBool==true)
             {
                 this.Close();
             }
