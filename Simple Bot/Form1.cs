@@ -26,7 +26,7 @@ namespace Simple_Bot
 {
     public partial class Form1 : Form
     {
-        int BotVersion = 2497;
+        int BotVersion = 2498;
 
         Random rnd = new Random();
 
@@ -1228,8 +1228,7 @@ namespace Simple_Bot
             {
                 backgroundWorker1.RunWorkerAsync();
             }
-            bool varBool = textBox1.Text.Contains("aksis");
-            if (Timer_CloseBot.CompareTo(DateTime.Now) < 0 & varBool==true)
+            if (Timer_CloseBot.CompareTo(DateTime.Now) < 0 & !textBox1.Text.Contains("aksis"))
             {
                 this.Close();
             }
