@@ -9,13 +9,12 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Diagnostics;
-//using SimpleBotLibrary;
+using System.Security.Cryptography;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions.Internal;
 using OpenQA.Selenium.Firefox;
-using System.Security.Cryptography;
 using System.Threading;
 using Simple_Bot.ocr;
 using System.Runtime.InteropServices;
@@ -27,6 +26,7 @@ namespace Simple_Bot
     public partial class Form1 : Form
     {
         int BotVersion = 2492;
+        bool isDonatePlayer = false;
 
         Random rnd = new Random();
 
@@ -47,7 +47,7 @@ namespace Simple_Bot
         {
             InitializeComponent();
 
-            this.Size = new System.Drawing.Size(217, 242);
+            this.Size = new System.Drawing.Size(217, 268);
 
             Timer_OpenSite = ToDateTime("00:" + Convert.ToString(rnd.Next(25, 29)) + ":00");
             Timer_OpenWindow = ToDateTime("00:" + Convert.ToString(rnd.Next(30, 34)) + ":00");
@@ -345,6 +345,27 @@ namespace Simple_Bot
             {
                 botStatus = false;
             }
+        }
+
+        private string GetMd5Hash(MD5 md5Hash, string input)
+        {
+
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString().Remove(21);
         }
 
         private void RemovingOldUpdater()
@@ -650,6 +671,29 @@ namespace Simple_Bot
             }
             catch { }
         }
+
+        private IList<string> GetDonatePlayersList()
+        {
+            WebClient client = new WebClient();
+            Stream stream = client.OpenRead("https://dl.dropbox.com/s/vhrstr5i424la7s/BotMessage.txt?token_hash=AAESnSj9Ws8Wzw7OFJdygkt5RUMF1rlmEHD7I7n_H8qyjg&dl=1");
+            StreamReader reader = new StreamReader(stream);
+            return reader.ReadToEnd().Split(';');
+        }
+
+        private void IsDonatePlayer(IList<string> playersList)
+        {
+            for (int i = 0; i < playersList.Count - 1; i++)
+            {
+                if (playersList[i] == textBoxMd5.Text)
+                {
+                    if (Convert.ToDateTime(playersList[i + 1]).CompareTo(DateTime.Now) > 0)
+                    {
+                        isDonatePlayer = true;
+                    }
+                }
+            }
+        }
+
 
         private DateTime ToDateTime(string CounterTime)
         {
@@ -1752,6 +1796,14 @@ namespace Simple_Bot
         private void button36_Click(object sender, EventArgs e)
         {
             UIBoxDisplay(3, 4, "MenuBox");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string login = textBox1.Text;
+            MD5 md5Hash = MD5.Create();
+            string loginMd5 = GetMd5Hash(md5Hash, login);
+            textBoxMd5.Text = loginMd5;
         }
     }
 }

@@ -323,6 +323,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.ShopBox = new System.Windows.Forms.GroupBox();
+            this.checkBoxAlarmBox = new System.Windows.Forms.CheckBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
             this.textBoxCurrentGren = new System.Windows.Forms.TextBox();
@@ -365,7 +366,7 @@
             this.numericUpDownGiftsCryNumber = new System.Windows.Forms.NumericUpDown();
             this.radioButtonMiddleGift = new System.Windows.Forms.RadioButton();
             this.radioButtonSmallGift = new System.Windows.Forms.RadioButton();
-            this.checkBoxAlarmBox = new System.Windows.Forms.CheckBox();
+            this.textBoxMd5 = new System.Windows.Forms.TextBox();
             this.LoginBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -496,6 +497,7 @@
             // 
             // LoginBox
             // 
+            this.LoginBox.Controls.Add(this.textBoxMd5);
             this.LoginBox.Controls.Add(this.checkBoxHideBrowser);
             this.LoginBox.Controls.Add(this.pictureBox27);
             this.LoginBox.Controls.Add(this.pictureBox26);
@@ -524,7 +526,7 @@
             this.LoginBox.Controls.Add(this.label1);
             this.LoginBox.Location = new System.Drawing.Point(7, 4);
             this.LoginBox.Name = "LoginBox";
-            this.LoginBox.Size = new System.Drawing.Size(197, 203);
+            this.LoginBox.Size = new System.Drawing.Size(197, 230);
             this.LoginBox.TabIndex = 1;
             this.LoginBox.TabStop = false;
             this.LoginBox.Text = "Login:";
@@ -532,7 +534,7 @@
             // checkBoxHideBrowser
             // 
             this.checkBoxHideBrowser.AutoSize = true;
-            this.checkBoxHideBrowser.Location = new System.Drawing.Point(74, 180);
+            this.checkBoxHideBrowser.Location = new System.Drawing.Point(74, 206);
             this.checkBoxHideBrowser.Name = "checkBoxHideBrowser";
             this.checkBoxHideBrowser.Size = new System.Drawing.Size(117, 17);
             this.checkBoxHideBrowser.TabIndex = 22;
@@ -544,7 +546,7 @@
             // 
             this.pictureBox27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox27.Image = global::Simple_Bot.Properties.Resources.VkLike;
-            this.pictureBox27.Location = new System.Drawing.Point(16, 247);
+            this.pictureBox27.Location = new System.Drawing.Point(16, 273);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(41, 22);
             this.pictureBox27.TabIndex = 18;
@@ -555,7 +557,7 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = global::Simple_Bot.Properties.Resources.info_icon;
-            this.pictureBox26.Location = new System.Drawing.Point(171, 207);
+            this.pictureBox26.Location = new System.Drawing.Point(171, 230);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(16, 17);
             this.pictureBox26.TabIndex = 18;
@@ -565,7 +567,7 @@
             // checkBoxTray
             // 
             this.checkBoxTray.AutoSize = true;
-            this.checkBoxTray.Location = new System.Drawing.Point(16, 227);
+            this.checkBoxTray.Location = new System.Drawing.Point(16, 253);
             this.checkBoxTray.Name = "checkBoxTray";
             this.checkBoxTray.Size = new System.Drawing.Size(72, 17);
             this.checkBoxTray.TabIndex = 17;
@@ -575,7 +577,7 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(112, 175);
+            this.button17.Location = new System.Drawing.Point(112, 201);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(75, 23);
             this.button17.TabIndex = 20;
@@ -595,7 +597,7 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(116, 253);
+            this.button18.Location = new System.Drawing.Point(116, 279);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(75, 21);
             this.button18.TabIndex = 19;
@@ -606,7 +608,7 @@
             // checkBoxReminder
             // 
             this.checkBoxReminder.AutoSize = true;
-            this.checkBoxReminder.Location = new System.Drawing.Point(16, 207);
+            this.checkBoxReminder.Location = new System.Drawing.Point(16, 233);
             this.checkBoxReminder.Name = "checkBoxReminder";
             this.checkBoxReminder.Size = new System.Drawing.Size(157, 17);
             this.checkBoxReminder.TabIndex = 18;
@@ -618,7 +620,7 @@
             // 
             this.pictureStatusNone.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.pictureStatusNone.Image = global::Simple_Bot.Properties.Resources.bullet_black;
-            this.pictureStatusNone.Location = new System.Drawing.Point(45, 179);
+            this.pictureStatusNone.Location = new System.Drawing.Point(45, 205);
             this.pictureStatusNone.Name = "pictureStatusNone";
             this.pictureStatusNone.Size = new System.Drawing.Size(16, 17);
             this.pictureStatusNone.TabIndex = 15;
@@ -628,7 +630,7 @@
             // pictureStatusTrue
             // 
             this.pictureStatusTrue.Image = global::Simple_Bot.Properties.Resources.bullet_green;
-            this.pictureStatusTrue.Location = new System.Drawing.Point(45, 179);
+            this.pictureStatusTrue.Location = new System.Drawing.Point(45, 205);
             this.pictureStatusTrue.Name = "pictureStatusTrue";
             this.pictureStatusTrue.Size = new System.Drawing.Size(16, 17);
             this.pictureStatusTrue.TabIndex = 14;
@@ -639,7 +641,7 @@
             // pictureStatusFalse
             // 
             this.pictureStatusFalse.Image = global::Simple_Bot.Properties.Resources.bullet_red;
-            this.pictureStatusFalse.Location = new System.Drawing.Point(45, 179);
+            this.pictureStatusFalse.Location = new System.Drawing.Point(45, 205);
             this.pictureStatusFalse.Name = "pictureStatusFalse";
             this.pictureStatusFalse.Size = new System.Drawing.Size(16, 17);
             this.pictureStatusFalse.TabIndex = 12;
@@ -653,7 +655,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(64, 253);
+            this.linkLabel1.Location = new System.Drawing.Point(64, 279);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(41, 15);
             this.linkLabel1.TabIndex = 13;
@@ -665,7 +667,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 180);
+            this.label22.Location = new System.Drawing.Point(12, 206);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(37, 13);
             this.label22.TabIndex = 6;
@@ -685,7 +687,7 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::Simple_Bot.Properties.Resources.Sheep;
-            this.pictureBox7.Location = new System.Drawing.Point(143, 225);
+            this.pictureBox7.Location = new System.Drawing.Point(143, 251);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(16, 16);
             this.pictureBox7.TabIndex = 13;
@@ -728,7 +730,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel2.Location = new System.Drawing.Point(109, 226);
+            this.linkLabel2.Location = new System.Drawing.Point(109, 252);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(82, 15);
             this.linkLabel2.TabIndex = 12;
@@ -759,6 +761,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -3938,6 +3941,15 @@
             this.ShopBox.TabStop = false;
             this.ShopBox.Text = "Покупать товар:";
             // 
+            // checkBoxAlarmBox
+            // 
+            this.checkBoxAlarmBox.AutoSize = true;
+            this.checkBoxAlarmBox.Location = new System.Drawing.Point(91, 75);
+            this.checkBoxAlarmBox.Name = "checkBoxAlarmBox";
+            this.checkBoxAlarmBox.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxAlarmBox.TabIndex = 26;
+            this.checkBoxAlarmBox.UseVisualStyleBackColor = true;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.label46);
@@ -4167,7 +4179,7 @@
             // 
             // textBoxAdv
             // 
-            this.textBoxAdv.Location = new System.Drawing.Point(12, 215);
+            this.textBoxAdv.Location = new System.Drawing.Point(88, 341);
             this.textBoxAdv.Name = "textBoxAdv";
             this.textBoxAdv.Size = new System.Drawing.Size(33, 20);
             this.textBoxAdv.TabIndex = 26;
@@ -4385,21 +4397,20 @@
             this.radioButtonSmallGift.Text = "Маленькие";
             this.radioButtonSmallGift.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAlarmBox
+            // textBoxMd5
             // 
-            this.checkBoxAlarmBox.AutoSize = true;
-            this.checkBoxAlarmBox.Location = new System.Drawing.Point(91, 75);
-            this.checkBoxAlarmBox.Name = "checkBoxAlarmBox";
-            this.checkBoxAlarmBox.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxAlarmBox.TabIndex = 26;
-            this.checkBoxAlarmBox.UseVisualStyleBackColor = true;
+            this.textBoxMd5.Location = new System.Drawing.Point(13, 175);
+            this.textBoxMd5.Name = "textBoxMd5";
+            this.textBoxMd5.Size = new System.Drawing.Size(174, 20);
+            this.textBoxMd5.TabIndex = 23;
+            this.textBoxMd5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1604, 1064);
+            this.ClientSize = new System.Drawing.Size(1604, 882);
             this.Controls.Add(this.GiftsBox);
             this.Controls.Add(this.PetForUndergrBox);
             this.Controls.Add(this.webBrowser1);
@@ -4936,6 +4947,7 @@
         private System.Windows.Forms.RadioButton radioButtonWhale;
         private System.Windows.Forms.RadioButton radioButtonCurrentPet;
         private System.Windows.Forms.CheckBox checkBoxAlarmBox;
+        private System.Windows.Forms.TextBox textBoxMd5;
     }
 }
 
